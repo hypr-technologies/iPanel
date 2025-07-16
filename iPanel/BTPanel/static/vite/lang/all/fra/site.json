@@ -136,7 +136,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Cible: vous pouvez remplir le site dont vous avez besoin pour procurer, la cible si vous choisissez l'adresse URL doit être un accès normal à l'URL, si vous choisissez Unix doit être un fichier de douille",
 	"048b905444a74d35b8a2847c2e6455bd": "Envoyer le nom de domaine: ajoutez le nom de domaine à l'en-tête de demande pour passer au serveur back-end, la valeur par défaut est le nom de domaine de l'URL cible, s'il n'est pas défini correctement, le proxy ne peut pas être accessible correctement, par exemple:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888, puis envoyez simplement le nom de domaine en gardant $ http_host",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, alors le domaine d'envoi doit être modifié sur www.bt.cn",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, alors le domaine d'envoi doit être modifié sur www.bt.cn",
 	"1043a7c470b9405f48cc7285d8ce529a": "Les exemples ci-dessus ne sont que des cas courants, veuillez vous référer à la situation réelle",
 	"058979f04343786888a00f962a02957c": "Adresse URL",
 	"7db8aa5fda93995f18366b137789a433": "Adresse Unix",
@@ -581,7 +581,7 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Cas insensible au cas",
 	"784d5106c2099b614a7e6326aeec9dd8": "Remplacez uniquement le premier",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Expression régulière",
-	"75f24fd22bcdebf788c00df6721f4faf": "Effet par défaut: remplacez tous les 'http://www.aapanel.com' par 'https://www.aapanel.com'.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Effet par défaut: remplacez tous les 'https://github.com/hypr-technologies/iPanel' par 'https://github.com/hypr-technologies/iPanel'.",
 	"6cb377a9cc9c0a595f359c57158418bb": "Global WebSocket est activé et ne sont pas autorisés à être désactivés individuellement",
 	"130f00db5ce836a6b86e3175bf893fd1": "Supprimer le projet proxy inversé",
 	"911a67aa7d7a43e4db64c57dc8a5a704": "* Limite de la concurrence maximale",
@@ -619,3 +619,5 @@
 	"4d18e28f94ba8141b12ad7c72361e67f": "Ne prend pas en charge l'antichanneling de certificat IP, ne l'ouvrez pas si vous utilisez directement l'accès IP",
 	"3293b90f17c2a86dff994a657361e810": "{0} jours"
 }
+
+

@@ -520,3 +520,5 @@ class plugin_deployment:
     #获取站点标识
     def GetSiteId(self,get):
         return public.M('sites').where('name=?',(get.webname,)).getField('id')
+
+

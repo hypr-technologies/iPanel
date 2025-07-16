@@ -63,3 +63,5 @@ def check_run():
                 return False,'The security entrance is: {}, too simple, there are potential safety hazards'.format(p_body)
     
     return True,'Risk-free'
+
+

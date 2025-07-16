@@ -903,3 +903,4 @@ class wordpress_scan:
         if path in wordpress_scan_info:
             return public.return_message(0,0,wordpress_scan_info[path]["status"])
         return public.return_message(0,0,True)
+

@@ -41,3 +41,4 @@ def acquire(*locks, timeout=-1):
                 lock.release()
             except: pass
         del (acquired[-len(locks):],)
+

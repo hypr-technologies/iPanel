@@ -416,3 +416,5 @@ class main(dataBase):
                 else:
                     wheres.append("(type_id = {})".format(get.type))
         return wheres
+
+

@@ -75,3 +75,5 @@ def get_cert_timeout(cert_file):
 def split_ca_data(cert):
     datas = cert.split('-----END CERTIFICATE-----')
     return datas[0] + "-----END CERTIFICATE-----\n"
+
+

@@ -205,3 +205,4 @@ class ftp:
             return public.get_error_info()
             public.write_log_gettext('FTP manager', 'FTP_PASS_ERR',(path,str(ex)))
             return public.returnMsg(False, public.lang("Failed to modify"))
+

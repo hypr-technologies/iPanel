@@ -192,7 +192,7 @@ class send_mail:
             return ipaddress
         except:
             try:
-                url = public.GetConfigValue('home') + '/Api/getIpAddress'
+                url = public.GetConfigValue('home') + '/ip'
                 return public.HttpGet(url)
             except:
                 return public.GetHost()
@@ -309,3 +309,5 @@ class send_mail:
                 return 3
         except:
             return 3
+
+

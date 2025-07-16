@@ -143,7 +143,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Hedef: Proxy yapmanız gereken siteyi doldurabilirsiniz, hedef URL adresini seçerseniz URL'ye normal bir erişim olmalıdır, Unix'i seçerseniz bir soket dosyası olmalıdır",
 	"048b905444a74d35b8a2847c2e6455bd": "Alan Adı Gönder: Alan adını arka uç sunucusuna geçmek için istek başlığına ekleyin, varsayılan hedef URL etki alanı adıdır, düzgün ayarlanmazsa proxy'ye yol açabilir, örneğin: Örneğin:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888, sonra $ http_host tutarak alan adını gönderin",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
 	"1043a7c470b9405f48cc7285d8ce529a": "Yukarıdaki örnekler sadece yaygın durumlardır, lütfen gerçek duruma bakın",
 	"058979f04343786888a00f962a02957c": "URL adresi",
 	"7db8aa5fda93995f18366b137789a433": "Unix adresi",
@@ -591,9 +591,11 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Durum duyarsız",
 	"784d5106c2099b614a7e6326aeec9dd8": "Yalnızca birinciyi değiştirin",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Düzenli ifade",
-	"75f24fd22bcdebf788c00df6721f4faf": "Varsayılan efekt: 'http://www.aapanel.com' ile 'https://www.aapanel.com' ile değiştirin.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Varsayılan efekt: 'https://github.com/hypr-technologies/iPanel' ile 'https://github.com/hypr-technologies/iPanel' ile değiştirin.",
 	"6cb377a9cc9c0a595f359c57158418bb": "Global WebSocket etkinleştirilir ve ayrı ayrı devre dışı bırakılmasına izin verilmez",
 	"130f00db5ce836a6b86e3175bf893fd1": "Ters proxy projesini sil",
 	"fcdb0820b609e6bcb1a661a095274b69": "Eşleşen tüm anahtar kelimeleri değiştirin",
 	"3293b90f17c2a86dff994a657361e810": "{0} günler"
 }
+
+

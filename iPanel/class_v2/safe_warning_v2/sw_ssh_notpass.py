@@ -47,3 +47,4 @@ def check_run():
         except:
             return True, 'Rick-free'
     return True, 'Rick-free'
+

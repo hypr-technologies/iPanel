@@ -227,3 +227,4 @@ class mail_msg:
             os.remove(self.__mail_send_conf)
         if os.path.exists(self.__mail_receive_conf):
             os.remove(self.__mail_receive_conf)
+

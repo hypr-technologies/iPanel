@@ -32,3 +32,5 @@ if not os.path.exists(not_accept_port_file):
                         firewalls.firewalls().AddAcceptPort(get)
         except Exception as e:
             public.print_log("e111--------------:{}".format(e))
+
+

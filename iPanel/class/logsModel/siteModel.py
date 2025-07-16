@@ -108,3 +108,5 @@ class main(logsBase):
         data['status'] = False
         data['msg'] = 'log is empty'
         return data
+
+

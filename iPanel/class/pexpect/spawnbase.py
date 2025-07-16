@@ -523,3 +523,5 @@ class SpawnBase(object):
         # We rely on subclasses to implement close(). If they don't, it's not
         # clear what a context manager should do.
         self.close()
+
+

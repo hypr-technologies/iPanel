@@ -24,3 +24,4 @@ else
 fi
 
 echo "$OSNAME" > /www/server/panel/data/osname.pl
+

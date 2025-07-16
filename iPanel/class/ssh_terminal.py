@@ -1260,3 +1260,4 @@ class ssh_host_admin(ssh_terminal):
         self.save_command(command)
         public.write_log_gettext(self._log_type,'Delete common commands [{}]',(str(args.title),))
         return public.return_msg_gettext(True, public.lang("Setup successfully!"))
+

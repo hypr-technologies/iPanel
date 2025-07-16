@@ -754,3 +754,5 @@ class main(databaseBase):
         except:
             db_status = False
         return {"status": True, "msg": "normalcy" if db_status is True else "exceptions", "db_status": db_status}
+
+

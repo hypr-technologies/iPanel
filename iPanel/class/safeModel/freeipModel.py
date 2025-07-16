@@ -96,3 +96,4 @@ class main(safeBase):
         """
         public.writeFile(self._sfile,json.dumps(data))
         return True
+

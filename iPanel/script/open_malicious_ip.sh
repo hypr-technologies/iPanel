@@ -41,3 +41,4 @@ else
     configure_logging
     echo "add rule finish..."
 fi
+

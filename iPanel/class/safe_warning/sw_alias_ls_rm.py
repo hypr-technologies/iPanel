@@ -40,3 +40,5 @@ def check_run():
         return False, '{} The command does not have an alias configured or is configured incorrectly'.format('、'.join(result_list))
     else:
         return True, 'Risk-free'
+
+

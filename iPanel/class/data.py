@@ -763,3 +763,4 @@ class data:
         get.action = 'get_result'
         data = log_analysis.log_analysis().get_result(get)
         return int(data['php']) + int(data['san']) + int(data['sql']) + int(data['xss'])
+

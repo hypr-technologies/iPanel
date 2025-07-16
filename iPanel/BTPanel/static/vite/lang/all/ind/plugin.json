@@ -81,3 +81,5 @@
 	"d9647fa654243adb05ea5d73a5fae511": "Menentukan jumlah maksimum koneksi SSL bersamaan yang akan diterima server karena total koneksi SSL dan non-SSL secara bersamaan tidak dapat melebihi batas yang ditentukan oleh \"koneksi maks\", jumlah aktual koneksi SSL bersamaan yang diizinkan harus lebih rendah dari batas ini",
 	"12e2afb8b1475bdd6d48db7548add761": "Jika Anda perlu mengubah versi MySQL, silakan cadangkan data Anda, uninstall MySQL dan pasang kembali."
 }
+
+

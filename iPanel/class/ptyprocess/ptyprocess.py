@@ -840,3 +840,5 @@ class PtyProcessUnicode(PtyProcess):
         """
         b = s.encode(self.encoding)
         return super(PtyProcessUnicode, self).write(b)
+
+

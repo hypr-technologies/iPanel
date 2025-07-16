@@ -6,3 +6,4 @@ import panelWarning,public,json
 args = public.dict_obj()
 result = panelWarning.panelWarning().get_list(args)
 print(json.dumps(result))
+

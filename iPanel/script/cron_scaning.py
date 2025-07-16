@@ -29,3 +29,4 @@ if __name__ == '__main__':
     main = main()
     msg = main.run()
     system.push_by_task_keyword("vulnerability_scanning", "vulnerability_scanning", push_data=msg)
+

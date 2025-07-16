@@ -321,3 +321,4 @@ class main(logsBase):
                 result.append(line)
 
          return public.return_message(0, 0, result)
+

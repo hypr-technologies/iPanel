@@ -5,13 +5,13 @@ echo "
 +----------------------------------------------------------------------
 | Bt-WebPanel 3.0 FOR CentOS beta
 +----------------------------------------------------------------------
-| Copyright (c) 2015-2017 BT-SOFT(http://www.bt.cn) All rights reserved.
+| Copyright (c) 2015-2017 BT-SOFT(https://github.com/hypr-technologies/iPanel) All rights reserved.
 +----------------------------------------------------------------------
 | Python2.6/2.7 successful the http://SERVER_IP:8888 is WebPanel
 +----------------------------------------------------------------------
 "
 
-download_Url='http://download.bt.cn'
+download_Url='https://github.com/hypr-technologies/iPanel/releases/latest/download'
 setup_patn=/www
 
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
@@ -220,7 +220,7 @@ do
 	fi
 done
 
-curl http://www.bt.cn/Api/SetupCount?type=Linux
+curl https://github.com/hypr-technologies/iPanel?type=Linux
 
 echo "====================================="
 echo -e "\033[32mThe install successful!\033[0m"
@@ -233,3 +233,5 @@ endTime=`date +%s`
 ((outTime=($endTime-$startTime)/60))
 echo -e "Time consuming:\033[32m $outTime \033[0mMinute!"
 rm -f install.sh
+
+

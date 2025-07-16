@@ -413,3 +413,5 @@ class Sql():
         # 设置数据库名称，用于判断数据库文件
         self.__DB_NAME = name
         return self
+
+

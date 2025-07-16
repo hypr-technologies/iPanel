@@ -744,3 +744,5 @@ class Redirect(BaseProjectCommon):
         if not isinstance(self.config_prefix, str):
             return public.returnMsg(False, "不支持的网站类型")
         return _RealRedirect(self.config_prefix).get_redirect_list(get)
+
+

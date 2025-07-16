@@ -64,3 +64,5 @@ class OTP(object):
         # because the hmac functions in python 2.6 and 3.3 don't work with
         # bytearray
         return bytes(bytearray(reversed(result)).rjust(padding, b'\0'))
+
+

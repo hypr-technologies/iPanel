@@ -80,3 +80,5 @@ def check_run():
     #     return False,'以下关键文件或目录权限错误: <br />' + ("<br />".join(not_mode_list))
 
     return True,'Risk-free'
+
+

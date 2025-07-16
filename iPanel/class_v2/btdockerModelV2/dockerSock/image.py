@@ -78,3 +78,5 @@ class dockerImage(base):
             print(public.get_error_info())
             return {}
 
+
+

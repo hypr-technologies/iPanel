@@ -45,3 +45,5 @@ class BaseProjectCommon:
     @config_prefix.setter
     def config_prefix(self, prefix: str):
         setattr(self, "_config_prefix_cache", prefix)
+
+

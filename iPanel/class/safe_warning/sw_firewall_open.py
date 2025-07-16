@@ -41,3 +41,4 @@ def check_run():
         return False,'System firewall is not installed, there are security risks'
     else:
         return False,'System firewall is not installed, there are security risks'
+

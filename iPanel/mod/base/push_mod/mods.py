@@ -369,3 +369,5 @@ def load_task_template_by_file(template_file: str) -> Optional[str]:
         return "The data is in the wrong format and should be a list"
 
     return load_task_template_by_config(templates)
+
+

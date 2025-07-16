@@ -1,15 +1,15 @@
 #!/bin/bash
-# chkconfig: 2345 55 25
-# description: bt Cloud Service
+# iPanel Cloud Service Management Script
+# Designed for infuze.cloud deployment
 
 ### BEGIN INIT INFO
-# Provides:          bt
-# Required-Start:    $all
-# Required-Stop:     $all
+# Provides:          ipanel
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $network $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: starts bt
-# Description:       starts the bt
+# Short-Description: iPanel Web Control Panel
+# Description:       Hypr Technologies iPanel Web Control Panel Service
 ### END INIT INFO
 
 panel_init(){
@@ -359,19 +359,25 @@ case "$1" in
                 ipv6_address=""
                 if [ "$address" = "" ];then
                        
-                        ipv4_address=$(curl -4 -sS --connect-timeout 10 -m 15 https://www.aapanel.com/api/common/getClientIP 2>&1)
-                        if [ -z "${ipv4_address}" ];then
-                                ipv4_address=$(curl -4 -sS --connect-timeout 10 -m 15 https://ifconfig.me 2>&1)
-                                if [ -z "${ipv4_address}" ];then
-                                    ipv4_address=$(curl -4 -sS --connect-timeout 10 -m 15 https://www.bt.cn/Api/getIpAddress 2>&1)
+                        # Try multiple IPv4 detection services
+                        for ipv4_service in "https://api.ipify.org" "https://ipinfo.io/ip" "https://icanhazip.com" "https://checkip.amazonaws.com" "https://ifconfig.me"; do
+                                ipv4_address=$(curl -4 -sS --connect-timeout 10 -m 15 "$ipv4_service" 2>/dev/null | tr -d '\n\r')
+                                if [ -n "${ipv4_address}" ] && [ "${ipv4_address}" != "0.0.0.0" ]; then
+                                        break
                                 fi
-                        fi
+                        done
                         IPV4_REGEX="^([0-9]{1,3}\.){3}[0-9]{1,3}$"
                         if ! [[ $ipv4_address =~ $IPV4_REGEX ]]; then
                                 ipv4_address=""
                         fi
                         
-                        ipv6_address=$(curl -6 -sS --connect-timeout 10 -m 15 https://www.aapanel.com/api/common/getClientIP 2>&1)
+                        # Try to get IPv6 address from multiple services
+                        for ipv6_service in "https://api64.ipify.org" "https://ipv6.icanhazip.com" "https://ifconfig.co"; do
+                                ipv6_address=$(curl -6 -sS --connect-timeout 10 -m 15 "$ipv6_service" 2>/dev/null | tr -d '\n\r')
+                                if [ -n "${ipv6_address}" ]; then
+                                        break
+                                fi
+                        done
                         # IPV6_REGEX="^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
                         IPV6_REGEX="^([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4}$"
                         if ! [[ $ipv6_address =~ $IPV6_REGEX ]]; then
@@ -396,26 +402,26 @@ case "$1" in
                 fi
                 LOCAL_IP=$(ip addr | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -E -v "^127\.|^255\.|^0\." | head -n 1)
                 echo -e "=================================================================="
-                echo -e "\033[32maaPanel default info!\033[0m"
+                echo -e "\033[32miPanel default info!\033[0m"
                 echo -e "=================================================================="
-                #echo  "aaPanel Internet Address: $pool://$address:$port$auth_path"
-                #echo  "aaPanel Internal Address: $pool://${LOCAL_IP}:$port$auth_path"
+                #echo  "iPanel Internet Address: $pool://$address:$port$auth_path"
+                #echo  "iPanel Internal Address: $pool://${LOCAL_IP}:$port$auth_path"
 
                 if [ "${ipv6_address}" ];then
-                        echo  "aaPanel Internet IPv6 Address: ${pool}://${ipv6_address}:${port}${auth_path}"
+                        echo  "iPanel Internet IPv6 Address: ${pool}://${ipv6_address}:${port}${auth_path}"
                 fi
                 if [ "${ipv4_address}" ];then
-                        echo  "aaPanel Internet IPv4 Address: ${pool}://${ipv4_address}:${port}${auth_path}"
+                        echo  "iPanel Internet IPv4 Address: ${pool}://${ipv4_address}:${port}${auth_path}"
                 fi
                 if [ "${address}" ];then
-                        echo  "aaPanel Internet Address: ${pool}://${address}:${port}${auth_path}"
+                        echo  "iPanel Internet Address: ${pool}://${address}:${port}${auth_path}"
                 fi
 
                 if [ "${address}" ];then
-                    echo  "aaPanel Internal Address: ${pool}://${address}:${port}${auth_path}"
+                    echo  "iPanel Internal Address: ${pool}://${address}:${port}${auth_path}"
                     echo -e "\033[33mNote: After binding a Domain, access is only allowed via the Domain. \nTo unbind the Domain, use: bt 12 \033[0m"
                 else
-                    echo  "aaPanel Internal Address:      ${pool}://${LOCAL_IP}:${port}${auth_path}"
+                    echo  "iPanel Internal Address:      ${pool}://${LOCAL_IP}:${port}${auth_path}"
                 fi
 
                 echo -e `$pythonV $panel_path/tools.py username`
@@ -429,3 +435,5 @@ case "$1" in
                 $pythonV $panel_path/tools.py cli $1
         ;;
 esac
+
+

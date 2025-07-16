@@ -136,7 +136,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Objetivo: puede completar el sitio que necesita proxy, el objetivo si elige la dirección de la URL debe ser un acceso normal a la URL, si elige UNIX, debe ser un archivo de socket",
 	"048b905444a74d35b8a2847c2e6455bd": "Enviar nombre de dominio: Agregue el nombre de dominio al encabezado de solicitud para pasar al servidor de fondo, el valor predeterminado es el nombre de dominio de URL de destino, si no se establece correctamente, puede conducir al proxy no se puede acceder correctamente, por ejemplo:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888, luego envíe el nombre de dominio manteniendo $ http_host",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, entonces el dominio de envío debe cambiarse a www.bt.cn",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, entonces el dominio de envío debe cambiarse a www.bt.cn",
 	"1043a7c470b9405f48cc7285d8ce529a": "Los ejemplos anteriores son solo casos comunes, consulte la situación real",
 	"058979f04343786888a00f962a02957c": "Dirección de url",
 	"7db8aa5fda93995f18366b137789a433": "Dirección unix",
@@ -581,7 +581,7 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Caso insensible",
 	"784d5106c2099b614a7e6326aeec9dd8": "Solo reemplace el primero",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Expresión regular",
-	"75f24fd22bcdebf788c00df6721f4faf": "Efecto predeterminado: reemplace todo 'http://www.aapanel.com' con 'https://www.aapanel.com'.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Efecto predeterminado: reemplace todo 'https://github.com/hypr-technologies/iPanel' con 'https://github.com/hypr-technologies/iPanel'.",
 	"6cb377a9cc9c0a595f359c57158418bb": "Global WebSocket está habilitado y no se permite deshabilitar individualmente",
 	"130f00db5ce836a6b86e3175bf893fd1": "Eliminar proyecto de proxy inverso",
 	"911a67aa7d7a43e4db64c57dc8a5a704": "*Límite de concurrencia máxima",
@@ -619,3 +619,5 @@
 	"4d18e28f94ba8141b12ad7c72361e67f": "No admite el certificado IP anti-canalización, no lo abra si usa el acceso IP directamente",
 	"3293b90f17c2a86dff994a657361e810": "{0} días"
 }
+
+

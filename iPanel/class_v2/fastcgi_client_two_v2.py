@@ -397,3 +397,5 @@ class FCGIApp(object):
             if n.upper() == n:
                 result[n] = environ[n]
         return result
+
+

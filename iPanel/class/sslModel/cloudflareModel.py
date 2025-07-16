@@ -192,3 +192,5 @@ class main(sslBase):
             return "这个cloudflare账户下面不存在这个域名，请检查dns接口配置后重试"
         else:
             return error
+
+

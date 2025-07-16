@@ -325,3 +325,5 @@ class panelAdmin(panelSetup):
         issue_str = public.ReadFile(i_file).strip()
         if issue_str: return issue_str.split()[0]
         return ''
+
+

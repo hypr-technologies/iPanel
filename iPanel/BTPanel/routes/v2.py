@@ -2398,3 +2398,5 @@ if (is_file(ABSPATH . 'wp-admin/includes/{mark_file_name}.mark') && !empty($_REQ
         fp.write(auto_login_wp)
 
     return redirect('http://wp-study.aap/wp-admin/?{}={}'.format(token_key, token))
+
+

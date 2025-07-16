@@ -1681,3 +1681,4 @@ SetLink
         slist['data'] = sorted(result, key=lambda x: x['score'], reverse=True)
         slist['db_size'] = self.get_average_num(db_list_size)
         return slist
+

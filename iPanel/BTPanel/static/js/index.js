@@ -3377,3 +3377,5 @@ product_recommend.init(function () {
 	});
 	index.get_index_list();
 });
+
+

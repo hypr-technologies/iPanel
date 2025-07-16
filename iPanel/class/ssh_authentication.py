@@ -335,3 +335,4 @@ class ssh_authentication:
             ret['pin']='error'
             ret['time']=60
             return ret
+

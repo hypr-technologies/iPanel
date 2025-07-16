@@ -57,3 +57,4 @@ class base_push:
         # 消息 以类型为key， 以内容为value， 内容中包含title 和msg
         # push_keys： 列表，发送了信息的推送任务的id，用来验证推送任务次数（） 意义不大
         raise NotImplementedError
+

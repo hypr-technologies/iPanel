@@ -62,3 +62,5 @@ class UWSGICache(BaseCache):
 
     def has(self, key):
         return self._uwsgi.cache_exists(key, self.cache) is not None
+
+

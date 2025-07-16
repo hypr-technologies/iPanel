@@ -853,3 +853,5 @@ class LogMgr:
         if isinstance(msg, str):
             return json_response(status=False, msg=msg)
         return json_response(status=True, data=msg)
+
+

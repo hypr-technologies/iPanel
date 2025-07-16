@@ -2292,3 +2292,4 @@ Please handle it as soon as possible""".format(
                 public.print_log(f"Monitoring data repair failed, file has been deleted: {db_path}")
 
             return False
+

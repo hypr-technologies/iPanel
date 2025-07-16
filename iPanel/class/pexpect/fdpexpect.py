@@ -146,3 +146,5 @@ class fdspawn(SpawnBase):
             if self.child_fd not in rlist:
                 raise TIMEOUT('Timeout exceeded.')
         return super(fdspawn, self).read_nonblocking(size)
+
+

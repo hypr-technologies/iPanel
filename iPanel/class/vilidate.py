@@ -128,3 +128,5 @@ class vieCode:
             y = self.__fontSize * random.uniform(0.3,0.5);
             #打印字符
             self.__draw.text((x, y),self.__code[i], font=font, fill=color)
+
+

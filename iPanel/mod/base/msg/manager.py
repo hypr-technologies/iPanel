@@ -360,3 +360,4 @@ class SenderManager:
             file_path = f"/www/server/panel/data/{missing_type}.json"
             if os.path.exists(file_path):
                 os.remove(file_path)
+

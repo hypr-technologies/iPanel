@@ -76,3 +76,5 @@ def pty_make_controlling_tty(tty_fd):
     # Verify we now have a controlling tty.
     fd = os.open("/dev/tty", os.O_WRONLY)
     os.close(fd)
+
+

@@ -1100,3 +1100,5 @@ logs.event();
 function getLogs(page) {
 	logs.panelLogs.getLogs(page,$('#operationLog .search_input').val())
 }
+
+

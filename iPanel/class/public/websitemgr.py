@@ -187,3 +187,5 @@ def get_available_php_ver_shorts(without_static: bool = True) -> typing.List[str
         lst = filter(lambda x: x['version'] != '00', lst)
 
     return list(map(lambda x: x['version'], lst))
+
+

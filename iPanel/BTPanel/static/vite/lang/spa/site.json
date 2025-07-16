@@ -147,7 +147,7 @@
 			"index_6": "Objetivo: puede completar el sitio que necesita proxy, el objetivo si elige la dirección de la URL debe ser un acceso normal a la URL, si elige UNIX, debe ser un archivo de socket",
 			"index_7": "Enviar nombre de dominio: Agregue el nombre de dominio al encabezado de solicitud para pasar al servidor de fondo, el valor predeterminado es el nombre de dominio de URL de destino, si no se establece correctamente, puede conducir al proxy no se puede acceder correctamente, por ejemplo:",
 			"index_8": "http://192.168.100.20:19888, luego envíe el nombre de dominio manteniendo $ http_host",
-			"index_9": "http://www.bt.cn, entonces el dominio de envío debe cambiarse a www.bt.cn",
+			"index_9": "https://github.com/hypr-technologies/iPanel, entonces el dominio de envío debe cambiarse a www.bt.cn",
 			"index_10": "Los ejemplos anteriores son solo casos comunes, consulte la situación real",
 			"index_11": "Dirección de url",
 			"index_12": "Dirección unix",
@@ -217,7 +217,7 @@
 			"index_76": "Objetivo: puede completar el sitio que necesita proxy, el objetivo si elige la dirección de la URL debe ser un acceso normal a la URL, si elige UNIX, debe ser un archivo de socket",
 			"index_77": "Enviar nombre de dominio: Agregue el nombre de dominio al encabezado de solicitud para pasar al servidor de fondo, el valor predeterminado es el nombre de dominio de URL de destino, si no se establece correctamente, puede conducir al proxy no se puede acceder correctamente, por ejemplo:",
 			"index_78": "http://192.168.100.20:19888, luego envíe el nombre de dominio manteniendo $ http_host",
-			"index_79": "http://www.bt.cn, entonces el dominio de envío debe cambiarse a www.bt.cn",
+			"index_79": "https://github.com/hypr-technologies/iPanel, entonces el dominio de envío debe cambiarse a www.bt.cn",
 			"index_80": "Los ejemplos anteriores son solo casos comunes, consulte la situación real",
 			"index_81": "Agregar reemplazo de contenido",
 			"index_82": "Agregue un proyecto de proxy inverso"
@@ -669,10 +669,12 @@
 			"index_12": "Caso insensible",
 			"index_13": "Solo reemplace el primero",
 			"index_14": "Expresión regular",
-			"index_15": "Efecto predeterminado: reemplace todo 'http://www.aapanel.com' con 'https://www.aapanel.com'.",
+			"index_15": "Efecto predeterminado: reemplace todo 'https://github.com/hypr-technologies/iPanel' con 'https://github.com/hypr-technologies/iPanel'.",
 			"index_16": "Global WebSocket está habilitado y no se permite deshabilitar individualmente",
 			"index_17": "Eliminar proyecto de proxy inverso",
 			"index_18": "Reemplace todas las palabras clave coincidentes"
 		}
 	}
 }
+
+

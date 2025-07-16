@@ -333,3 +333,4 @@ class nginx:
             return True
         except:
             return False
+

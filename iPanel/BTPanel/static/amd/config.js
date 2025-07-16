@@ -1337,3 +1337,5 @@ define(['require', 'exports', './snabbdom', './public/public', './panelConfig', 
 	})(public_1.default);
 	exports.Config = Config;
 });
+
+

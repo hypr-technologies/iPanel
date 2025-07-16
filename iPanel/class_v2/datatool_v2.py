@@ -166,3 +166,5 @@ class datatools:
     #检查表
     def CheckTable(self,database,tables,*args,**kwargs):
         pass
+
+

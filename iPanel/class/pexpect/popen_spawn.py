@@ -186,3 +186,5 @@ class PopenSpawn(SpawnBase):
     def sendeof(self):
         '''Closes the stdin pipe from the writing end.'''
         self.proc.stdin.close()
+
+

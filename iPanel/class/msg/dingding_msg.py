@@ -222,3 +222,4 @@ class dingding_msg:
     def uninstall(self):
         if os.path.exists(self.conf_path):
             os.remove(self.conf_path)
+

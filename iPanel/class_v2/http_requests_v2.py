@@ -613,3 +613,5 @@ def get(url,timeout = 60,headers = {},verify = False,s_type = None):
     except:
         raise Exception(public.get_error_info())
 
+
+

@@ -17,3 +17,5 @@ echo 'skip telegram'
 #
 #rm -f /www/server/panel/script/upgrade_telegram.sh
 #bash /www/server/panel/init.sh reload
+
+

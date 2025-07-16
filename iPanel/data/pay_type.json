@@ -29,7 +29,7 @@
 			"install": false,
 			"pid": 100000010,
 			"dependent": "nginx",
-			"preview": "https://www.aapanel.com/forum/d/3351-nginx-waf-instructions",
+			"preview": "https://github.com/hypr-technologies/iPanel/forum/d/3351-nginx-waf-instructions",
 			"ps": "Mitigating DDOS attacks, easily creating custom rules, protecting your website and reducing the risk of malicious attacks and data leakage, it is recommended to use Nginx 1.18 and above"
 		}, {
 			"pay": "40",
@@ -39,7 +39,7 @@
 			"isBuy":false,
 			"pid": 100000063,
 			"dependent": "apache",
-			"preview": "https://www.aapanel.com/forum/d/3351-nginx-waf-instructions",
+			"preview": "https://github.com/hypr-technologies/iPanel/forum/d/3351-nginx-waf-instructions",
 			"ps": "Mitigating DDOS attacks, easily creating custom rules, protecting your website and reducing the risk of malicious attacks and data leakage, it is recommended to use Nginx 1.18 and above"
 		}, {
 			"pay": "41",
@@ -48,7 +48,7 @@
 			"isBuy":false,
 			"install": false,
 			"pid": 100000074,
-			"preview": "https://www.aapanel.com/forum/d/3789-website-statistics-instructions",
+			"preview": "https://github.com/hypr-technologies/iPanel/forum/d/3789-website-statistics-instructions",
 			"ps": "Real-time accurate statistics of website traffic, ip, uv, pv, requests, spiders and other data"
 		}, {
 			"pay": "42",
@@ -57,7 +57,7 @@
 			"isBuy":false,
 			"install": false,
 			"pid": 100000071,
-			"preview": "https://www.aapanel.com/forum/d/17491-how-to-use-tamper-proof-for-enterprise",
+			"preview": "https://github.com/hypr-technologies/iPanel/forum/d/17491-how-to-use-tamper-proof-for-enterprise",
 			"ps": "Effectively intercept 99.9% of illegal modification of web pages, tampering of files, etc. Note: Cannot be used with other anti-tamper software"
 		}, {
 			"pay": "43",
@@ -66,7 +66,7 @@
 			"isBuy":false,
 			"install": false,
 			"pid": 100000067,
-			"preview": "https://www.aapanel.com/forum/d/12760-anti-intrusion",
+			"preview": "https://github.com/hypr-technologies/iPanel/forum/d/12760-anti-intrusion",
 			"ps": "Effective defense against intrusion into the system through processes such as websites, redis, mysql, etc."
 		}]
 	}, {
@@ -108,7 +108,7 @@
 
 				"pluginName": "Nginx网站防火墙",
 				"ps": "有效拦截SQL 注入、XSS跨站、恶意代码、网站挂马等常见攻击，过滤恶意访问，降低数据泄露的风险，保障网站的可用性。",
-				"preview": "https://www.bt.cn/new/product_nginx_firewall.html",
+				"preview": "https://github.com/hypr-technologies/iPanel/new/product_nginx_firewall.html",
 				"dependent": "nginx",
 				"eventList": [{
 					"event": "site_waf_config('$siteName')",
@@ -120,7 +120,7 @@
 				"pay": "46",
 				"pluginName": "网站防火墙",
 				"ps": "有效拦截SQL 注入、XSS跨站、恶意代码、网站挂马等常见攻击，过滤恶意访问，降低数据泄露的风险，保障网站的可用性。",
-				"preview": "https://www.bt.cn/new/product_nginx_firewall.html",
+				"preview": "https://github.com/hypr-technologies/iPanel/new/product_nginx_firewall.html",
 				"dependent": "apache",
 				"eventList": [{
 					"event": "site_waf_config('$siteName')",
@@ -132,7 +132,7 @@
 				"pay": "47",
 				"pluginName": "网站监控报表",
 				"ps": "快速分析网站运行状况，实时精确统计网站流量、ip、uv、pv、请求、蜘蛛等数据，网站SEO优化利器",
-				"preview": "https://www.bt.cn/new/product_website_total.html",
+				"preview": "https://github.com/hypr-technologies/iPanel/new/product_website_total.html",
 				"dependent": "apache",
 				"eventList": [{
 					"event": "WebsiteReport('$siteName')",
@@ -146,7 +146,7 @@
 				"pay": "47",
 				"pluginName": "网站监控报表",
 				"ps": "快速分析网站运行状况，实时精确统计网站流量、ip、uv、pv、请求、蜘蛛等数据，网站SEO优化利器",
-				"preview": "https://www.bt.cn/new/product_website_total.html",
+				"preview": "https://github.com/hypr-technologies/iPanel/new/product_website_total.html",
 				"dependent": "nginx",
 				"eventList": [{
 					"event": "WebsiteReport('$siteName')",
@@ -201,3 +201,5 @@
 		}]
 	}
 ]
+
+

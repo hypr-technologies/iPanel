@@ -82,3 +82,4 @@ class SecureManage(SSHbase):
         commands = "ls -tr {file_path}|grep -v '\.gz$'|xargs cat|grep -aE '({login_type})'{query}|wc -l".format(file_path=self.ssh_log_path,login_type=login_type,query=query)
         result, err = public.ExecShell(commands)
         return int(result.strip())
+

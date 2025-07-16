@@ -90,3 +90,4 @@ if __name__ == '__main__':
         os.system('/usr/local/lsws/bin/lswsctl restart')
     else:
         os.system('/etc/init.d/httpd reload')
+

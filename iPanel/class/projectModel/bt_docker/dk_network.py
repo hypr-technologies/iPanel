@@ -67,3 +67,4 @@ class main :#line:5
             if " has active endpoints"in str (OOOOOO0O00O0O0OO0 ):#line:111
                 return public .returnMsg (False ,"The network is in use and cannot be deleted!")#line:112
             return public .returnMsg (False ,"Failed to delete! {}".format (str (OOOOOO0O00O0O0OO0 )))
+

@@ -267,3 +267,5 @@ class IptablesServices(Base):
             return self._result(False, public.lang(f"Failed to set up rule:{stderr}"))
         public.ExecShell("systemctl reload BT-FirewallServices")
         return self._result(True, public.lang("Setting up the rule was successful"))
+
+

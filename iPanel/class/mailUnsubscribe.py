@@ -198,3 +198,5 @@ class mailUnsubscribe:
 
         # return mail_type
         return {"status":True, "msg": mail_type}
+
+

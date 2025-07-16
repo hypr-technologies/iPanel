@@ -31,3 +31,5 @@ def check_run():
         return True, 'Risk-free'
     else:
         return False, 'Remote administration of ssh without secure socket encryption'
+
+

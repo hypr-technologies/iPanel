@@ -175,3 +175,4 @@ class website_auto_index:
         if hasattr(args, 'dir'):
             if not args.dir:
                 return public.returnMsg(False, public.lang("Directory cannot be empty"))
+

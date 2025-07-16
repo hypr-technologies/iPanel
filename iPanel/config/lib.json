@@ -253,8 +253,8 @@
       "name": "bt-openssl",
       "ps": "宝塔单独安装的openssl库",
       "check": "/usr/local/openssl/bin/openssl",
-      "debian": "curl http://download.bt.cn/install/libsh/openssl.sh|bash",
-      "redhat": "curl http://download.bt.cn/install/libsh/openssl.sh|bash",
+      "debian": "curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/openssl.sh|bash",
+      "redhat": "curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/openssl.sh|bash",
       "getv": "/usr/local/openssl/bin/openssl version|awk '{print $2}'"
     },
 		{
@@ -368,8 +368,8 @@
 			"name":"cjson",
 			"ps":"Json格式解析库",
 			"check":"/usr/local/lib/lua/5.1/cjson.so",
-			"debian":"curl http://download.bt.cn/install/libsh/cjson.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/cjson.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/cjson.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/cjson.sh|bash",
 			"getv":"echo 2.1.0"
 		},
     {
@@ -395,40 +395,40 @@
 			"name":"bt-curl",
 			"ps":"文件传输工具",
 			"check":"/usr/local/curl/bin/curl",
-			"debian":"curl http://download.bt.cn/install/libsh/curl.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/curl.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/curl.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/curl.sh|bash",
 			"getv":"/usr/local/curl/bin/curl --version|grep curl|awk '{print $2}'"
 		},
 		{
 			"name":"libiconv",
 			"ps":"编码转换工具",
 			"check":"/usr/local/libiconv/bin/iconv",
-			"debian":"curl http://download.bt.cn/install/libsh/libiconv.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/libiconv.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/libiconv.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/libiconv.sh|bash",
 			"getv":"/usr/local/libiconv/bin/iconv --version|grep iconv|awk '{print $4}'|grep -oE [0-9].[0-9]+"
 		},
 		{
 			"name":"libmcrypt",
 			"ps":"文件加密工具",
 			"check":"/usr/local/bin/libmcrypt-config",
-			"debian":"curl http://download.bt.cn/install/libsh/libmcrypt.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/libmcrypt.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/libmcrypt.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/libmcrypt.sh|bash",
 			"getv":"/usr/local/bin/libmcrypt-config --version"
 		},
 		{
 			"name":"mcrypt",
 			"ps":"文件加密工具",
 			"check":"/usr/local/bin/mcrypt",
-			"debian":"curl http://download.bt.cn/install/libsh/mcrypt.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/mcrypt.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/mcrypt.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/mcrypt.sh|bash",
 			"getv":"echo 2.6.8"
 		},
 		{
 			"name":"Mhash",
 			"ps":"加密扩展库",
 			"check":"/usr/local/lib/libmhash.so",
-			"debian":"curl http://download.bt.cn/install/libsh/mhash.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/mhash.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/mhash.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/mhash.sh|bash",
 			"getv":"echo 0.9.9.9"
 		}
 
@@ -439,8 +439,8 @@
 			"name":"nghttp2",
 			"ps":" HTTP/2 C Library ",
 			"check":"/usr/local/nghttp2/lib/libnghttp2.so",
-			"debian":"curl http://download.bt.cn/install/libsh/nghttp2.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/nghttp2.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/nghttp2.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/nghttp2.sh|bash",
 			"getv":"cat /usr/local/nghttp2/version.pl"
 		}
 	],
@@ -450,8 +450,8 @@
 			"name":"luajit",
 			"ps":" lua即时编译器",
 			"check":"/usr/local/lib/libluajit-5.1.so.2",
-			"debian":"curl http://download.bt.cn/install/libsh/luajit.sh|bash",
-			"redhat":"curl http://download.bt.cn/install/libsh/luajit.sh|bash",
+			"debian":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/luajit.sh|bash",
+			"redhat":"curl https://github.com/hypr-technologies/iPanel/releases/latest/download/install/libsh/luajit.sh|bash",
 			"getv":"echo 2.0.4"
 		}
 	],
@@ -466,3 +466,4 @@
 		}
 	]
 }
+

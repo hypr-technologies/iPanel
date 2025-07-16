@@ -90,3 +90,5 @@ class TOTP(OTP):
     def timecode(self, for_time):
         i = time.mktime(for_time.timetuple())
         return int(i / self.interval)
+
+

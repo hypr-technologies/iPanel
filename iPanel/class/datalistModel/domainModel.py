@@ -37,3 +37,4 @@ class main(dataBase):
         if 'pid' in get:
             wheres.append(("(pid = ?)", (get.pid)))
         return wheres
+

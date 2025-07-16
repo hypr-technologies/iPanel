@@ -24,3 +24,4 @@ for i in site_infos:
     la.log_analysis(get)
     print('|-Analysis of website logs completed')
     print('==================================================================')
+

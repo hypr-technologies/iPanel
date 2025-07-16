@@ -48,3 +48,5 @@ def check_run():
     
     return False,'The current Memcached port: {} allows arbitrary client access, which can lead to data leakage'.format(tmp[0])
     
+
+

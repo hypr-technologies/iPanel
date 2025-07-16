@@ -636,3 +636,5 @@ class CloudStoraUpload:
 #     x = 'bt_backup/database/test_cron_back_1_2023-10-10_02-30-03_mysql_data.sql.gz'
 #     print(c.obj.backup_path)
 #     c.cloud_download_file('/bt_backup/', '/xiaopacai/backup')
+
+

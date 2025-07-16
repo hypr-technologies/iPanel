@@ -8507,3 +8507,4 @@ bt.htmlEncode = {
 			.replace(/=/g, '＝');
 	},
 };
+

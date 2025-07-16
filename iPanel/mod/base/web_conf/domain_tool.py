@@ -333,3 +333,5 @@ class ApacheDomainTool:
             return
         new_conf = ap_conf[:last_idx] + "\n".join(["Listen %s" % i for i in real_ports]) + "\n" + ap_conf[last_idx:]
         write_file(ap_conf_file, new_conf)
+
+

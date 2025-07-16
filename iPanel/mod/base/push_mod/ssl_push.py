@@ -346,3 +346,4 @@ class ViewMsgFormat(object):
         if task["template_id"] in self._FORMAT:
             return self._FORMAT[task["template_id"]](task)
         return None
+

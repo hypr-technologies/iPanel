@@ -79,3 +79,5 @@ def check_run():
         except: pass
 
     return False,'MySQL port: {}, can be accessed by any server, which may cause MySQL to be cracked by brute force, posing security risks'.format(port_tmp[0])
+
+

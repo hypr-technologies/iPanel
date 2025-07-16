@@ -725,3 +725,5 @@ class Client(object):
             https://letsencrypt.org/docs/rate-limits/
         """
         return self.cert()
+
+

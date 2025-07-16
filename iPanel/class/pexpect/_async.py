@@ -101,3 +101,5 @@ class PatternWaiter(asyncio.Protocol):
             self.eof_received()
         elif exc is not None:
             self.error(exc)
+
+

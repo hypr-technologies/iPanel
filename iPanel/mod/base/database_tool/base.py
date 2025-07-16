@@ -32,3 +32,5 @@ class BaseDatabaseTool:
     # 添加一个数据库
     def add_database(self, server_id: int, database_name: str, **kwargs) -> List[Dict]:
         raise NotImplementedError()
+
+

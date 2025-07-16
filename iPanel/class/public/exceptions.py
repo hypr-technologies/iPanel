@@ -23,3 +23,5 @@ class PanelError(Exception):
 
     def __str__(self):
         return ("An error occurred while the panel was running: {}".format(str(self.value)))
+
+

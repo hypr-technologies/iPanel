@@ -136,7 +136,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Ziel: Sie können die Website ausfüllen, die Sie zum Proxy benötigen. Das Ziel, wenn Sie die URL -Adresse auswählen, muss ein normaler Zugriff auf die URL sein. Wenn Sie Unix wählen",
 	"048b905444a74d35b8a2847c2e6455bd": "Domänenname senden: Fügen Sie den Domänennamen dem Anforderungsheader hinzu, um an den Back-End-Server weiterzugeben. Der Standardwert ist der Ziel-URL-Domänenname, wenn nicht ordnungsgemäß festgelegt wird, kann zum Beispiel nicht ordnungsgemäß zugegriffen werden, z. B.:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888 und senden",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, dann sollte die sendende Domain in www.bt.cn geändert werden",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, dann sollte die sendende Domain in www.bt.cn geändert werden",
 	"1043a7c470b9405f48cc7285d8ce529a": "Die obigen Beispiele sind nur übliche Fälle. Beziehen Sie sich bitte auf die tatsächliche Situation",
 	"058979f04343786888a00f962a02957c": "URL -Adresse",
 	"7db8aa5fda93995f18366b137789a433": "UNIX -Adresse",
@@ -581,7 +581,7 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Fall unempfindlich",
 	"784d5106c2099b614a7e6326aeec9dd8": "Ersetzen Sie nur den ersten",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Regelmäßiger Ausdruck",
-	"75f24fd22bcdebf788c00df6721f4faf": "Standardffekt: Ersetzen Sie alle 'http://www.aapanel.com' durch 'https://www.aapanel.com'.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Standardffekt: Ersetzen Sie alle 'https://github.com/hypr-technologies/iPanel' durch 'https://github.com/hypr-technologies/iPanel'.",
 	"6cb377a9cc9c0a595f359c57158418bb": "Global WebSocket sind aktiviert und dürfen nicht einzeln deaktiviert werden",
 	"130f00db5ce836a6b86e3175bf893fd1": "Reverse Proxy -Projekt löschen",
 	"911a67aa7d7a43e4db64c57dc8a5a704": "*Grenze der maximalen Parallelität",
@@ -619,3 +619,5 @@
 	"4d18e28f94ba8141b12ad7c72361e67f": "Unterstützt kein IP-Zertifikat gegen Channeling, öffnen Sie es nicht, wenn Sie IP-Zugriff direkt verwenden",
 	"3293b90f17c2a86dff994a657361e810": "{0} Tage"
 }
+
+

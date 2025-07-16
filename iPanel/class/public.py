@@ -658,7 +658,7 @@ def GetLocalIp():
         return ipaddress
     except Exception as e:
         try:
-            url = 'https://www.iPanel.com/api/common/getClientIP'
+            url = 'https://www.iPanel.com'
             ipaddress = HttpGet(url)
             WriteFile(filename, ipaddress)
             return ipaddress
@@ -2520,7 +2520,7 @@ def sync_date():
         if os.path.exists(tip_file):
             if s_time - int(readFile(tip_file)) < 60: return False
             os.remove(tip_file)
-        time_str = HttpGet(GetConfigValue('home') + '/api/index/get_time')
+        time_str = HttpGet(GetConfigValue('home') + '')
         new_time = int(time_str)
         time_arr = time.localtime(new_time)
         date_str = time.strftime("%Y-%m-%d %H:%M:%S", time_arr)
@@ -3308,7 +3308,7 @@ def check_domain_cloud(domain):
     run_thread(cloud_check_domain,(domain,))
 
 def count_wp():
-    run_thread(httpPost('http://brandnew.iPanel.com/api/setupCount/setupWP',{}))
+    run_thread(httpPost('http://brandnew.iPanel.com/setupWP',{}))
 
 def cloud_check_domain(domain):
     '''
@@ -5953,11 +5953,11 @@ def check_auth_ip():
     """
     import http_requests
     result = {'www':'','api':''}
-    res = http_requests.post('https://www.hypr.local/api/getIpAddress', data={}, timeout=5, headers={})
+    res = http_requests.post('https://www.hypr.local/ip', data={}, timeout=5, headers={})
     if res.status_code == 200:
         result['www'] = res.text
 
-    res1 = http_requests.post('https://api.hypr.local/api/getIpAddress', data={}, timeout=5, headers={})
+    res1 = http_requests.post('https://api.hypr.local/ip', data={}, timeout=5, headers={})
     if res1.status_code == 200:
         result['api'] = res1.text
 
@@ -6499,7 +6499,7 @@ def get_user_server_ipaddress(host_list, level):
     headers = {"host": "www.hypr.local"}
     for host in host_list:
         try:
-            new_url = "https://{}/Api/getIpAddress".format(host["ip"])
+            new_url = "https://{}/ip".format(host["ip"])
             m_str = HttpGet(new_url, 1, headers=headers)
             ipaddress = re.search(r"^\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}$", m_str).group(0)
             s_ip_info = get_free_ip_info("{}".format(ipaddress))
@@ -7183,5 +7183,7 @@ def ws_send(data: str):
         return True
     except:
         return False
+
+
 
 

@@ -706,7 +706,7 @@ class ajax:
             import json
             conf_status = public.M('config').where("id=?",('1',)).field('status').find()
             if int(session['config']['status']) == 0 and int(conf_status['status']) == 0:
-                public.arequests('get', '{}/api/setupCount/setupPanel?type=Linux'.format(self.__official_url))
+                public.arequests('get', '{}?type=Linux'.format(self.__official_url))
                 public.M('config').where("id=?",('1',)).setField('status',1)
 
             #取回远程版本信息
@@ -2198,4 +2198,6 @@ class Dpkg:
             return debian_res
 
         return 0
+
+
 

@@ -81,3 +81,5 @@
 	"d9647fa654243adb05ea5d73a5fae511": "Especifica o número máximo de conexões SSL simultâneas que o servidor aceitará, pois as conexões SSL e não-SSL simultâneas não podem exceder o limite especificado por \"conexões máximas\", o número real de conexões SSL simultâneas permitidas deve ser menor que este limite",
 	"12e2afb8b1475bdd6d48db7548add761": "Se você precisar alterar a versão MySQL, faça backup de seus dados, desinstale o MySQL e reinstale -os."
 }
+
+

@@ -81,3 +81,5 @@
 	"d9647fa654243adb05ea5d73a5fae511": "Chỉ định số lượng kết nối SSL đồng thời tối đa mà máy chủ sẽ chấp nhận do tổng số SSL và kết nối không SSL đồng thời không thể vượt quá giới hạn được chỉ định bởi các kết nối tối đa",
 	"12e2afb8b1475bdd6d48db7548add761": "Nếu bạn cần thay đổi phiên bản MySQL, vui lòng sao lưu dữ liệu của bạn, gỡ cài đặt MySQL và cài đặt lại nó."
 }
+
+

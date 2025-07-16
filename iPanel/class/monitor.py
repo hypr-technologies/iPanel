@@ -378,3 +378,5 @@ class Monitor:
         cache.set('old_total_request', new_total_request, cache_timeout)
         cache.set('old_get_time', ntime, cache_timeout)
         return {'qps': qps, 'request_count': new_total_request}
+
+

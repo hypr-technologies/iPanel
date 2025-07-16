@@ -540,9 +540,9 @@ class panelPlugin:
         try:
             # if 'status' in result:
             #     if result['status']:
-            #         public.arequests('post','{}/api/setupCount/setupPlugin'.format(self.__official_url),data={"pid":pluginInfo['id'],'p_name':pluginInfo['name']},timeout=3)
+            #         public.arequests('post','{}/setupPlugin'.format(self.__official_url),data={"pid":pluginInfo['id'],'p_name':pluginInfo['name']},timeout=3)
             if result:
-                public.arequests('post', '{}/api/setupCount/setupPlugin'.format(self.__official_url),
+                public.arequests('post', '{}/setupPlugin'.format(self.__official_url),
                                  data={"pid": pluginInfo['id'], 'p_name': pluginInfo['name']}, timeout=3)
             # get.force = 1
             # self.get_cloud_list(get)
@@ -3315,3 +3315,5 @@ class panelPlugin:
     def __ensure_plugin_list_obtained(self, force: bool = False):
         if force or not self.__plugin_list:
             self.__plugin_list = public.load_soft_list(force)
+
+

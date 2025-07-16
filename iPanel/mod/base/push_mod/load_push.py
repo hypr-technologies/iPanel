@@ -272,3 +272,5 @@ class ViewMsgFormat(object):
             return "<span>When the node access is abnormal, the alarm message is pushed (it is not pushed after {} times per day)<span>".format(
                 task.get("number_rule", {}).get("day_num"))
         return None
+
+

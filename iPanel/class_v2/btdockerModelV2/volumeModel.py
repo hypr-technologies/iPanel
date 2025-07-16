@@ -156,3 +156,5 @@ class main(dockerBase):
             return public.return_message(0, 0, public.lang("successfully delete!"))
         except docker.errors.APIError as e:
             return public.return_message(-1, 0, public.lang("Delete failed! {}", e))
+
+
