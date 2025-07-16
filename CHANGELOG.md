@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [8.0.0] - 2024-12-19
+## [8.0.0] - 2025-01-16
 ### Added
 - Forked from aaPanel
 - Rebranded to Infuze Panel
 - Transitioned to Hypr Technologies (iPanel v8.0.0)
+- Complete integration with Hypr Technologies infrastructure
+- Enhanced cloud deployment capabilities
+- Multi-cloud support (AWS, GCP, Azure, bare metal)
+- Advanced security features and compliance tools
+- Improved performance and scalability optimizations
+- Branch protection rules and automated CI/CD workflows
+- Comprehensive documentation updates
 
 ## [7.43.0-infuze-final] - 2024-12-19
 ### Fixed
