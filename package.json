@@ -1,6 +1,6 @@
 {
   "name": "ipanel",
-  "version": "1.0.1",
+  "version": "8.0.0",
   "description": "iPanel - Web-based Server Management Panel",
   "main": "index.js",
   "scripts": {
