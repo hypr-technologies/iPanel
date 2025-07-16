@@ -111,7 +111,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Part of the [Hypr Technologies Ecosystem](https://hypr.tech)**  
-[![Documentation](https://img.shields.io/badge/Documentation-docs.noahdummett.com-blue?style=for-the-badge)](https://docs.noahdummett.com/ipanel)
 [![GitHub](https://img.shields.io/badge/GitHub-hypr--technologies/iPanel-black?style=for-the-badge&logo=github)](https://github.com/hypr-technologies/iPanel)
 [![Web](https://img.shields.io/badge/Web-hypr.tech-38B2AC?style=for-the-badge)](https://hypr.tech)
 [![Twitter](https://img.shields.io/badge/Twitter-@hyprtech-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/hyprtech)
