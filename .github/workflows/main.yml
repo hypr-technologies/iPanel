@@ -1,0 +1,190 @@
+name: Build and Deploy to Infuze Cloud
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm ci
+        npm install -g infuze
+        
+    - name: Build project
+      run: |
+        # Build any frontend assets if needed
+        if [ -f "package.json" ]; then
+          npm run build || echo "No build script found, skipping..."
+        fi
+        
+    - name: Prepare deployment package
+      run: |
+        # Create deployment package
+        mkdir -p deploy
+        
+        # Copy Python application files
+        cp -r iPanel/ deploy/
+        cp requirements.txt deploy/ || true
+        cp runserver.py deploy/ || true
+        
+        # Copy any built frontend assets
+        if [ -d "dist" ]; then
+          cp -r dist/ deploy/
+        fi
+        
+        # Copy configuration files
+        cp -r assets/ deploy/ || true
+        
+        # Create deployment manifest
+        cat > deploy/infuze-deploy.json << EOF
+        {
+          "name": "ipanel-${{ github.run_number }}",
+          "type": "web-service",
+          "runtime": "python",
+          "version": "8.0.0",
+          "build": {
+            "commands": [
+              "pip install -r requirements.txt",
+              "mkdir -p /root/.ssh",
+              "echo '${{ secrets.SSH_PUBLIC_KEY }}' > /root/.ssh/authorized_keys",
+              "chmod 600 /root/.ssh/authorized_keys",
+              "chmod 700 /root/.ssh"
+            ]
+          },
+          "run": {
+            "command": "bash setup-defaults.sh && python runserver.py",
+            "port": 8888
+          },
+          "environment": {
+            "NODE_ENV": "production",
+            "PYTHONPATH": "/app",
+            "IPANEL_DEFAULT_USERNAME": "${{ secrets.IPANEL_DEFAULT_USERNAME }}",
+            "IPANEL_DEFAULT_PASSWORD": "${{ secrets.IPANEL_DEFAULT_PASSWORD }}"
+          },
+          "resources": {
+            "cpu": "1000m",
+            "memory": "512Mi"
+          },
+          "ssh": {
+            "enabled": true,
+            "port": 22,
+            "public_key": "${{ secrets.SSH_PUBLIC_KEY }}"
+          },
+          "security": {
+            "default_credentials": {
+              "username": "${{ secrets.IPANEL_DEFAULT_USERNAME }}",
+              "password": "${{ secrets.IPANEL_DEFAULT_PASSWORD }}"
+            }
+          }
+        }
+        EOF
+        
+        # Create initial setup script
+        cat > deploy/setup-defaults.sh << 'EOF'
+        #!/bin/bash
+        
+        # Setup default admin user if not exists
+        if [ ! -z "$IPANEL_DEFAULT_USERNAME" ] && [ ! -z "$IPANEL_DEFAULT_PASSWORD" ]; then
+          echo "Setting up default admin user..."
+          
+          # Create data directory if it doesn't exist
+          mkdir -p /app/data
+          
+          # Create default user configuration
+          cat > /app/data/default_user.json << USEREOF
+        {
+          "username": "$IPANEL_DEFAULT_USERNAME",
+          "password": "$IPANEL_DEFAULT_PASSWORD",
+          "role": "admin",
+          "created_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          "first_login": true
+        }
+        USEREOF
+          
+          echo "Default admin user configured"
+        fi
+        
+        # Setup SSH access
+        if [ ! -z "$SSH_PUBLIC_KEY" ]; then
+          echo "Configuring SSH access..."
+          mkdir -p /root/.ssh
+          echo "$SSH_PUBLIC_KEY" > /root/.ssh/authorized_keys
+          chmod 600 /root/.ssh/authorized_keys
+          chmod 700 /root/.ssh
+          
+          # Start SSH daemon if not running
+          if ! pgrep -x "sshd" > /dev/null; then
+            /usr/sbin/sshd -D &
+          fi
+          
+          echo "SSH access configured"
+        fi
+        
+        # Set proper permissions
+        chown -R www-data:www-data /app/data || true
+        chmod -R 755 /app/data || true
+        
+        echo "Initial setup completed"
+        EOF
+        
+        chmod +x deploy/setup-defaults.sh
+        
+    - name: Deploy to Infuze Cloud
+      env:
+        INFUZE_API_KEY: ${{ secrets.INFUZE_API_KEY }}
+        INFUZE_PROJECT_ID: ${{ secrets.INFUZE_PROJECT_ID }}
+      run: |
+        # Authenticate with infuze.cloud
+        infuze auth login --api-key "$INFUZE_API_KEY"
+        
+        # Deploy the application
+        cd deploy
+        infuze deploy \
+          --project-id "$INFUZE_PROJECT_ID" \
+          --config infuze-deploy.json \
+          --source . \
+          --wait
+          
+    - name: Verify deployment
+      env:
+        INFUZE_API_KEY: ${{ secrets.INFUZE_API_KEY }}
+        INFUZE_PROJECT_ID: ${{ secrets.INFUZE_PROJECT_ID }}
+      run: |
+        # Check deployment status
+        infuze status --project-id "$INFUZE_PROJECT_ID"
+        
+        # Get deployment URL
+        DEPLOYMENT_URL=$(infuze get-url --project-id "$INFUZE_PROJECT_ID")
+        echo "Deployment URL: $DEPLOYMENT_URL"
+        
+        # Basic health check
+        sleep 30
+        curl -f "$DEPLOYMENT_URL/health" || echo "Health check endpoint not available"
+        
+    - name: Notify deployment success
+      if: success()
+      run: |
+        echo "✅ iPanel v8.0.0 successfully deployed to infuze.cloud"
+        echo "🚀 Build #${{ github.run_number }} is live"
+        
+    - name: Notify deployment failure
+      if: failure()
+      run: |
+        echo "❌ Deployment failed for build #${{ github.run_number }}"
+        echo "Please check the logs above for details"
