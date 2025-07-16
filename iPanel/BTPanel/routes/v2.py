@@ -2,9 +2,12 @@
 # +-------------------------------------------------------------------
 # | iPanel V2路由
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
+# | Copyright (c) 2025 Hypr Technologies
+# | Licensed under the MIT License
+# | https://github.com/hyprtech/ipanel/blob/main/LICENSE
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@hypr.local>
+# | Based on original work by iPanel (2015-2099)
+# | Original Author: hwliang <hwl@hypr.local>
 # +-------------------------------------------------------------------
 from BTPanel.app import *
 

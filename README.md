@@ -5,8 +5,11 @@
   <img src="https://hypr.tech/images/ipanel-logo.png" alt="Hypr Technologies Ecosystem" width="300"/>
   <br/><br/>
   
-[![Hypr Technologies](https://img.shields.io/badge/Hypr_Technologies-Integrated-blue?logo=google-cloud&style=for-the-badge)](https://hypr.tech)
-[![Deployment](https://img.shields.io/badge/1-Click_Deployment-38B2AC?style=for-the-badge&logo=terraform)](https://hypr.tech/deploy)
+[![GitHub release](https://img.shields.io/github/release/hypr-technologies/iPanel?style=for-the-badge)](https://github.com/hypr-technologies/iPanel/releases)
+[![GitHub issues](https://img.shields.io/github/issues/hypr-technologies/iPanel?style=for-the-badge)](https://github.com/hypr-technologies/iPanel/issues)
+[![GitHub stars](https://img.shields.io/github/stars/hypr-technologies/iPanel?style=for-the-badge)](https://github.com/hypr-technologies/iPanel/stargazers)
+[![License](https://img.shields.io/github/license/hypr-technologies/iPanel?style=for-the-badge)](https://github.com/hypr-technologies/iPanel/blob/main/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hypr-technologies/ipanel?style=for-the-badge)](https://hub.docker.com/r/hypr-technologies/ipanel)
 </div>
 
 ## Cloud-Integrated Server Management  
@@ -92,14 +95,24 @@ docker run -d \
 - **Audit Log Streaming**: CloudTrail-compatible logs
 
 ## Documentation & Support
-- [Cloud Integration Guide](https://docs.hypr.tech/ipanel-integration)
-- [API Reference](https://api.hypr.tech/panel-docs)
+- [Installation Guide](https://docs.noahdummett.com/ipanel/installation)
+- [User Manual](https://docs.noahdummett.com/ipanel/user-guide)
+- [API Reference](https://docs.noahdummett.com/ipanel/api-reference)
+- [Configuration Guide](https://docs.noahdummett.com/ipanel/configuration)
+- [Troubleshooting](https://docs.noahdummett.com/ipanel/troubleshooting)
 - [Community Forum](https://forum.hypr.tech)
 - [Enterprise Support](https://hypr.tech/support)
+
+## License
+Copyright (c) 2025 Hypr Technologies
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 **Part of the [Hypr Technologies Ecosystem](https://hypr.tech)**  
-[![Web](https://img.shields.io/badge/Web-hypr.tech-38B2AC)](https://hypr.tech)
-[![Twitter](https://img.shields.io/badge/Twitter-@hyprtech-1DA1F2)](https://twitter.com/hyprtech)
-[![Discord](https://img.shields.io/badge/Discord-Community-5865F2)](https://discord.gg/hypr)
+[![Documentation](https://img.shields.io/badge/Documentation-docs.noahdummett.com-blue?style=for-the-badge)](https://docs.noahdummett.com/ipanel)
+[![GitHub](https://img.shields.io/badge/GitHub-hypr--technologies/iPanel-black?style=for-the-badge&logo=github)](https://github.com/hypr-technologies/iPanel)
+[![Web](https://img.shields.io/badge/Web-hypr.tech-38B2AC?style=for-the-badge)](https://hypr.tech)
+[![Twitter](https://img.shields.io/badge/Twitter-@hyprtech-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/hyprtech)
+[![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/hypr)

@@ -7,12 +7,56 @@ on:
     branches: [ main ]
   release:
     types: [ published ]
+  workflow_dispatch:
 
 env:
   PYTHON_VERSION: '3.9'
   NODE_VERSION: '18'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  lint-and-type-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11']
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r iPanel/requirements.txt
+        pip install ruff mypy pytest pytest-cov pytest-xdist
+        
+    - name: Lint with ruff
+      run: |
+        ruff check iPanel/ --output-format=github
+        
+    - name: Format check with ruff
+      run: |
+        ruff format --check iPanel/
+        
+    - name: Type check with mypy
+      run: |
+        mypy iPanel/ --ignore-missing-imports --show-error-codes --pretty
+        
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -40,24 +84,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r iPanel/requirements.txt
-        pip install pytest pytest-cov pytest-xdist black flake8 mypy
+        pip install pytest pytest-cov pytest-xdist coverage[toml]
         
-    - name: Lint with flake8
+    - name: Run tests with coverage
       run: |
-        flake8 iPanel/ --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 iPanel/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-        
-    - name: Type check with mypy
-      run: |
-        mypy iPanel/ --ignore-missing-imports --no-strict-optional
-        
-    - name: Code formatting check
-      run: |
-        black --check iPanel/
-        
-    - name: Run tests
-      run: |
-        pytest iPanel/ -v --cov=iPanel --cov-report=xml --cov-report=html
+        pytest iPanel/ -v --cov=iPanel --cov-report=xml --cov-report=html --cov-report=term-missing --cov-fail-under=85
         
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
@@ -132,36 +163,42 @@ jobs:
         # Add actual deployment commands here
         
   docker-build:
-    needs: test
+    needs: [lint-and-type-check, test]
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || github.event_name == 'release'
+    permissions:
+      contents: read
+      packages: write
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+      uses: docker/setup-buildx-action@v3
       
-    - name: Login to Docker Hub
-      uses: docker/login-action@v2
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Extract metadata
       id: meta
-      uses: docker/metadata-action@v4
+      uses: docker/metadata-action@v5
       with:
-        images: your-registry/ipanel
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
           type=ref,event=branch
           type=ref,event=pr
           type=semver,pattern={{version}}
           type=semver,pattern={{major}}.{{minor}}
+          type=semver,pattern={{major}}
+          type=sha
           
     - name: Build and push Docker image
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v5
       with:
         context: .
         push: true
@@ -169,3 +206,4 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        platforms: linux/amd64,linux/arm64

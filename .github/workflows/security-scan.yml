@@ -9,15 +9,41 @@ on:
     - cron: '0 6 * * 1'  # Weekly Monday at 6 AM UTC
 
 jobs:
+  codeql-analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'python' ]   # CodeQL supports: ['cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby']
+    name: Analyze (${{ matrix.language }})
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+
   security-scan:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        
+
     - name: Run TruffleHog OSS
       uses: trufflesecurity/trufflehog@main
       with:
@@ -25,7 +51,7 @@ jobs:
         base: main
         head: HEAD
         extra_args: --debug --only-verified
-        
+
     - name: Run Semgrep
       uses: returntocorp/semgrep-action@v1
       with:
@@ -38,17 +64,17 @@ jobs:
           p/sql-injection
           p/xss
           p/command-injection
-          
+
     - name: Run Bandit Security Linter
       run: |
         pip install bandit[toml]
         bandit -r iPanel/ -f json -o bandit-report.json || true
-        
+
     - name: Run Safety Check
       run: |
         pip install safety
         safety check --json --output safety-report.json || true
-        
+
     - name: Upload Security Reports
       uses: actions/upload-artifact@v3
       if: always()
@@ -57,7 +83,7 @@ jobs:
         path: |
           bandit-report.json
           safety-report.json
-          
+
     - name: Comment PR with Security Summary
       if: github.event_name == 'pull_request'
       uses: actions/github-script@v6
@@ -65,7 +91,7 @@ jobs:
         script: |
           const fs = require('fs');
           let comment = '## 🔒 Security Scan Results\n\n';
-          
+
           try {
             const banditReport = JSON.parse(fs.readFileSync('bandit-report.json', 'utf8'));
             const highSeverity = banditReport.results.filter(r => r.issue_severity === 'HIGH').length;
@@ -74,7 +100,7 @@ jobs:
           } catch (e) {
             comment += '**Bandit Results:** Unable to parse report\n';
           }
-          
+
           github.rest.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
