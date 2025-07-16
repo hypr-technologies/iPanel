@@ -1,5 +1,31 @@
 # iPanel v8.0.0 - Changelog
 
+## [8.0.1-alpha] - 2025-07-16
+
+### 🎯 Core Module System - Phase 1
+- **Core Architecture**: Implemented modular core system foundation
+- **Exception Handling**: Added comprehensive error management framework
+- **Error Classes**: Created structured exception hierarchy for better debugging
+- **Module Foundation**: Established base for auth, database, config, logging, and cache managers
+
+### 🔧 Technical Implementation
+- **Modular Design**: Clean separation of concerns with `/core/` directory structure
+- **Error Management**: JSON-serializable exception responses
+- **Type Safety**: Structured error handling with detailed error codes
+- **Extensibility**: Foundation for plugin and service management
+
+### 📁 New Files
+- `core/__init__.py` - Central module management system
+- `core/exceptions.py` - Custom exception classes
+- `.env.example` - Enhanced environment configuration template
+
+### 🏗️ Architecture
+- Established modular foundation for complete iPanel v8.0.0 system
+- Prepared structure for upcoming authentication, database, and configuration modules
+- Implemented error handling best practices
+
+---
+
 ## [8.0.0] - 2025-07-16
 
 ### 🚀 New Features

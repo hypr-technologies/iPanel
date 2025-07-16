@@ -1,4 +1,4 @@
-# iPanel v8.0.0
+# iPanel v8.0.1-alpha
 
 A modern web-based control panel for server management by Hypr Technologies.
 
