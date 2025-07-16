@@ -19,7 +19,7 @@ We're excited to announce the **official release of iPanel v8.0.0**, marking a s
 - **Version**: 8.0.0
 - **Release Date**: January 16, 2025
 - **Repository**: https://github.com/hypr-technologies/iPanel
-- **Documentation**: https://docs.noahdummett.com/ipanel
+- **Documentation**: https://docs.infuze.cloud/ipanel
 - **Docker Hub**: https://hub.docker.com/r/hypr-technologies/ipanel
 
 ### 🌟 New Features
@@ -53,9 +53,9 @@ We're excited to announce the **official release of iPanel v8.0.0**, marking a s
 ### 🔗 Resources
 
 - **GitHub Release**: https://github.com/hypr-technologies/iPanel/releases/tag/v8.0.0
-- **Documentation**: https://docs.noahdummett.com/ipanel
-- **Migration Guide**: https://docs.noahdummett.com/ipanel/migration
-- **API Reference**: https://docs.noahdummett.com/ipanel/api-reference
+- **Documentation**: https://docs.infuze.cloud/ipanel
+- **Migration Guide**: https://docs.infuze.cloud/ipanel/migration
+- **API Reference**: https://docs.infuze.cloud/ipanel/api-reference
 
 ### 📞 Support
 

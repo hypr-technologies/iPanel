@@ -60,7 +60,7 @@ Welcome to the iPanel documentation hub. This comprehensive guide will help you 
 **Current Version**: 8.0.0  
 **Release Date**: December 19, 2024  
 **Last Updated**: January 2025  
-**Documentation URL**: [https://docs.noahdummett.com/ipanel](https://docs.noahdummett.com/ipanel)
+**Documentation URL**: [https://docs.infuze.cloud/ipanel](https://docs.infuze.cloud/ipanel)
 
 ### What's New in v8.0.0
 

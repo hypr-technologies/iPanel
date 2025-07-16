@@ -1,4 +1,4 @@
-# 🌍 Blog Post for hypr.tech and docs.noahdummett.com
+# 🌍 Blog Post for hypr.tech and docs.infuze.cloud
 
 ## Launching iPanel v8.0.0: Unified Cloud Management at Your Fingertips
 
@@ -22,7 +22,7 @@ iPanel has been redesigned and rebranded to offer a robust, cloud-native managem
 
 ### 📚 Comprehensive Documentation
 
-To ensure a smooth transition and onboarding, extensive documentation has been updated and is available at [docs.noahdummett.com](https://docs.noahdummett.com/ipanel).
+To ensure a smooth transition and onboarding, extensive documentation has been updated and is available at [docs.infuze.cloud](https://docs.infuze.cloud/ipanel).
 
 ### Join the Conversation
 

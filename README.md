@@ -146,12 +146,12 @@ For detailed troubleshooting instructions, see [INSTALLATION_FIXES.md](iPanel/IN
 
 ## 📚 Documentation & Support
 
-* [Installation Guide](https://docs.noahdummett.com/ipanel/installation)
-* [Documentation](https://docs.noahdummett.com/ipanel/documentation)
-* [User Manual](https://docs.noahdummett.com/ipanel/user-guide)
-* [API Reference](https://docs.noahdummett.com/ipanel/api)
-* [Configuration Guide](https://docs.noahdummett.com/ipanel/configuration)
-* [Troubleshooting](https://docs.noahdummett.com/ipanel/troubleshooting)
+* [Installation Guide](https://docs.infuze.cloud/ipanel/installation)
+* [Documentation](https://docs.infuze.cloud/ipanel/documentation)
+* [User Manual](https://docs.infuze.cloud/ipanel/user-guide)
+* [API Reference](https://docs.infuze.cloud/ipanel/api)
+* [Configuration Guide](https://docs.infuze.cloud/ipanel/configuration)
+* [Troubleshooting](https://docs.infuze.cloud/ipanel/troubleshooting)
 * [Community Forum](https://github.com/hypr-technologies/iPanel/discussions)
 * [Enterprise Support](https://hypr.tech/support)
 

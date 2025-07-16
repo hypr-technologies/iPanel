@@ -222,4 +222,4 @@ After successful installation:
 **Need Help?**
 - [Community Forum](https://forum.hypr.tech)
 - [GitHub Issues](https://github.com/hypr-technologies/iPanel/issues)
-- [Documentation](https://docs.noahdummett.com/ipanel)
+- [Documentation](https://docs.infuze.cloud/ipanel)

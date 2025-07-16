@@ -400,16 +400,16 @@ site_details = client.sites.get(site.id)
 ### Postman Collection
 
 Download our Postman collection for API testing:
-- [iPanel API Collection](https://docs.noahdummett.com/ipanel/postman-collection.json)
+- [iPanel API Collection](https://docs.infuze.cloud/ipanel/postman-collection.json)
 
 ### OpenAPI Specification
 
 The complete OpenAPI 3.0 specification is available at:
-- [OpenAPI Spec](https://docs.noahdummett.com/ipanel/openapi.json)
+- [OpenAPI Spec](https://docs.infuze.cloud/ipanel/openapi.json)
 
 ---
 
 **Need Help?**
 - [API Forum](https://forum.hypr.tech/c/api)
 - [GitHub Issues](https://github.com/hypr-technologies/iPanel/issues)
-- [Documentation](https://docs.noahdummett.com/ipanel)
+- [Documentation](https://docs.infuze.cloud/ipanel)
