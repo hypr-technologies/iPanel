@@ -83,7 +83,27 @@ docker run -d \
   hypr/ipanel-cloud:latest
 ```
 
-## Cloud Features Preview  
+## Installation Troubleshooting
+
+### Common Installation Issues
+
+If you encounter installation failures, we provide comprehensive fix scripts:
+
+- **Quick Fix**: `./iPanel/quick_fix.sh` - Fast resolution for immediate deployment
+- **Comprehensive Fix**: `./iPanel/install_fix_comprehensive.sh` - Complete system preparation
+- **Diagnostic Tool**: `./iPanel/diagnose_installation.sh` - System analysis and recommendations
+
+For detailed troubleshooting instructions, see [INSTALLATION_FIXES.md](iPanel/INSTALLATION_FIXES.md).
+
+### Manual Installation Steps
+
+1. **System Requirements**: Ensure OpenSSL, Python 3.7+, and development headers are installed
+2. **Dependencies**: Install all system packages (libffi-dev, python3-dev, build-essential)
+3. **Python Environment**: Create clean virtual environment at `/www/server/panel/pyenv`
+4. **Service Setup**: Configure `/etc/init.d/bt` service script
+5. **Verification**: Test all components before deployment
+
+## Cloud Features Preview
 ![Cloud Dashboard](https://hypr.tech/screenshots/cloud-dash.png)  
 *Unified view of multi-cloud resources and server metrics*
 
