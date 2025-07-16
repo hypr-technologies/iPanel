@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [8.0.0] - YYYY-MM-DD
+## [8.0.0] - 2024-12-19
 ### Added
 - Forked from aaPanel
 - Rebranded to Infuze Panel
 - Transitioned to Hypr Technologies (iPanel v8.0.0)
 
-## [7.43.0-infuze-final] - YYYY-MM-DD
+## [7.43.0-infuze-final] - 2024-12-19
 ### Fixed
 - Final adjustments and fixes for Infuze Panel
 
