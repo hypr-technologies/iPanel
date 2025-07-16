@@ -146,3 +146,5 @@ class AesCryptPy3(object):
             return base64.b64decode(str2)
         else:
             return str(base64.b64decode(str2).decode('utf-8'))
+
+

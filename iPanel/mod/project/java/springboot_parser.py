@@ -1045,3 +1045,5 @@ class SpringLogConfigParser(SpringConfigParser):
             if os.path.isdir(file_path) and file_path not in res:
                 res.append(file_path)
         return res
+
+

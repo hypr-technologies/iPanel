@@ -2,7 +2,7 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 install_tmp='/tmp/bt_install.pl'
-download_Url=http://download.bt.cn
+download_Url=https://github.com/hypr-technologies/iPanel/releases/latest/download
 Install_Ftp()
 {	
 	echo 'Installing script files...' > $install_tmp
@@ -24,3 +24,5 @@ if [ "${1}" == 'install' ];then
 else
 	Uninstall_Ftp
 fi
+
+

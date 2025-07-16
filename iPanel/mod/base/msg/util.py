@@ -137,3 +137,5 @@ def get_test_msg(title: str, task_name="Message channel configuration reminders"
     t.title = title
     t.template_name = task_name
     return t
+
+

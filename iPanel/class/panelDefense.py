@@ -85,3 +85,5 @@ class bot_safe:
         if self.is_scripter(user_agent): return False
 
         return True
+
+

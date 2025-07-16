@@ -61,3 +61,5 @@ with open(task_log, 'a') as f:
         if crontab_data_list:
             public.M('crontab').where('echo=?', (echo_value,)).setField('result', 1)
         # f.write("{0} - 最后一次定时任务执行成功\n".format(current_time))
+
+

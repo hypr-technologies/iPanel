@@ -75,3 +75,5 @@ class BaseDns(object):
         """
         self.logger.info("delete_dns_record")
         raise NotImplementedError("delete_dns_record method must be implemented.")
+
+

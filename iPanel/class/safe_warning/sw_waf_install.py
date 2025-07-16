@@ -65,3 +65,5 @@ def check_run():
 
     return True,'If the WAF firewall is not installed, the server website is vulnerable to attacks and there is a security risk'
 
+
+

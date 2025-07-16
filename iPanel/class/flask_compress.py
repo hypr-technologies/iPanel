@@ -144,3 +144,5 @@ class Compress(object):
                       fileobj=gzip_buffer) as gzip_file:
             gzip_file.write(response.get_data())
         return gzip_buffer.getvalue()
+
+

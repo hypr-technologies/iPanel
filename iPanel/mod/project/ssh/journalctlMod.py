@@ -55,3 +55,5 @@ class JournalctlManage(SSHbase):
                     entry["log_file"] = "journalctl"
                     new_logins.append(entry)
         return new_logins, current_positions
+
+

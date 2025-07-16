@@ -1896,3 +1896,5 @@ class main(IpRestrict, RealProcess, Proxy, Redirect):  # 继承并使用同ip黑
 if __name__ == "__main__":
     m = main()
     m.install_dependence("555.com", "82", "/xiaopacai/laravel11.5.0/", composer_version="2.7.3")
+
+

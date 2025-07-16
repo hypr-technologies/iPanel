@@ -735,3 +735,5 @@ class Redirect(RealRedirect):
             return json_response(status=flag, msg=data)
         else:
             return json_response(status=flag, data=data)
+
+

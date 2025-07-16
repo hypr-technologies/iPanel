@@ -319,3 +319,4 @@ class main(logsBase):
                 result.append(line)
 
          return result
+

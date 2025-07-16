@@ -43,3 +43,4 @@ def check_run():
                 # return False,"未设置umask为027"
         else:
             return True,"Risk-free"
+

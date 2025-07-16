@@ -143,7 +143,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Target: è possibile compilare il sito necessario per proxy, l'obiettivo se si sceglie l'indirizzo URL deve essere un normale accesso all'URL, se si sceglie UNIX deve essere un file socket",
 	"048b905444a74d35b8a2847c2e6455bd": "Invia il nome di dominio: aggiungi il nome di dominio all'intestazione della richiesta per passare al server back-end, il valore predefinito è il nome di dominio URL di destinazione, se non impostato correttamente, non è possibile accedere correttamente al proxy, ad esempio: ad esempio:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888, quindi invia il nome di dominio mantenendo $ http_host",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, quindi il dominio di invio dovrebbe essere modificato in www.bt.cn",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, quindi il dominio di invio dovrebbe essere modificato in www.bt.cn",
 	"1043a7c470b9405f48cc7285d8ce529a": "Gli esempi di cui sopra sono solo casi comuni, fare riferimento alla situazione effettiva",
 	"058979f04343786888a00f962a02957c": "Indirizzo URL",
 	"7db8aa5fda93995f18366b137789a433": "Indirizzo unix",
@@ -591,9 +591,11 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Caso insensibile",
 	"784d5106c2099b614a7e6326aeec9dd8": "Sostituisci solo il primo",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Espressione regolare",
-	"75f24fd22bcdebf788c00df6721f4faf": "Effetto predefinito: sostituire tutto 'http://www.aapanel.com' con 'https://www.aapanel.com'.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Effetto predefinito: sostituire tutto 'https://github.com/hypr-technologies/iPanel' con 'https://github.com/hypr-technologies/iPanel'.",
 	"6cb377a9cc9c0a595f359c57158418bb": "WebSocket globale è abilitato e non è consentito essere disabilitato individualmente",
 	"130f00db5ce836a6b86e3175bf893fd1": "Elimina il progetto proxy inverso",
 	"fcdb0820b609e6bcb1a661a095274b69": "Sostituisci tutte le parole chiave abbinate",
 	"3293b90f17c2a86dff994a657361e810": "{0} giorni"
 }
+
+

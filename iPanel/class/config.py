@@ -828,7 +828,7 @@ class config:
         @author hezhihong
         """
         #取国际标准0时时间戳
-        time_str = public.HttpGet(public.GetConfigValue('home') + '/api/index/get_time')
+        time_str = public.HttpGet(public.GetConfigValue('home') + '')
         try:
             new_time = int(time_str)-28800
         except:
@@ -1100,7 +1100,7 @@ class config:
             if ip in local_ip: continue
             if ip in ip_list: continue
             ip_list.append(ip)
-        net_ip = public.httpGet('{}/api/common/getClientIP'.format(public.OfficialApiBase()))
+        net_ip = public.httpGet('{}'.format(public.OfficialApiBase()))
 
         if net_ip:
             net_ip = net_ip.strip()
@@ -3752,3 +3752,5 @@ class config:
                 pass
 
         return public.returnMsg(True, "OK")
+
+

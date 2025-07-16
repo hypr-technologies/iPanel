@@ -1,1 +1,3 @@
-{"product": "Linux panel", "setup_path": "/www/server", "openlitespeed_path": "/usr/local", "language": "English", "title": "aaPanel Linux panel", "brand": "aaPanel", "root_path": "/www", "template": "default", "logs_path": "/www/wwwlogs", "home": "https://www.aapanel.com", "recycle_bin": true}
+{"product": "Linux panel", "setup_path": "/www/server", "openlitespeed_path": "/usr/local", "language": "English", "title": "aaPanel Linux panel", "brand": "aaPanel", "root_path": "/www", "template": "default", "logs_path": "/www/wwwlogs", "home": "https://github.com/hypr-technologies/iPanel", "recycle_bin": true}
+
+

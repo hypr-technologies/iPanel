@@ -1680,3 +1680,5 @@ class DNSApiManager:
             m.save_config()
 
         return json_response(status=True, data=res)
+
+

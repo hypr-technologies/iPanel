@@ -136,7 +136,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "目標：您可以填寫需要代理的網站，如果選擇URL地址必須是對URL的正常訪問，則目標",
 	"048b905444a74d35b8a2847c2e6455bd": "發送域名：將域名添加到請求標頭中以傳遞到後端服務器，默認值是目標URL域名，如果未正確設置，則可能無法正確訪問代理，例如：",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888，然後發送域名保留$ http_host",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn，然後將發送域更改為www.bt.cn",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel，然後將發送域更改為www.bt.cn",
 	"1043a7c470b9405f48cc7285d8ce529a": "以上示例僅是常見案例，請參閱實際情況",
 	"058979f04343786888a00f962a02957c": "URL地址",
 	"7db8aa5fda93995f18366b137789a433": "UNIX地址",
@@ -720,7 +720,7 @@
 	"27b5815ff5cf2ffc8fd2fbcf30d09e02": "目標：您可以填寫需要代理的網站，如果選擇 URL 地址必須是對 URL 的正常訪問，如果選擇 UNIX 必須是一個套接字文件",
 	"4071575d631195e6bd7bf8460289a6ac": "發送域名：將域名添加到請求頭中以傳遞到後端服務器，默認是目標 URL 域名，如果未正確設置可能導致代理無法正常訪問，例如：",
 	"63e15fe5b20557482b575b0c0cde940c": "http://192.168.100.20:19888，然後只需發送域名保留 $http_host",
-	"4807bf173f4ed624a10b42d732e716cc": "http://www.bt.cn，然後發送域名應更改為 www.bt.cn",
+	"4807bf173f4ed624a10b42d732e716cc": "https://github.com/hypr-technologies/iPanel，然後發送域名應更改為 www.bt.cn",
 	"5ddaf95629bcd2aab2a9ea8a994c4c86": "以上示例僅是常見案例，請參閱實際情況",
 	"0d5005810ad9d9ee4e634ca6d81cb70c": "URL 地址",
 	"ed13dbe850da2daa3f358e2c87a69510": "Unix 地址",
@@ -1123,7 +1123,7 @@
 	"9759e35612e3e28055152d8d16999ee2": "不區分大小寫",
 	"6443c81cf66d702a2c44d6a30eb83d7b": "僅替換第一個",
 	"2e576047ae509e55d8e86f36d730caf4": "正則表達式",
-	"2c4b2640724420b487311655246e81bb": "默認效果：將所有 'http://www.aapanel.com' 替換為 'https://www.aapanel.com'。",
+	"2c4b2640724420b487311655246e81bb": "默認效果：將所有 'https://github.com/hypr-technologies/iPanel' 替換為 'https://github.com/hypr-technologies/iPanel'。",
 	"9290a9d67d7f252a938a494807914166": "全局 WebSocket 已啟用，不允許單獨禁用",
 	"ea93c1ee758e23a712974a828d83c254": "刪除反向代理項目",
 	"40518e09840c9d575c1592da5b2343cf": "404錯誤頁面",
@@ -1163,3 +1163,5 @@
 	"d396baa966d3d1fce62cb3bad239bbb6": "不支持IP證書反通道，如果直接使用，請不要打開，請不要打開，請不要打開",
 	"7aad1ac47f0467fc522167a273a046e5": "{0}天"
 }
+
+

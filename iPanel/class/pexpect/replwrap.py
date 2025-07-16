@@ -128,3 +128,5 @@ def bash(command="bash"):
 
     return REPLWrapper(child, u'\\$', prompt_change,
                        extra_init_cmd="export PAGER=cat")
+
+

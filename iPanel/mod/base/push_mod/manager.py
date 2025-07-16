@@ -476,3 +476,5 @@ class PushManager:
         tr_conf = TaskRecordConfig(task_id)
         if os.path.exists(tr_conf.config_file_path):
             os.remove(tr_conf.config_file_path)
+
+

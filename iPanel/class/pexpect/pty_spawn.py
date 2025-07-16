@@ -858,3 +858,5 @@ def spawnu(*args, **kwargs):
     """Deprecated: pass encoding to spawn() instead."""
     kwargs.setdefault('encoding', 'utf-8')
     return spawn(*args, **kwargs)
+
+

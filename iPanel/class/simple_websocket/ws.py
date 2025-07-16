@@ -451,3 +451,5 @@ class Client(Base):
     def close(self, reason=None, message=None):
         super().close(reason=reason, message=message)
         self.sock.close()
+
+

@@ -21,3 +21,5 @@ def random_base32(length=16, random=None,
         random.choice(chars)
         for _ in range(length)
     )
+
+

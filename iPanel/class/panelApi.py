@@ -250,3 +250,4 @@ class panelApi:
         data['tmp_time'] = time.time()
         self.save_api_config(data)
         return public.return_msg_gettext(True,data['tmp_token'])
+

@@ -369,3 +369,5 @@ class searcher_re(object):
         self.match = the_match
         self.end = self.match.end()
         return best_index
+
+

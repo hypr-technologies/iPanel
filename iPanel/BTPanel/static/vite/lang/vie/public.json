@@ -1,6 +1,6 @@
 {
 	"Public": {
-		"Name": "aaPanel",
+		"Name": "iPanel",
 		"All": "Tất cả",
 		"SelectAll": "Chọn tất cả",
 		"Punctuation": {
@@ -137,3 +137,5 @@
 		}
 	}
 }
+
+

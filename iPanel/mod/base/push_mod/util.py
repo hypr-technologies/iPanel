@@ -142,3 +142,5 @@ def get_db_by_file(file: str):
     db_obj = db.Sql()
     db_obj._Sql__DB_FILE = file
     return db_obj
+
+

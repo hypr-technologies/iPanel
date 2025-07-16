@@ -80,3 +80,5 @@
 	"67199120cc71036a3f020f7955e4ee37": "Specifica il numero massimo di richieste che possono essere servite attraverso una sessione Keep-Alive (persistente)",
 	"d9647fa654243adb05ea5d73a5fae511": "Specifica il numero massimo di connessioni SSL simultanee che il server accetterà poiché le connessioni SSL e non-SSL simultanee totali non possono superare il limite specificato dalle \"connessioni massime\", il numero effettivo di connessioni SSL simultanee consentite deve essere inferiore a questo limite"
 }
+
+

@@ -349,3 +349,5 @@ class ANSI (term):
         FSM rather than just improve or override this method. '''
         screen = fsm.memory[0]
         fsm.memory = [screen]
+
+

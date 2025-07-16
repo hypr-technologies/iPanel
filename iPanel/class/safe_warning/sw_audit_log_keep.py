@@ -29,3 +29,5 @@ def check_run():
         if 'keep_logs'.lower() == tmp.group(1).lower():
             return True, 'Risk-free'
     return False, 'The current max_log_file_action value is {}, it should be KEEP_LOGS'.format(tmp.group(1))
+
+

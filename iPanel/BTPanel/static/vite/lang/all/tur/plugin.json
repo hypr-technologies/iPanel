@@ -80,3 +80,5 @@
 	"67199120cc71036a3f020f7955e4ee37": "Bir tutucu (kalıcı) oturum aracılığıyla sunulabilecek maksimum istek sayısını belirtir",
 	"d9647fa654243adb05ea5d73a5fae511": "Sunucunun kabul edeceği maksimum eşzamanlı SSL bağlantıları sayısını belirtir, çünkü toplam eşzamanlı SSL ve SSL olmayan bağlantılar “maksimum bağlantılar” ile belirtilen sınırı aşamaz, bu sınırdan izin verilen gerçek eşzamanlı SSL bağlantılarının sayısı bu sınırdan daha düşük olmalıdır"
 }
+
+

@@ -3087,3 +3087,5 @@ class SqliteEasy:
         self.__OPT_LIMIT.clear()
         self.__OPT_UPDATE.clear()
         self.__OPT_DUPLICATE.clear()
+
+

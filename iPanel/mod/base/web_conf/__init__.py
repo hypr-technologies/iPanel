@@ -64,3 +64,5 @@ def remove_sites_service_config(site_name: str, config_prefix: str = ""):
     rewrite_path = "/www/server/panel/vhost/rewrite/{}{}.conf".format(config_prefix, site_name)
     if os.path.isdir(rewrite_path):
         os.remove(rewrite_path)
+
+

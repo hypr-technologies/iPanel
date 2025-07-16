@@ -726,3 +726,5 @@ class main(Compose):
             return public.return_message(0, 0, public.lang("Modify successfully!"))
         except:
             public.print_log(public.get_error_info())
+
+

@@ -139,7 +139,7 @@
 	"27b5815ff5cf2ffc8fd2fbcf30d09e02": "대상: 프록시할 사이트를 입력할 수 있습니다. 대상이 URL 주소인 경우 정상적으로 접근 가능한 URL이어야 하며, UNIX를 선택하는 경우 소켓 파일이어야 합니다.",
 	"4071575d631195e6bd7bf8460289a6ac": "도메인 이름 보내기: 요청 헤더에 도메인 이름을 추가하여 백엔드 서버로 전달합니다. 기본값은 대상 URL 도메인 이름입니다. 올바르게 설정되지 않으면 프록시에 정상적으로 접근하지 못할 수 있습니다. 예를 들어:",
 	"63e15fe5b20557482b575b0c0cde940c": "http://192.168.100.20:19888인 경우 도메인 이름을 $http_host로 유지합니다.",
-	"4807bf173f4ed624a10b42d732e716cc": "http://www.bt.cn인 경우 보내는 도메인을 www.bt.cn으로 변경해야 합니다.",
+	"4807bf173f4ed624a10b42d732e716cc": "https://github.com/hypr-technologies/iPanel인 경우 보내는 도메인을 www.bt.cn으로 변경해야 합니다.",
 	"5ddaf95629bcd2aab2a9ea8a994c4c86": "위의 예시는 일반적인 경우일 뿐이며, 실제 상황을 참조하십시오.",
 	"0d5005810ad9d9ee4e634ca6d81cb70c": "URL 주소",
 	"ed13dbe850da2daa3f358e2c87a69510": "Unix 주소",
@@ -576,7 +576,7 @@
 	"9759e35612e3e28055152d8d16999ee2": "대소문자 구분 안 함",
 	"6443c81cf66d702a2c44d6a30eb83d7b": "첫 번째만 교체",
 	"2e576047ae509e55d8e86f36d730caf4": "정규 표현식",
-	"2c4b2640724420b487311655246e81bb": "기본 효과: 'http://www.aapanel.com'을 'https://www.aapanel.com'으로 모두 교체합니다.",
+	"2c4b2640724420b487311655246e81bb": "기본 효과: 'https://github.com/hypr-technologies/iPanel'을 'https://github.com/hypr-technologies/iPanel'으로 모두 교체합니다.",
 	"9290a9d67d7f252a938a494807914166": "전역 웹소켓이 활성화되어 있으며 개별적으로 비활성화할 수 없습니다.",
 	"ea93c1ee758e23a712974a828d83c254": "역방향 프록시 프로젝트 삭제",
 	"8c2f09b55b0708bbf6b495baa66a4637": "일치하는 모든 키워드 교체",
@@ -718,7 +718,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "대상 : 프록시 해야하는 사이트를 작성할 수 있습니다. 대상을 선택하면 URL 주소를 선택하면 URL에 대한 일반 액세스 여야합니다. UNIX를 선택하면 소켓 파일이어야합니다.",
 	"048b905444a74d35b8a2847c2e6455bd": "도메인 이름 보내기 : 요청 헤더에 도메인 이름을 추가하여 백엔드 서버로 전달하십시오. 기본값은 대상 URL 도메인 이름입니다. 제대로 설정되지 않으면 프록시를 제대로 액세스 할 수 없습니다.",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888은 $ http_host를 유지하는 도메인 이름을 보내십시오",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, 송금 도메인은 www.bt.cn으로 변경해야합니다.",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, 송금 도메인은 www.bt.cn으로 변경해야합니다.",
 	"1043a7c470b9405f48cc7285d8ce529a": "위의 예는 일반적인 경우에만 가능합니다. 실제 상황을 참조하십시오.",
 	"058979f04343786888a00f962a02957c": "URL 주소",
 	"7db8aa5fda93995f18366b137789a433": "유닉스 주소",
@@ -1156,9 +1156,11 @@
 	"90f226142cacd8ccceeb26378b3490f8": "케이스 둔감",
 	"784d5106c2099b614a7e6326aeec9dd8": "첫 번째를 교체하십시오",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "정규 표현",
-	"75f24fd22bcdebf788c00df6721f4faf": "기본 효과 : 모든 'http://www.aapanel.com'을 'https://www.aapanel.com'으로 교체하십시오.",
+	"75f24fd22bcdebf788c00df6721f4faf": "기본 효과 : 모든 'https://github.com/hypr-technologies/iPanel'을 'https://github.com/hypr-technologies/iPanel'으로 교체하십시오.",
 	"6cb377a9cc9c0a595f359c57158418bb": "Global WebSocket은 활성화되어 개별적으로 비활성화 할 수 없습니다.",
 	"130f00db5ce836a6b86e3175bf893fd1": "리버스 프록시 프로젝트를 삭제하십시오",
 	"fcdb0820b609e6bcb1a661a095274b69": "일치하는 모든 키워드를 교체하십시오",
 	"3293b90f17c2a86dff994a657361e810": "{0} 일"
 }
+
+

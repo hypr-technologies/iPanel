@@ -28,3 +28,5 @@ def check_run():
         else:
             return False, 'SSH graphical forwarding is not disabled'
     return True, 'Risk-free'
+
+

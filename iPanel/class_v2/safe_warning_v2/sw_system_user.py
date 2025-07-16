@@ -34,3 +34,4 @@ def check_run():
     if ret:
         return False, 'There is a backdoor user: %s'%''.join(ret)
     return True, 'No backdoor users are currently found'
+

@@ -759,3 +759,5 @@ class Firewalld(Base):
             @return list[dict{}...]
         """
         return self.parse_public_zone()["forward_ports"]
+
+

@@ -637,3 +637,4 @@ class Proxy(object):
             return json_response(status=False, msg=data)
         else:
             return json_response(status=True, data=data)
+

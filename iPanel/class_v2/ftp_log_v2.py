@@ -559,3 +559,5 @@ $IncludeConfig /etc/rsyslog.d/*.conf
                 return True
             return False
         return True
+
+

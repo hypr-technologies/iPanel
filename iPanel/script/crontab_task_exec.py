@@ -40,3 +40,5 @@ res=getattr(plugin_object,def_name)(args)
 if res['status'] != 0 and 'message' in res:
     print(res['message'])
     sys.exit()
+
+

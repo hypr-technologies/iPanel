@@ -188,3 +188,5 @@ class FileSystemCache(BaseCache):
                     return False
         except (IOError, OSError, pickle.PickleError):
             return False
+
+

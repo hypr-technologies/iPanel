@@ -3450,3 +3450,4 @@ var docker = {
 }
 //默认触发
 $('#cutMode .tabs-item[data-type="' + (bt.get_cookie('docker_model') || 'container') + '"]').trigger('click');
+

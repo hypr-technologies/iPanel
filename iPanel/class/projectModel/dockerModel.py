@@ -56,3 +56,5 @@ class main :#line:15
         if isinstance (O0OO0OOOOO00OOOO0 ,dict ):#line:96
             OO000OOOO000OOO0O =O0OO0OOOOO00OOOO0 ['result']#line:97
         return OO000OOOO000OOO0O #line:98
+
+

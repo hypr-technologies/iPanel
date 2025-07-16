@@ -300,3 +300,5 @@ class ViewMsgFormat(object):
             return "<span>Push alarm information when there is an exception in file synchronization (push {} times per day and then not push)<span>".format(
                 task.get("number_rule", {}).get("day_num"))
         return None
+
+

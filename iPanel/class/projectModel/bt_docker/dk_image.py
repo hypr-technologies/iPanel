@@ -224,3 +224,4 @@ class main :#line:18
         for OO00OOO0000OO0O00 in O00O000OO0OO000OO ['msg']['images_list']:#line:387
             O0OOOO0OO000OO0OO +=OO00OOO0000OO0O00 ['size']#line:388
         return public .returnMsg (True ,{'num':OO000O0000O000000 ,'size':O0OOOO0OO000OO0OO })
+

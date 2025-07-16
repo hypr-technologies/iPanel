@@ -573,3 +573,5 @@ class JvavWebConfig:
             else:
                 return res
         return "只支持nginx设置静态路由"
+
+

@@ -24,3 +24,4 @@ if [ $? -eq 0 ]; then
 else
     echo "Git installation failed."
 fi
+

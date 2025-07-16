@@ -1,1 +1,3 @@
 System.register(["./naive-legacy.js?v=1752142539265","./vue-legacy.js?v=1752142539265"],(function(e,l){"use strict";var t,a,r,s,u,n,d,i;return{setters:[e=>{t=e.cE},e=>{a=e.k,r=e.r,s=e.a1,u=e.X,n=e.s,d=e.a2,i=e.q}],execute:function(){e("_",a({__name:"index",props:{model:{},rules:{},labelWidth:{default:"126"},labelPlacement:{default:"left"}},setup(e,{expose:l}){const a=r(null);return l({validate:()=>a.value?.validate(),restoreValidation:()=>a.value?.restoreValidation()}),(e,l)=>{const r=t;return u(),s(r,n(e.$attrs,{ref_key:"formRef",ref:a,model:e.model,rules:e.rules,"label-width":e.labelWidth,"label-placement":e.labelPlacement,"show-require-mark":!1}),{default:d((()=>[i(e.$slots,"default")])),_:3},16,["model","rules","label-width","label-placement"])}}}))}}}));
+
+

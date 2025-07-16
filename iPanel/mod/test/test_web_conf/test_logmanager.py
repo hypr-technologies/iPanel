@@ -157,3 +157,5 @@ if __name__ == '__main__':
     s = unittest.TestSuite()
     s.addTest(TestRealLogMgr())
     unittest.TextTestRunner().run(s)
+
+

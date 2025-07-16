@@ -108,3 +108,5 @@ class wxapp():
     #生成request_token
     def set_request_token(self):
         session['request_token_head'] = public.GetRandomString(48)
+
+

@@ -46,3 +46,5 @@ class WorkFor(IntEnum):
     panel = 2
     mails = 3
     account = 4
+
+

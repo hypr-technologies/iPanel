@@ -8,7 +8,10 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'iPanel'))
 
 try:
-    from iPanel.class import public
+    import sys
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'iPanel', 'class'))
+    import public
 except ImportError:
     # Create a mock public module if not available
     class MockPublic:

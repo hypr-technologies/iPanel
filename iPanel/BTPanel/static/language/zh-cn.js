@@ -17,3 +17,4 @@ var BT_MSG = {
 	"SITE_ADD_EXISTS":"指定域名已绑定过!",
 	"SITE_ADD_BINDING":"域名和子目录名称不能为空!"
 }
+

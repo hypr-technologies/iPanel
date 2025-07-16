@@ -136,7 +136,7 @@
 	"961a1b33a6554a79f4b9ab085888f601": "Target: você pode preencher o site que você precisa proxy, o alvo se escolher o endereço URL deve ser um acesso normal ao URL, se você escolher o Unix, deve ser um arquivo de soquete",
 	"048b905444a74d35b8a2847c2e6455bd": "Enviar nome de domínio: Adicione o nome de domínio ao cabeçalho da solicitação para passar para o servidor de back-end, o padrão é o nome do domínio da URL de destino, se não estiver definido corretamente, pode levar ao proxy não pode ser acessado corretamente, por exemplo:",
 	"22f315cad295b597b1cee7514fad4407": "http://192.168.100.20:19888, depois envie o nome de domínio que mantém $ http_host",
-	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "http://www.bt.cn, então o domínio de envio deve ser alterado para www.bt.cn",
+	"aa2701f9cd0bbeb6ebc92f260a94e4b2": "https://github.com/hypr-technologies/iPanel, então o domínio de envio deve ser alterado para www.bt.cn",
 	"1043a7c470b9405f48cc7285d8ce529a": "Os exemplos acima são apenas casos comuns, consulte a situação real",
 	"058979f04343786888a00f962a02957c": "Endereço de URL",
 	"7db8aa5fda93995f18366b137789a433": "Endereço unix",
@@ -581,7 +581,7 @@
 	"90f226142cacd8ccceeb26378b3490f8": "Caso insensível",
 	"784d5106c2099b614a7e6326aeec9dd8": "Substitua apenas o primeiro",
 	"0c49a7a7a3887766b5de7ee60fdb6b7b": "Expressão regular",
-	"75f24fd22bcdebf788c00df6721f4faf": "Efeito padrão: substitua todos os 'http://www.aapanel.com' por 'https://www.aapanel.com'.",
+	"75f24fd22bcdebf788c00df6721f4faf": "Efeito padrão: substitua todos os 'https://github.com/hypr-technologies/iPanel' por 'https://github.com/hypr-technologies/iPanel'.",
 	"6cb377a9cc9c0a595f359c57158418bb": "O WebSocket global está ativado e não pode ser desativado individualmente",
 	"130f00db5ce836a6b86e3175bf893fd1": "Excluir projeto de proxy reverso",
 	"911a67aa7d7a43e4db64c57dc8a5a704": "*Limite de concorrência máxima",
@@ -619,3 +619,5 @@
 	"4d18e28f94ba8141b12ad7c72361e67f": "Não suporta anti-canaling do certificado IP, não o abra se você usar o acesso IP diretamente",
 	"3293b90f17c2a86dff994a657361e810": "{0} dias"
 }
+
+

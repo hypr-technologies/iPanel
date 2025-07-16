@@ -23,3 +23,5 @@ if new_conf: conf += new_conf
 public.writeFile(ftp_file, conf)
 public.writeFile(ftp_log_file, '')
 print('|pure-ftpd log cut completed')
+
+

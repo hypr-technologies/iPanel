@@ -608,3 +608,5 @@ class BusinessSSL(object):
             } for ssl in ssl_obj
         ])
         return public.success_v2({"data": res, "total": total, "msg": msg})
+
+

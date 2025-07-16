@@ -613,3 +613,4 @@ class ViewMsgFormat(BaseTaskViewMsg):
 
 
 SiteMonitorViolationWordTask.VIEW_MSG = VulnerabilityScanningTask.VIEW_MSG = FileDetectTask.VIEW_MSG = SafeCloudTask.VIEW_MSG = ViewMsgFormat
+

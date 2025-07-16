@@ -250,3 +250,5 @@ if __name__ == "__main__":  # 文件验证调用脚本
             public.ExecShell('/etc/init.d/nginx start');
     else:
         result = public.ExecShell('/etc/init.d/httpd reload')
+
+

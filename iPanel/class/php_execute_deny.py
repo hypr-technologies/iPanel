@@ -207,3 +207,4 @@ class PhpExecuteDeny:
         if hasattr(args,'dir'):
             if not args.dir:
                 return public.returnMsg(False, public.lang("Directory cannot be empty"))
+

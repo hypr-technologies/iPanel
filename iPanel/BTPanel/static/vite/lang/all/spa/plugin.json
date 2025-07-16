@@ -81,3 +81,5 @@
 	"d9647fa654243adb05ea5d73a5fae511": "Especifica el número máximo de conexiones SSL concurrentes que el servidor aceptará ya que las conexiones SSL concurrentes totales y no SSL no pueden exceder el límite especificado por \"conexiones máximas\", el número real de conexiones SSL concurrentes permitidas debe ser inferior a este límite",
 	"12e2afb8b1475bdd6d48db7548add761": "Si necesita cambiar la versión MySQL, haga una copia de seguridad de sus datos, desinstale MySQL y reinstale."
 }
+
+

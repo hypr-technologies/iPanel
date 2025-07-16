@@ -364,3 +364,5 @@ class firewalls:
         data['firewall_status'] = self.CheckFirewallStatus()
         return data
 
+
+

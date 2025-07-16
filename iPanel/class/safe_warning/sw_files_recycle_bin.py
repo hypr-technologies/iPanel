@@ -37,3 +37,5 @@ def check_run():
     if not os.path.exists('/www/server/panel/data/recycle_bin.pl'):
         return False,'The function of [File Recycle Station] is not enabled at present. There is a risk that files cannot be retrieved in case of being deleted by mistake'
     return True,'Risk-free'
+
+

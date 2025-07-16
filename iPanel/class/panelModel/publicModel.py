@@ -284,3 +284,4 @@ class main(panelBase):
             count = public.M('database_servers').where("LOWER(db_type)=LOWER(?)", (name,)).count()
             if count > 0: return public.returnMsg(True,'accordWith')
         return public.returnMsg(False,'Not true')
+

@@ -804,3 +804,5 @@ class main(dockerBase):
         get.wsLogTitle = "Start executing the command, please wait..."
         get._log_path = self._rCmd_log
         return self.get_ws_log(get)
+
+

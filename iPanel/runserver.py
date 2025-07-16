@@ -9,12 +9,13 @@
 # | Based on original work by iPanel (2015-2099)
 # | Original Author: hwliang <hwl@hypr.local>
 # +-------------------------------------------------------------------
-from os import environ
-from BTPanel import app,sys
+import os
+from BTPanel import app, sys
 
-if __name__ == '__main__':
-    f = open('data/port.pl')
-    PORT = int(f.read())
-    HOST = '0.0.0.0'
-    f.close()
-    app.run(host=HOST,port=PORT)
+if __name__ == "__main__":
+    with open("data/port.pl") as f:
+        PORT = int(f.read())
+    HOST = "0.0.0.0"
+    app.run(host=HOST, port=PORT)
+
+

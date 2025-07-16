@@ -541,3 +541,5 @@ class GitMager:
     @staticmethod
     def git_ssh_pub_key(get=None):
         return GitTool.ssh_pub_key()
+
+

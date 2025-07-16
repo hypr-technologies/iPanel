@@ -606,3 +606,5 @@ class AccessRestriction:
             return json_response(status=False, msg="请求参数错误")
         data = self._ar.site_access_restriction_info(site_name)
         return json_response(status=True, data=data)
+
+

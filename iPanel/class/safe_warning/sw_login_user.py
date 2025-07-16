@@ -65,3 +65,4 @@ def get_ulist():
         u_info['user'],u_info['pass'],u_info['uid'],u_info['gid'],u_info['user_msg'],u_info['home'],u_info['login'] = u_tmp
         u_list.append(u_info)
     return u_list
+

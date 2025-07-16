@@ -90,3 +90,4 @@ def check_run():
                 return False, 'Please update polkit'
             return True, 'Risk-free'
     return True, 'Risk-free'
+

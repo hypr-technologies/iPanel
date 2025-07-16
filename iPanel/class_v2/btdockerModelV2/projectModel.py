@@ -534,3 +534,5 @@ class main(dockerBase):
         }
         dp.sql("templates").insert(pdata)
         dp.write_log("Add template [{}] successful!".format(server_name))
+
+

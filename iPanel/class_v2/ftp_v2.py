@@ -330,3 +330,5 @@ class ftp:
             return_message=public.returnMsg(False, public.lang('Editing error'))
             del return_message['status']
             return public.return_message(-1,0, return_message['msg'])
+
+

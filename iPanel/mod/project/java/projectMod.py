@@ -3250,3 +3250,4 @@ class main(JvavWebConfig, Proxy, Redirect, GitMager):
             return json_response(False, res)
 
         return json_response(True, '已添加到安装任务，请在消息盒子中查看安装情况')
+

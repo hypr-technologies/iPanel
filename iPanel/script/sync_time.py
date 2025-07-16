@@ -64,7 +64,7 @@ if __name__ == '__main__':
     if flag == 0:
         try:
             print("Getting time from {}...".format('http://www.hypr.local'))
-            r = requests.get("http://www.hypr.local/api/index/get_time")
+            r = requests.get("http://www.hypr.local")
             timestamp = int(r.text)
             tz = pytz.timezone(sys.argv[1])
             time_zone = datetime.fromtimestamp(timestamp, tz)
@@ -81,3 +81,5 @@ if __name__ == '__main__':
             print(traceback.format_exc())
     if flag == 0:
         print("|-Synchronization time error!")
+
+

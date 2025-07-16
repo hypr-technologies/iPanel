@@ -174,7 +174,7 @@ download() {
     # 获取machine
     machine=$(uname -m)
     zip_file=$panel_path/data/webserver-$machine.zip
-    wget -O $zip_file https://node.aapanel.com/webserver/webserver-$machine.zip
+    wget -O $zip_file https://github.com/hypr-technologies/iPanel/releases/latest/download/webserver/webserver-$machine.zip
     if [ $? -ne 0 ]; then
         echo "Failed to download aaPanel web server binary"
         rm -f $zip_file
@@ -183,7 +183,7 @@ download() {
 
     # 验证文件hash
     hash256=$(sha256sum $zip_file | awk '{print $1}')
-    cloud_hash256=$(wget -q -O - https://node.aapanel.com/webserver/webserver-$machine.txt)
+    cloud_hash256=$(wget -q -O - https://github.com/hypr-technologies/iPanel/releases/latest/download/webserver/webserver-$machine.txt)
     if [ "$hash256" != "$cloud_hash256" ]; then
         echo "Failed to verify aaPanel web server binary"
         rm -f $zip_file
@@ -237,3 +237,5 @@ case "$action" in
         exit 1
         ;;
 esac
+
+

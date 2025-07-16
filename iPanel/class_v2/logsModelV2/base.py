@@ -139,3 +139,4 @@ class logsBase:
             return result.strip()
         except:
             return ""
+

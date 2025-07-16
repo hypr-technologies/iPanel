@@ -351,3 +351,4 @@ class main(dockerBase):
 
         if create_table_str and 'remark' not in create_table_str:
             public.M('registry').execute('ALTER TABLE `registry` ADD COLUMN `remark` VARCHAR default "";')
+
