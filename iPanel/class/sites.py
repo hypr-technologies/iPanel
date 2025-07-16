@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -46,9 +46,9 @@ class sites:
 server
 {
     listen 80;
-    server_name huang.infuze.local bt001.infuze.local;
+    server_name huang.hypr.local bt001.hypr.local;
     index index.php index.html index.htm default.php default.htm default.html;
-    root /www/wwwroot/huang.infuze.local;
+    root /www/wwwroot/huang.hypr.local;
         
     #SSL-START SSL相关配置，请勿删除或修改下一行带注释的404规则
     #error_page 404/404.html;
@@ -64,7 +64,7 @@ server
     #PHP-INFO-END
     
     #REWRITE-START URL重写规则引用,修改后将导致面板设置的伪静态规则失效
-    include /www/server/panel/vhost/rewrite/huang.infuze.local.conf;
+    include /www/server/panel/vhost/rewrite/huang.hypr.local.conf;
     #REWRITE-END
     
     #禁止访问的文件或目录
@@ -92,8 +92,8 @@ server
         error_log off;
         access_log off;
     }
-    access_log  /www/wwwlogs/huang.infuze.local.log;
-    error_log  /www/wwwlogs/huang.infuze.local.error.log;
+    access_log  /www/wwwlogs/huang.hypr.local.log;
+    error_log  /www/wwwlogs/huang.hypr.local.error.log;
 };'''
 
 
@@ -188,20 +188,20 @@ server
 	                    "redirect": [{
 		                    "code": 301,
 		                    "var": "$host",
-		                    "rule": "^infuze.local$",
-		                    "to": "https://www.infuze.local",
+		                    "rule": "^hypr.local$",
+		                    "to": "https://www.hypr.local",
 		                    "args": "$request_uri"
 	                    }, {
 		                    "code": 302,
 		                    "var": "$uri",
 		                    "rule": "^/test/",
-		                    "to": "https://www.infuze.local",
+		                    "to": "https://www.hypr.local",
 		                    "args": "$request_uri"
 	                    }],
 	                    "proxy": {
 		                    "open": False,
-		                    "url": "http://www.infuze.local",
-		                    "host": "www.infuze.local",
+		                    "url": "http://www.hypr.local",
+		                    "host": "www.hypr.local",
 		                    "subOpen": False,
 		                    "src": "",
 		                    "dst": "",
@@ -210,7 +210,7 @@ server
 	                    "antiStealingLink": {
 		                    "open": False,
 		                    "extName": ["jpg", "png", "gif", "js", "css"],
-		                    "domains": ["www.infuze.local", "infuze.local"],
+		                    "domains": ["www.hypr.local", "hypr.local"],
 		                    "code": 404
 	                    },
 	                    "networkLimit": {

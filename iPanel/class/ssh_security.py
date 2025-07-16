@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: lkqiang <lkq@infuze panel.com>
+# Author: lkqiang <lkq@iPanel.com>
 #-------------------------------------------------------------------
 # SSH 安全类
 #------------------------------
@@ -500,7 +500,7 @@ class ssh_security:
         cpath = 'data/msg.json'
         try:
             if 'force' in get or not os.path.exists(cpath):
-                public.downloadFile('{}/linux/panel/msg/msg.json'.format("https://node.infuze panel.com"),cpath)
+                public.downloadFile('{}/linux/panel/msg/msg.json'.format("https://node.iPanel.com"),cpath)
         except : pass
 
         data = {}

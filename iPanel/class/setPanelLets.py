@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: zhwen <zhw@infuze panel.com>
+# | Author: zhwen <zhw@iPanel.com>
 # +-------------------------------------------------------------------
 import os
 os.chdir("/www/server/panel")
@@ -33,7 +33,7 @@ class setPanelLets:
         public.writeFile('ssl/input.pl','True')
         return public.returnMsg(True, public.lang("The certificate has been saved!"))
 
-    # 检查是否存在站点infuze panel主机名站点
+    # 检查是否存在站点iPanel主机名站点
     def __check_host_name(self, domain):
         sql = db.Sql()
         path = sql.table('sites').where('name=?', (domain,)).getField('path')

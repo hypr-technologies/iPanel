@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: zouhw <zhw@infuze panel.com>
+# Author: zouhw <zhw@iPanel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -285,7 +285,7 @@ class main(dockerBase):
                 "registry.cn-hangzhou.aliyuncs.com": "Alibaba Cloud Mirror Station (Hangzhou)"
             }
 
-            # # https://node.infuze panel.com/src/com_registry.json
+            # # https://node.iPanel.com/src/com_registry.json
             # public.ExecShell("rm -f {}".format(com_registry_file))
             # public.downloadFile("{}/src/com_registry.json".format(public.get_url()), com_registry_file)
             # try:

@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2019 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2019 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@hypr panel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -22,7 +22,7 @@ class panelAuth:
     __product_bay_path = 'data/product_bay.pl'
     __product_id = '100000011'
     __official_url = '{}'.format(public.OfficialApiBase())
-    # __official_url = 'http://dev.infuze panel.com'
+    # __official_url = 'http://dev.iPanel.com'
 
     def create_serverid(self, get):
         try:
@@ -64,7 +64,7 @@ class panelAuth:
                 params['product_id'] = get.product_id
             data = self.send_cloud('{}/api/product/pricesV3'.format(self.__official_url), params)
             if not data:
-                return public.return_msg_gettext(False, public.lang("Please log in to your Infuze Panel account on the panel first!"))
+                return public.return_msg_gettext(False, public.lang("Please log in to your iPanel account on the panel first!"))
             if not data['success']:
                 return public.return_msg_gettext(False,data['msg'])
             # if len(data['res']) == 6:

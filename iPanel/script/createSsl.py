@@ -53,13 +53,13 @@ class CreateSSLMain:
         domains = self.get_host_all()
         pdata = {
             "action":"get_domain_cert",
-            "company":"infuze panel.com",
+            "company":"iPanel.com",
             "domain":','.join(domains),
             "uid":userInfo['uid'],
             "access_key":userInfo['access_key'],
             "panel":1
         }
-        cert_api = 'https://api.infuze panel.com/infuze panel_cert'
+        cert_api = 'https://api.iPanel.com/iPanel_cert'
         result = json.loads(public.httpPost(cert_api,{'data': json.dumps(pdata)}))
         if 'status' in result:
             if result['status']:

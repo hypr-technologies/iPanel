@@ -197,8 +197,8 @@ class BaseTask:
         print(title)
         if dingding:
             print("dingdingtitle",title)
-            if "infuze panel" not in title:
-                title += "infuze panel"
+            if "iPanel" not in title:
+                title += "iPanel"
                 print("dingdingtitle",title)
         
         print(title)     

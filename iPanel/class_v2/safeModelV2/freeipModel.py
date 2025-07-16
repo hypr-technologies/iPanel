@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: cjxin <cjxin@infuze panel.com>
+# Author: cjxin <cjxin@iPanel.com>
 #-------------------------------------------------------------------
 
 # 免费IP库
@@ -57,7 +57,7 @@ class main(safeBase):
             # 与面板字段差异
             data["serverid"]=self.user_info["server_id"]
             #如果不是我们的用户，那么不返回数据
-            res = public.httpPost('https://wafapi2.infuze panel.com/api/ip/info',data)
+            res = public.httpPost('https://wafapi2.iPanel.com/api/ip/info',data)
             res = json.loads(res)
             data = self.get_ip_area_cache()
             for key in res:

@@ -536,7 +536,7 @@
 							<select id="lang_select"></select>
 						</div>
 						<!-- 忘记密码 -->
-						<a class="forget_pwd" href="https://www.infuze panel.com/forum/d/16-how-to-reset-password-for-infuze panel-linux-6-x" target="_blank" data-i18n="Login.index_4"></a>
+						<a class="forget_pwd" href="https://www.iPanel.com/forum/d/16-how-to-reset-password-for-iPanel-linux-6-x" target="_blank" data-i18n="Login.index_4"></a>
 						{% if data['hosts'] != '[]' %}
 						<div class="static_cdn">
 							<div class="cont">
@@ -555,7 +555,7 @@
 					<div class="scan_tip">
 						<div class="link">
 							<span data-i18n="Login.index_13"></span>
-							<a href="https://www.infuze panel.com/forum/d/3527-infuze panel-mobile" target="_blank" class="bt_link" data-i18n="Login.index_14"></a>
+							<a href="https://www.iPanel.com/forum/d/3527-iPanel-mobile" target="_blank" class="bt_link" data-i18n="Login.index_14"></a>
 						</div>
 						<div class="desc">
 							<div class="icon scan"></div>
@@ -739,7 +739,7 @@
 					var last_token = document.querySelector('.last_token').attributes.data.value;
 					var data = {
 						username: rsa_encrypt(md5(md5(username + last_token))),
-						password: rsa_encrypt(md5(md5(password) + '' + '_infuze.local')),
+						password: rsa_encrypt(md5(md5(password) + '' + '_hypr.local')),
 						code: code,
 					};
 					if (staticCdnSelect) {
@@ -802,7 +802,7 @@
 				function generate_qrcode() {
 					if (qrcode) qrcode.clear();
 					request.post('/public?name=app&fun=login_qrcode', {}, function (res) {
-						var text = res.status ? res.msg : 'https://www.infuze panel.com/app.html';
+						var text = res.status ? res.msg : 'https://www.iPanel.com/app.html';
 						if (qrcode) {
 							qrcode.makeCode(text);
 						} else {
@@ -854,7 +854,7 @@
 														</div>\
 														<div class="v_tips">' +
 										i18next.t('Login.index_17') +
-										'<br><a class="bt_link" href="https://www.infuze panel.com/forum/d/357-how-to-use-google-authenticator-in-the-infuze panel" target="_blank">' +
+										'<br><a class="bt_link" href="https://www.iPanel.com/forum/d/357-how-to-use-google-authenticator-in-the-iPanel" target="_blank">' +
 										i18next.t('Login.index_18') +
 										'</a>\
 												</div>\

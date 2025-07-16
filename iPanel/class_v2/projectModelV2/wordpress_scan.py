@@ -1,8 +1,8 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099  Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099  iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # |   Wordpress 安全扫描
 # +--------------------------------------------------------------------
@@ -112,7 +112,7 @@ class wordpress_scan:
     def Md5(self,strings):
         """
             @name    生成MD5
-            @author hwliang<hwl@infuze.local>
+            @author hwliang<hwl@hypr.local>
             @param strings 要被处理的字符串
             @return string(32)
         """
@@ -126,7 +126,7 @@ class wordpress_scan:
     def FileMd5(self,filename):
         """
             @name 生成文件的MD5
-            @author hwliang<hwl@infuze.local>
+            @author hwliang<hwl@hypr.local>
             @param filename 文件名
             @return string(32) or False
         """

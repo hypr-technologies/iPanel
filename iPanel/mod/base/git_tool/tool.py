@@ -251,7 +251,7 @@ class RealGitMager:
         #     "site_name": [{
         #         "id": "",
         #         "site_name": "aaaa",
-        #         "url": "http://git.infuze.local/cjxin/panel-plugin.git",  # ssh://git@git.infuze.local/cjxin/panel-plugin.git
+        #         "url": "http://git.hypr.local/cjxin/panel-plugin.git",  # ssh://git@git.hypr.local/cjxin/panel-plugin.git
         #         "path_ino": 4564524,
         #         "git_path": "/www/wwwroot/site",
         #         "config": {

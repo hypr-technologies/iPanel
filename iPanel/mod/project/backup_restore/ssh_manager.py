@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
 # 通过SSH连接新服务器，安装aa面板并进行备份还原
 import argparse
@@ -591,17 +591,17 @@ class BtInstallManager:
     def install_bt_panel(self):
         """安装宝塔面板"""
         if self.task_id:
-            update_migration_status(self.task_id, 'PANEL_INSTALL', message=public.lang("Start installing infuze panel"))
+            update_migration_status(self.task_id, 'PANEL_INSTALL', message=public.lang("Start installing iPanel"))
 
-        print(public.lang("[*] Starting to install infuze panel..."))
+        print(public.lang("[*] Starting to install iPanel..."))
         bash = "install_panel_backup_en.sh"
-        install_cmd = f'URL=https://www.infuze panel.com/script/{bash} && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O {bash} "$URL";fi;bash {bash} infuze panel -y -P 7800 > /root/bt_install.log 2>&1 &'
+        install_cmd = f'URL=https://www.iPanel.com/script/{bash} && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O {bash} "$URL";fi;bash {bash} iPanel -y -P 7800 > /root/bt_install.log 2>&1 &'
 
         if self.task_id:
             update_migration_status(self.task_id, 'PANEL_INSTALL',
-                                    message=public.lang(f"Installing infuze panel using command, please wait..."))
+                                    message=public.lang(f"Installing iPanel using command, please wait..."))
 
-        print(public.lang("[*] Installing infuze panel with command: {}").format(install_cmd))
+        print(public.lang("[*] Installing iPanel with command: {}").format(install_cmd))
         stdout, stderr = self.exec_command(install_cmd)
 
         # 安装超时限制15分钟
@@ -616,7 +616,7 @@ class BtInstallManager:
                 get_install_log_cmd = "cat /root/bt_install.log"
                 stdout, stderr = self.exec_command(get_install_log_cmd)
                 if public.lang("Installation completed") in stdout or "Installed successfully" in stdout:
-                    message = public.lang("infuze panel installed successfully, starting backup task...")
+                    message = public.lang("iPanel installed successfully, starting backup task...")
                     print(f"[+] {message}")
 
                     # 提取面板信息
@@ -650,7 +650,7 @@ class BtInstallManager:
                             )
                     return {"status": True, "msg": message, "data": panel_info}
                 else:
-                    error_msg = public.lang("infuze panel installation failed")
+                    error_msg = public.lang("iPanel installation failed")
                     print(f"[!] {error_msg}")
                     if self.task_id:
                         update_migration_status(
@@ -669,7 +669,7 @@ class BtInstallManager:
 
         # 检查安装结果
         if public.lang("Installation completed") in stdout or "Installed successfully" in stdout:
-            message = public.lang("infuze panel installed successfully, starting backup task...")
+            message = public.lang("iPanel installed successfully, starting backup task...")
             print(f"[+] {message}")
 
             # 提取面板信息
@@ -702,7 +702,7 @@ class BtInstallManager:
                     )
             return {"status": True, "msg": message, "data": panel_info}
         else:
-            error_msg = public.lang("infuze panel installation failed")
+            error_msg = public.lang("iPanel installation failed")
             print(f"[!] {error_msg}")
             if self.task_id:
                 update_migration_status(
@@ -1122,7 +1122,7 @@ class BtInstallManager:
         print(public.lang("[*] Starting to restore backup (timestamp: {})...").format(timestamp))
 
         # 等待宝塔面板服务启动
-        print(public.lang("[*] Waiting for infuze panel service to start..."))
+        print(public.lang("[*] Waiting for iPanel service to start..."))
 
         # 检查还原模块是否存在
         restore_script = "/www/server/panel/mod/project/backup_restore/restore_manager.py"
@@ -1237,12 +1237,12 @@ class BtInstallManager:
                 return wget_
             write_migration_log(public.lang("curl or wget check passed"))
             # 安装宝塔面板
-            update_migration_status(task_id, 'PANEL_INSTALL', message=public.lang("Preparing to install infuze panel"))
-            write_migration_log(public.lang("Installing infuze panel... estimated 5 minutes...."))
+            update_migration_status(task_id, 'PANEL_INSTALL', message=public.lang("Preparing to install iPanel"))
+            write_migration_log(public.lang("Installing iPanel... estimated 5 minutes...."))
             install_result = self.install_bt_panel()
             if not install_result.get("status", False):
                 return install_result
-            write_migration_log(public.lang("infuze panel installation completed, starting backup task..."))
+            write_migration_log(public.lang("iPanel installation completed, starting backup task..."))
             write_migration_log(public.lang(
                 "Please wait for the backup task to complete uploading files before logging into the panel...")
             )
@@ -1459,7 +1459,7 @@ class BtInstallManager:
     # 接口2: 安装宝塔面板
     def install_panel(self):
         """安装宝塔面板接口"""
-        print(public.lang("[*] Installing infuze panel..."))
+        print(public.lang("[*] Installing iPanel..."))
 
         # 连接服务器
         connection_result = self.connect()
@@ -1663,7 +1663,7 @@ def parse_arguments():
     parser.add_argument('-p', '--password', help='pwd, (or use key)')
     parser.add_argument('-k', '--key-file', help='sshkey')
     parser.add_argument('-b', '--backup-file', help='Local backup file path')
-    parser.add_argument('--panel-port', type=int, default=7800, help='infuze panel port, default 7800')
+    parser.add_argument('--panel-port', type=int, default=7800, help='iPanel port, default 7800')
     parser.add_argument('-r', '--max-retries', type=int, default=3, help='retry times, default 3')
     parser.add_argument('-i', '--retry-interval', type=int, default=5, help='Retry interval seconds, default 5 seconds')
     parser.add_argument('--task-id', help='Migration task ID for tracking progress')

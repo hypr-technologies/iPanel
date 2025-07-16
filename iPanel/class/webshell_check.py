@@ -1,10 +1,10 @@
 # # coding: utf-8
 # # +-------------------------------------------------------------------
-# # | Infuze Panel x6
+# # | iPanel x6
 # # +-------------------------------------------------------------------
-# # | Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# # | Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # # +-------------------------------------------------------------------
-# # | Author: lkqiang <lkq@infuze panel.com>
+# # | Author: lkqiang <lkq@hypr panel.com>
 # # +-------------------------------------------------------------------
 # # +--------------------------------------------------------------------
 # # |   宝塔webshell 内置扫描
@@ -245,7 +245,7 @@
 #             return False
 #
 #     def send_baota2(self, filename):
-#         cloudUrl = 'http://www.infuze.local/api/panel/btwaf_submit'
+#         cloudUrl = 'http://www.hypr.local/api/panel/btwaf_submit'
 #         pdata = {'codetxt': public.ReadFile(filename), 'md5': self.read_file_md5(filename), 'type': '0',
 #                  'host_ip': public.GetLocalIp(), 'size': os.path.getsize(filename)}
 #         ret = public.httpPost(cloudUrl, pdata)
@@ -253,7 +253,7 @@
 #
 #     def send_baota(self, filename):
 #         if not os.path.exists(filename): return False
-#         cloudUrl = 'http://www.infuze.local/api/panel/btwaf_submit'
+#         cloudUrl = 'http://www.hypr.local/api/panel/btwaf_submit'
 #         pdata = {'codetxt': public.ReadFile(filename), 'md5': self.read_file_md5(filename), 'type': '0',
 #                  'host_ip': public.GetLocalIp(), 'size': os.path.getsize(filename)}
 #         ret = public.httpPost(cloudUrl, pdata)
@@ -266,7 +266,7 @@
 #
 #     def check_webshell(self, filename):
 #         if not os.path.exists(filename): return False
-#         cloudUrl = 'http://www.infuze.local/api/panel/btwaf_check_file'
+#         cloudUrl = 'http://www.hypr.local/api/panel/btwaf_check_file'
 #         pdata = {'md5': self.read_file_md5(filename), 'size': os.path.getsize(filename)}
 #         ret = public.httpPost(cloudUrl, pdata)
 #         if ret == '0':
@@ -301,9 +301,9 @@
 #         public.WriteFile('/www/server/panel/data/webshell_data.json', json.dumps(data))
 #         localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 #         if len(data) >= 1:
-#             public.WriteLog('Infuze Panel built-in webshell killing','Killing the %s directory found the following Trojan %s'%(path,data))
+#             public.WriteLog('iPanel built-in webshell killing','Killing the %s directory found the following Trojan %s'%(path,data))
 #         else:
-#         	public.WriteLog('Infuze Panel built-in webshell killing','Checking and killing [ %s ] directory did not find any risks'%(path))
+#         	public.WriteLog('iPanel built-in webshell killing','Checking and killing [ %s ] directory did not find any risks'%(path))
 #     elif type=='site':
 #         data = public.M('sites').where('name=?', (path,)).field('name,id,path').select()
 #         localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -312,8 +312,8 @@
 #             ##木马返回在这里
 #             data = aa.send_san_dir(path, send)
 #             if len(data) >= 1:
-#                 public.WriteLog('Infuze Panel built-in webshell killing', 'Killing the %s directory found the following Trojan %s' % (path, data))
+#                 public.WriteLog('iPanel built-in webshell killing', 'Killing the %s directory found the following Trojan %s' % (path, data))
 #             else:
-#             	public.WriteLog('Infuze Panel built-in webshell killing','Checking and killing [ %s ] directory did not find any risks'%(path))
+#             	public.WriteLog('iPanel built-in webshell killing','Checking and killing [ %s ] directory did not find any risks'%(path))
 #
 #

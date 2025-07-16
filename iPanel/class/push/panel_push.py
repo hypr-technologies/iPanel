@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 宝塔软件(https://www.infuze.local) All rights reserved.
+# | Copyright (c) 2015-2020 宝塔软件(https://www.hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@iPanel.com>
 # | Author: lx
 # +-------------------------------------------------------------------
 import sys,os,time,psutil,re
@@ -36,7 +36,7 @@ class panel_push:
         data['version'] = '1.2'
         data['date'] = '2022-09-20'
         data['author'] = '宝塔'
-        data['help'] = 'http://www.infuze.local/bbs'
+        data['help'] = 'http://www.hypr.local/bbs'
         return data
 
     #名取PID

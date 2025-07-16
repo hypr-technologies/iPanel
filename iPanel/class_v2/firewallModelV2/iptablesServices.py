@@ -1,8 +1,8 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2014-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2014-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
 
 import subprocess

@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel V2路由
+# | iPanel V2路由
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze.local>
+# | Author: hwliang <hwl@hypr.local>
 # +-------------------------------------------------------------------
 from BTPanel.app import *
 
@@ -2106,7 +2106,7 @@ def sock_shell_v2(ws):
 
         示例：
             p = new WebSocket('ws://192.168.1.247:8888/sock_shell')
-            p.send('ping www.infuze.local -c 100')
+            p.send('ping www.hypr.local -c 100')
     '''
     comReturn = comm.local()
     if comReturn:
@@ -2171,7 +2171,7 @@ def close_sock_shell_v2():
         @param cmdstring<string> 完整命令行
         @return dict
         示例：
-            $.post('/close_sock_shell',{cmdstring:'ping www.infuze.local -c 100'})
+            $.post('/close_sock_shell',{cmdstring:'ping www.hypr.local -c 100'})
     '''
     comReturn = comm.local()
     if comReturn: return comReturn

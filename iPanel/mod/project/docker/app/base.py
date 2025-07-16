@@ -2,9 +2,9 @@
 # -------------------------------------------------------------------
 # 宝塔Linux面板
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 宝塔软件(http://infuze.local) All rights reserved.
+# Copyright (c) 2015-2099 宝塔软件(http://hypr.local) All rights reserved.
 # -------------------------------------------------------------------
-# Author: wzz <wzz@infuze.local>
+# Author: wzz <wzz@hypr.local>
 # -------------------------------------------------------------------
 # ------------------------------
 # docker模型 - docker app 基类
@@ -231,9 +231,9 @@ class App(composeMod):
 
     def download_apps_json(self) -> 'App':
         try:
-            public.downloadFile(public.get_url() + '/src/dk_app/infuze panel/apps/apps.json', self.apps_json_file)
+            public.downloadFile(public.get_url() + '/src/dk_app/iPanel/apps/apps.json', self.apps_json_file)
 
-            public.downloadFile(public.get_url() + '/src/dk_app/infuze panel/apps/apptags.json', self.app_tags_file)
+            public.downloadFile(public.get_url() + '/src/dk_app/iPanel/apps/apptags.json', self.app_tags_file)
             return self
         except:
             return self
@@ -331,7 +331,7 @@ class App(composeMod):
         if not os.path.exists(tmp_path):
             public.ExecShell("mkdir -p {}".format(tmp_path))
 
-        public.downloadFile(public.get_url() + '/src/dk_app/infuze panel/apps/dkapp_ico.zip', os.path.join(tmp_path, "dkapp_ico.zip"))
+        public.downloadFile(public.get_url() + '/src/dk_app/iPanel/apps/dkapp_ico.zip', os.path.join(tmp_path, "dkapp_ico.zip"))
         public.ExecShell("unzip -o {}/dkapp_ico.zip -d {}".format(tmp_path, zip_ico_path))
         public.ExecShell("cd {} && mv dkapp_ico dkapp".format(zip_ico_path))
 
@@ -1024,7 +1024,7 @@ class App(composeMod):
         if os.path.exists(self.app_template_path):
             public.ExecShell("rm -rf {}".format(self.app_template_path))
 
-        app_url = "{}/src/dk_app/infuze panel/apps/templates/{}.zip".format(public.get_url(), get.app_name)
+        app_url = "{}/src/dk_app/iPanel/apps/templates/{}.zip".format(public.get_url(), get.app_name)
         to_file = '/tmp/{}.zip'.format(get.app_name)
         if os.path.exists(to_file):
             public.ExecShell("rm -f {}".format(to_file))

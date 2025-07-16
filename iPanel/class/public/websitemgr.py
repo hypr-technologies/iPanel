@@ -102,7 +102,7 @@ def restore_files(site_id: int, bak_file: str) -> aap_t_simple_result:
 
 # 删除网站备份文件
 def del_bak(bak_file: str) -> aap_t_simple_result:
-    # infuze panel内部备份
+    # iPanel内部备份
     bak_id_dict = M('backup').where('`type`=0 and `filename` = ?', (bak_file,)).field('id').find()
 
     if isinstance(bak_id_dict, dict):

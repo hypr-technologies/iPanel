@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: zhwen <zhwen@infuze panel.com>
+# | Author: zhwen <zhwen@iPanel.com>
 # +-------------------------------------------------------------------
 import os
 import time
@@ -27,7 +27,7 @@ def get_mem():
 
 class one_key_wp:
     wp_package_url = 'https://wordpress.org/latest.zip'
-    # wp_package_url = 'http://download.infuze.local/install/package/wordpress-5.9.1.zip'
+    # wp_package_url = 'http://download.hypr.local/install/package/wordpress-5.9.1.zip'
     base_path = "/www/server/panel/"
     wp_session_path = '{}/data/wp_session'.format(base_path)
     package_zip = '{}/package/wp.zip'.format(base_path)
@@ -813,7 +813,7 @@ class one_key_wp:
                 values['domain'] = public.xssencode2(args.domain)
             else:
                 return public.return_msg_gettext(False, "Please check if the [{}] format is correct For example: {}",
-                                                 ("domain", "infuze panel.com"))
+                                                 ("domain", "iPanel.com"))
         if hasattr(args, 'weblog_title'):
             values['weblog_title'] = public.xssencode2(args.weblog_title)
         if hasattr(args, 'user_name'):
@@ -831,7 +831,7 @@ class one_key_wp:
                 values['admin_email'] = public.xssencode2(args.admin_email)
             else:
                 return public.return_msg_gettext(False, "Please check if the [{}] format is correct For example: {}",
-                                                 ("admin_email", "adimn@infuze panel.com"))
+                                                 ("admin_email", "adimn@iPanel.com"))
         if hasattr(args, 'prefix'):
             values['prefix'] = public.xssencode2(args.prefix)
         if hasattr(args, 'php_version'):
@@ -1278,19 +1278,19 @@ class fast_cgi:
             os.makedirs("/dev/shm/nginx-cache/wp")
             one_key_wp().set_permission("/dev/shm/nginx-cache")
         conf = """
- #INFUZE PANEL_FASTCGI_CONF_BEGIN
+ #iPanel_FASTCGI_CONF_BEGIN
  fastcgi_cache_key "$scheme$request_method$host$request_uri";
  fastcgi_cache_path /dev/shm/nginx-cache/wp levels=1:2 keys_zone=WORDPRESS:100m inactive=60m max_size=1g;
  fastcgi_cache_use_stale error timeout invalid_header http_500;
  fastcgi_ignore_headers Cache-Control Expires Set-Cookie;
- #INFUZE PANEL_FASTCGI_CONF_END
+ #iPanel_FASTCGI_CONF_END
  """
         conf_path = "/www/server/nginx/conf/nginx.conf"
         public.back_file(conf_path)
         content = public.readFile(conf_path)
         if not content:
             return
-        if "#INFUZE PANEL_FASTCGI_CONF_BEGIN" in content:
+        if "#iPanel_FASTCGI_CONF_BEGIN" in content:
             one_key_wp().write_logs("|-Nginx FastCgi cache configuration already exists")
             print("Nginx FastCgi cache configuration already exists")
             return public.return_msg_gettext(True, public.lang("Nginx FastCgi cache configuration already exists"))
@@ -1314,16 +1314,16 @@ class fast_cgi:
         #     os.makedirs("/dev/shm/nginx-cache/wp")
         #     one_key_wp().set_permission("/dev/shm/nginx-cache")
         conf2 = """
-     #INFUZE PANEL_FASTCGI_CONF_BEGIN
+     #iPanel_FASTCGI_CONF_BEGIN
      mkdir -p /dev/shm/nginx-cache/wp
-     #INFUZE PANEL_FASTCGI_CONF_END
+     #iPanel_FASTCGI_CONF_END
  """
         init_path = "/etc/init.d/nginx"
         public.back_file(init_path)
         content_init = public.readFile(init_path)
         if not content_init:
             return
-        if "#INFUZE PANEL_FASTCGI_CONF_BEGIN" in content_init:
+        if "#iPanel_FASTCGI_CONF_BEGIN" in content_init:
             one_key_wp().write_logs("|-Nginx init FastCgi cache configuration already exists")
             print("Nginx init FastCgi cache configuration already exists")
             return public.return_msg_gettext(True, public.lang("Nginx init FastCgi cache configuration already exists"))
@@ -1407,9 +1407,9 @@ class fast_cgi:
 
     def set_wp_nginx_helper(self, site_path):
         cache_conf = """
- #INFUZE PANEL_FASTCGICACHE_BEGIN
+ #iPanel_FASTCGICACHE_BEGIN
  define('RT_WP_NGINX_HELPER_CACHE_PATH','/dev/shm/nginx-cache/wp');
- #INFUZE PANEL_FASTCGICACHE_END
+ #iPanel_FASTCGICACHE_END
  """
         conf_file = "{}/wp-config.php".format(site_path)
         conf = public.readFile(conf_file)
@@ -1417,7 +1417,7 @@ class fast_cgi:
             print("Wordpress configuration file does not exist: {}".format(conf_file))
             one_key_wp().write_logs("|-Wordpress configuration file does not exist: {}".format(conf_file))
             return public.return_msg_gettext(False, "Wordpress configuration file does not exist: {}", (conf_file,))
-        if "INFUZE PANEL_FASTCGICACHE_BEGIN" in conf:
+        if "iPanel_FASTCGICACHE_BEGIN" in conf:
             one_key_wp().write_logs("|-Cache cleaning configuration already exists, skip")
             print("Cache cleaning configuration already exists")
             return

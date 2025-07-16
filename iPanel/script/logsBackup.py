@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding: utf-8
 #-----------------------------
-#Infuze Panel
+#iPanel
 # 网站日志切割脚本
 #-----------------------------
 import sys

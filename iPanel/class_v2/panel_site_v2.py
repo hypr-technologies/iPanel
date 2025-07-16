@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -3048,10 +3048,10 @@ listener SSL443 {
             return public.return_message(0, 0, public.lang("Site stopped"))
         if not os.path.exists(path):
             os.makedirs(path)
-            public.downloadFile('https://node.infuze panel.com/stop_en.html', path + '/index.html')
+            public.downloadFile('https://node.iPanel.com/stop_en.html', path + '/index.html')
 
         # if 'This site has been closed by administrator' not in public.readFile(path + '/index.html'):
-        #     public.downloadFile('http://download.infuze.local/stop_en.html', path + '/index.html')
+        #     public.downloadFile('http://download.hypr.local/stop_en.html', path + '/index.html')
 
         binding = public.M('binding').where('pid=?', (id,)).field('id,pid,domain,path,port,addtime').select()
         for b in binding:
@@ -4794,7 +4794,7 @@ RewriteRule ^%s(.*)$ http://%s/$1 [P,E=Proxy-Host:%s]
                 return ret
 
         if not get.proxysite.split('//')[-1]:
-            return public.return_message(-1, 0, public.lang("The target URL cannot be [http:// or https://], please fill in the full URL, such as: https://infuze panel.com"))
+            return public.return_message(-1, 0, public.lang("The target URL cannot be [http:// or https://], please fill in the full URL, such as: https://iPanel.com"))
         # project_type = public.M('sites').where('name=?', (get.sitename,)).field('project_type').find()['project_type']
         # if project_type == 'WP':
         #     return public.return_msg_gettext(False, public.lang("Reverse proxies are not currently available for Wordpress sites that use one-click deployment"))
@@ -5649,10 +5649,10 @@ location %s
             #     conf = conf.replace('access_log  /dev/null', 'access_log  ' + rep)
 
             if conf:
-                regex_obj = re.compile(r'(?:# *)?(access_log +(?:{}|off; # Disable with infuze panel))(?: *;)?'.format(rep.replace('.', r'\.')))
+                regex_obj = re.compile(r'(?:# *)?(access_log +(?:{}|off; # Disable with iPanel))(?: *;)?'.format(rep.replace('.', r'\.')))
                 if conf.find('access_log {}'.format(rep)) > -1:
                     # 禁用Access日志
-                    conf = regex_obj.sub('access_log off; # Disable with infuze panel'.format(rep), conf)
+                    conf = regex_obj.sub('access_log off; # Disable with iPanel'.format(rep), conf)
                 else:
                     # 启用Access日志
                     conf = regex_obj.sub('access_log {};'.format(rep), conf)
@@ -5694,7 +5694,7 @@ location %s
                     conf = conf.replace(m.group(), s)
                 else:
                     # 禁用Access日志
-                    s = m.group().replace('}', '\tLogLevel NONE # Disable with infuze panel\n}')
+                    s = m.group().replace('}', '\tLogLevel NONE # Disable with iPanel\n}')
                     conf = conf.replace(m.group(), s)
 
             public.writeFile(filename, conf)
@@ -5713,7 +5713,7 @@ location %s
             return public.return_message(0, 0, True)
 
         # Nginx
-        if conf.find('access_log off; # Disable with infuze panel') > -1:
+        if conf.find('access_log off; # Disable with iPanel') > -1:
             return public.return_message(0, 0, False)
 
         # Apache
@@ -5721,7 +5721,7 @@ location %s
             return public.return_message(0, 0, False)
 
         # OpenLiteSpeed
-        if conf.find('LogLevel NONE # Disable with infuze panel') > -1:
+        if conf.find('LogLevel NONE # Disable with iPanel') > -1:
             return public.return_message(0, 0, False)
 
         # 兼容旧方式
@@ -7752,7 +7752,7 @@ RewriteRule \.(BTPFILE)$    /404.html   [R,NC]
             return public.fail_v2(msg)
         return public.success_v2(msg)
 
-    # 从infuze panel WP备份中创建WP站点
+    # 从iPanel WP备份中创建WP站点
     def wp_create_with_aap_bak(self, args: public.dict_obj):
         from wp_toolkit import wpbackup
         ok, msg = wpbackup.wp_deploy_with_aap_bak(args)

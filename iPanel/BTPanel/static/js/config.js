@@ -19,7 +19,7 @@ function modify_port_val(port){
                 </div>\
                 <div class="details" style="margin-top:5px;padding-left: 3px;">\
 					<input type="checkbox" id="check_port">\
-					<label style="font-weight: 400;margin: 3px 5px 0px;" for="check_port">I already understand</label>,<a target="_blank" class="btlink" href="https://www.infuze panel.com/forum/d/599-how-to-release-the-infuze panel-port">How to release the port?</a>\
+					<label style="font-weight: 400;margin: 3px 5px 0px;" for="check_port">I already understand</label>,<a target="_blank" class="btlink" href="https://www.iPanel.com/forum/d/599-how-to-release-the-iPanel-port">How to release the port?</a>\
 				</div>\
 			</div>',
 		yes:function(index,layero){
@@ -118,7 +118,7 @@ $('#panel_verification').click(function(){
 				<div class="details" style="width: 90%;margin-bottom:10px;">\
 					<input type="checkbox" id="check_verification">\
 					<label style="font-weight: 400;margin: 3px 5px 0px;" for="check_verification">I already know the details and are willing to take risks</label>\
-					<a target="_blank" class="btlink" href="https://www.infuze panel.com/forum/d/357-how-to-use-google-authenticator-in-the-infuze panel">Learn more</a>\
+					<a target="_blank" class="btlink" href="https://www.iPanel.com/forum/d/357-how-to-use-google-authenticator-in-the-iPanel">Learn more</a>\
 				</div>\
 				<div class="bt-form-submit-btn">\
 					<button type="button" class="btn btn-sm btn-danger close_verify">Close</button>\
@@ -208,7 +208,7 @@ $('.open_two_verify_view').click(function(){
 						</div>\
 					</div>\
 					<div class="verify_tips">\
-						<p>Tips: Please use the "Google Authenticator APP" binding to support Android, IOS system.<a href="https://www.infuze panel.com/forum/d/357-how-to-use-google-authenticator-in-the-infuze panel" class="btlink" target="_blank">Use tutorial</a></p>\
+						<p>Tips: Please use the "Google Authenticator APP" binding to support Android, IOS system.<a href="https://www.iPanel.com/forum/d/357-how-to-use-google-authenticator-in-the-iPanel" class="btlink" target="_blank">Use tutorial</a></p>\
 						<p style="color:red;">Once you have turned on the service, use the Google Authenticator app binding now to avoid having to sign in.</p>\
 					</div>\
 				</div>',
@@ -492,7 +492,7 @@ function setPanelSSL(){
                                 <ul style="width: 100%;">\
                                     <li style="color:red;">' + lan.config.ssl_open_ps_1 + '</li>\
                                     <li>' + lan.config.ssl_open_ps_2 + '</li>\
-                                    <li>If panel is not accessible, you can click the <a class="btlink" href="https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate" target="_blank">link</a> below to find solutions</li>\
+                                    <li>If panel is not accessible, you can click the <a class="btlink" href="https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate" target="_blank">link</a> below to find solutions</li>\
                                 </ul>\
                             </div>\
                         '
@@ -568,7 +568,7 @@ function setPanelSSL(){
                             <div class="details" style="width: 90%; padding-top: 15px;">\
                                 <input type="checkbox" id="checkSSL" />\
                                 <label style="font-weight: 400; margin: -1px 5px 0px;" for="checkSSL">' + lan.config.ssl_open_ps_4 + '</label>\
-                                <a class="btlink" style="top: 0;" href="https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate" target="_blank">' + lan.config.ssl_open_ps_5 + '</a>\
+                                <a class="btlink" style="top: 0;" href="https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate" target="_blank">' + lan.config.ssl_open_ps_5 + '</a>\
                             </div>\
                         '
                     }
@@ -660,7 +660,7 @@ function GetPanelSSL() {
 				</div>\
 			</div>\
 			<ul class="help-info-text c7 pull-left">\
-				<li>' + lan.config.ps + '<a href="http://www.infuze.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' + lan.config.help + ']</a>。</li>\
+				<li>' + lan.config.ps + '<a href="http://www.hypr.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' + lan.config.help + ']</a>。</li>\
 				<li>' + lan.config.ps1 + '</li><li>' + lan.config.ps2 + '</li>\
 			</ul>\
 		</div>'
@@ -896,7 +896,7 @@ function open_wxapp(){
 							<div id="QRcode"></div>\
 							<div class="codeTip">\
 								<ul>\
-									<li>1、'+lan.config.open_small_app+'<span class="btlink weChat">'+lan.config.qrcore_of_small_app+'<div class="weChatSamll"><img src="https://app.infuze.local/static/app.png"></div></span></li>\
+									<li>1、'+lan.config.open_small_app+'<span class="btlink weChat">'+lan.config.qrcore_of_small_app+'<div class="weChatSamll"><img src="https://app.hypr.local/static/app.png"></div></span></li>\
 									<li>2、'+lan.config.scan_qrcore_with_small_app+'</li>\
 								</ul>\
 								<span><a href="javascript:;" title="'+lan.config.return_bind_list+'" class="btlink" style="margin: 0 auto" onclick="weChat.getUserDetails(true)">'+lan.config.read_bind_list+'</a></span>\
@@ -984,7 +984,7 @@ function GetPanelApi() {
                         <ul class="help-info-text c7">\
                             <li>'+lan.config.help1+'</li>\
                             <li>'+lan.config.help2+'</li>\
-                            <li>'+lan.config.help3+'：<a class="btlink" href="https://www.infuze panel.com/forum/d/482-api-interface-tutorial" target="_blank">https://www.infuze panel.com/forum/d/482-api-interface-tutorial</a></li>\
+                            <li>'+lan.config.help3+'：<a class="btlink" href="https://www.iPanel.com/forum/d/482-api-interface-tutorial" target="_blank">https://www.iPanel.com/forum/d/482-api-interface-tutorial</a></li>\
                         </ul>\
                     </div>'
         })
@@ -1254,7 +1254,7 @@ function modify_basic_auth() {
                 + '</ul></div>'
                 + '<div class="details">'
                 + '<input type="checkbox" id="check_basic"><label style="font-weight: 400;margin: 3px 10px 0px;font-size:12px;" for="check_basic">I already know the details and are willing to take risks</label>'
-                + '<a target="_blank" style="font-size:12px;" class="btlink" href="https://www.infuze.local/bbs/thread-34374-1-1.html">What is BasicAuth authentication?</a><p></p></div>'
+                + '<a target="_blank" style="font-size:12px;" class="btlink" href="https://www.hypr.local/bbs/thread-34374-1-1.html">What is BasicAuth authentication?</a><p></p></div>'
             var loadT = layer.confirm(m_html, { title: "Risk reminder", area: "600px",closeBtn:2 }, function () {
                 if (!$("#check_basic").prop("checked")) {
                     layer.msg("Please read the precautions carefully and check to agree to take risks!");

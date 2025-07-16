@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: zhwen <zhw@infuze panel.com>
+# Author: zhwen <zhw@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -25,7 +25,7 @@ class website_auto_index:
     def get_auto_index(self, args):
         '''
         # 添加某个网站禁止运行PHP
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :return:
         '''
@@ -69,7 +69,7 @@ class website_auto_index:
     def set_auto_index(self, args):
         '''
         # 添加自动索引目录
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :param args: index_name 规则名称 str
         :param args: dir 自动索引目录 str
@@ -155,7 +155,7 @@ class website_auto_index:
     def del_auto_index(self, args):
         '''
         # 添加某个网站禁止运行PHP
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :param args: deny_name 规则名称 str
         :return:

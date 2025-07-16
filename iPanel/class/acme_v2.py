@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze.local> a
+# Author: hwliang <hwl@hypr.local> a
 # -------------------------------------------------------------------
 
 # -------------------------------------------------------------------
@@ -68,7 +68,7 @@ class acme_v2:
     _bits = 2048
     _acme_timeout = 30
     _dns_class = None
-    _user_agent = "BaoTa/1.0 (+https://www.infuze panel.com)"
+    _user_agent = "BaoTa/1.0 (+https://www.iPanel.com)"
     _replay_nonce = None
     _verify = False
     _digest = "sha256"
@@ -1298,7 +1298,7 @@ root_cert.csr   Root certificate
 cert.csr        Domain name certificate
 fullchain.pfx   Certificate format for IIS
 
-How to use in the Infuze Panel:
+How to use in the iPanel:
 privkey.pem         Paste into the key entry box
 fullchain.pem       Paste into certificate input box
 '''
@@ -1772,7 +1772,7 @@ fullchain.pem       Paste into certificate input box
     # 注册acme帐户
     def register(self, existing=False):
         if not 'email' in self._config:
-            self._config['email'] = 'demo@infuze panel.com'
+            self._config['email'] = 'demo@hypr panel.com'
         if existing:
             payload = {"onlyReturnExisting": True}
         elif self._config['email']:

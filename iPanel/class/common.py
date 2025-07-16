@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 from BTPanel import session, cache , request, redirect, g,abort, Response
 from datetime import datetime
@@ -27,7 +27,7 @@ class panelSetup:
             if ua.find('spider') != -1 or g.ua.find('bot') != -1:
                 return abort(403)
 
-        g.version = '7.43.0'
+        g.version = '8.0.0'
         g.title = public.GetConfigValue('title')
         g.uri = request.path
         g.debug = os.path.exists('data/debug.pl')
@@ -107,7 +107,7 @@ class panelAdmin(panelSetup):
             "The current IE browser version is too low to display some features, please use another browser."
             " Or if you use a browser developed by a Chinese company, please switch to Extreme Mode!"
         )
-        session["bt_help"] = public.lang("For Support|Suggestions, please visit the Infuze Panel Forum")
+        session["bt_help"] = public.lang("For Support|Suggestions, please visit the iPanel Forum")
         session["download"] = public.lang("Downloading:")
         if request.method == 'GET':
             self.__set_session_munes()
@@ -116,7 +116,7 @@ class panelAdmin(panelSetup):
             session['brand'] = public.GetConfigValue('brand')
             session['product'] = public.GetConfigValue('product')
             session['rootPath'] = '/www'
-            session['download_url'] = 'https://node.infuze panel.com'
+            session['download_url'] = 'https://node.iPanel.com'
             session['setupPath'] = session['rootPath'] + '/server'
             session['logsPath'] = '/www/wwwlogs'
             session['yaer'] = datetime.now().year

@@ -1,0 +1,83 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly Monday at 6 AM UTC
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Run TruffleHog OSS
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: main
+        head: HEAD
+        extra_args: --debug --only-verified
+        
+    - name: Run Semgrep
+      uses: returntocorp/semgrep-action@v1
+      with:
+        config: >-
+          p/security-audit
+          p/secrets
+          p/python
+          p/javascript
+          p/typescript
+          p/sql-injection
+          p/xss
+          p/command-injection
+          
+    - name: Run Bandit Security Linter
+      run: |
+        pip install bandit[toml]
+        bandit -r iPanel/ -f json -o bandit-report.json || true
+        
+    - name: Run Safety Check
+      run: |
+        pip install safety
+        safety check --json --output safety-report.json || true
+        
+    - name: Upload Security Reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          bandit-report.json
+          safety-report.json
+          
+    - name: Comment PR with Security Summary
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          let comment = '## 🔒 Security Scan Results\n\n';
+          
+          try {
+            const banditReport = JSON.parse(fs.readFileSync('bandit-report.json', 'utf8'));
+            const highSeverity = banditReport.results.filter(r => r.issue_severity === 'HIGH').length;
+            const mediumSeverity = banditReport.results.filter(r => r.issue_severity === 'MEDIUM').length;
+            comment += `**Bandit Results:** ${highSeverity} high, ${mediumSeverity} medium severity issues\n`;
+          } catch (e) {
+            comment += '**Bandit Results:** Unable to parse report\n';
+          }
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });

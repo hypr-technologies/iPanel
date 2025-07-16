@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: baozi <baozi@infuze.local>
+# | Author: baozi <baozi@hypr.local>
 # | 消息通道微信公众号模块
 # +-------------------------------------------------------------------
 
@@ -91,7 +91,7 @@ class WeChatAccountMsg:
 
         msg.set_ip_address(self.user_info["address"], self.get_local_ip())
         template_id, msg_data = msg.to_send_data()
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/send_template_msg_v3"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/send_template_msg_v3"
         wx_account_ids = self.config["users"] if "users" in self.config else [self.config["id"], ]
         data = {
             "uid": self.user_info["uid"],
@@ -134,7 +134,7 @@ class WeChatAccountMsg:
         user_info = cls.get_user_info()
         if user_info is None:
             return None
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/bound_wx_accounts"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/bound_wx_accounts"
         data = {
             "uid": user_info["uid"],
             "access_key": 'B' * 32,
@@ -185,7 +185,7 @@ class WeChatAccountMsg:
         user_info = cls.get_user_info()
         if user_info is None:
             return json_response(status=True, msg=public.lang('The user binding information was not obtained'))
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/unbind_wx_accounts"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/unbind_wx_accounts"
         data = {
             "uid": user_info["uid"],
             "access_key": 'B' * 32,
@@ -206,7 +206,7 @@ class WeChatAccountMsg:
         user_info = cls.get_user_info()
         if user_info is None:
             return json_response(status=True, msg=public.lang('The user binding information was not obtained'))
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/get_auth_url"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/get_auth_url"
         data = {
             "uid": user_info["uid"],
             "access_key": 'B' * 32,
@@ -257,7 +257,7 @@ class WeChatAccountMsg:
 #         data['date'] = '2022-08-15'
 #         data['author'] = '宝塔'
 #         data['title'] = '微信公众号'
-#         data['help'] = 'http://www.infuze panel.com'
+#         data['help'] = 'http://www.iPanel.com'
 #         return data
 #
 #     def get_local_ip(self):
@@ -318,7 +318,7 @@ class WeChatAccountMsg:
 #
 #     def get_web_info(self, get):
 #         if self.user_info is None: return public.returnMsg(False, 'The user binding information was not obtained')
-#         url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/info"
+#         url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/info"
 #         data = {
 #             "uid": self.user_info["uid"],
 #             "access_key": self.user_info["access_key"],
@@ -341,7 +341,7 @@ class WeChatAccountMsg:
 #     def unbind(self):
 #         if self.user_info is None:
 #             return public.returnMsg(False, 'The user binding information was not obtained')
-#         url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/unbind"
+#         url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/unbind"
 #         data = {
 #             "uid": self.user_info["uid"],
 #             "access_key": self.user_info["access_key"],
@@ -365,7 +365,7 @@ class WeChatAccountMsg:
 #     def get_web_info2(self):
 #         if self.user_info is None:
 #             return public.returnMsg(False, 'The user binding information was not obtained')
-#         url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/info"
+#         url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/info"
 #         data = {
 #             "uid": self.user_info["uid"],
 #             "access_key": self.user_info["access_key"],
@@ -431,7 +431,7 @@ class WeChatAccountMsg:
 #             return self.send_msg_v2(msg)
 #
 #         msg, title = self.get_send_msg(msg)
-#         url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/send_template_msg_v2"
+#         url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/send_template_msg_v2"
 #         datassss = {
 #             "first": {
 #                 "value": "堡塔主机告警",
@@ -519,7 +519,7 @@ class WeChatAccountMsg:
 #         msg.set_ip_address(self.user_info["address"], self.get_local_ip())
 #
 #         template_id, msg_data = msg.to_send_data()
-#         url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/send_template_msg_v2"
+#         url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/send_template_msg_v2"
 #         data = {
 #             "uid": self.user_info["uid"],
 #             "access_key": self.user_info["access_key"],

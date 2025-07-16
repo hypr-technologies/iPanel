@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2017 infuze panel(http:#infuze.local) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(http:#hypr.local) All rights reserved.
 # -------------------------------------------------------------------
-# Author: sww <sww@infuze.local>
+# Author: sww <sww@hypr.local>
 # -------------------------------------------------------------------
 # php异步项目部署模块
 # ------------------------------

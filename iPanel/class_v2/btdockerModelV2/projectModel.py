@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2014-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2014-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: wzz <wzz@infuze panel.com>
+# Author: wzz <wzz@hypr panel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -529,7 +529,7 @@ class main(dockerBase):
         if data: return
         pdata = {
             "name": server_name,
-            "remark": "Infuze Panel Docker Quick Deployment templates only [Do not delete them and use them separately to create projects]",
+            "remark": "iPanel Docker Quick Deployment templates only [Do not delete them and use them separately to create projects]",
             "path": "{}/{}/docker-compose.yml".format(self.templates_path, server_name)
         }
         dp.sql("templates").insert(pdata)

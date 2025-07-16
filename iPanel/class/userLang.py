@@ -1,8 +1,8 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: lotk
 # | 登录处设置语言

@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@hypr panel.com>
 # | Author: lx
 # | 消息通道邮箱模块
 # +-------------------------------------------------------------------
@@ -58,9 +58,9 @@ class mail_msg:
         data['ps'] = 'Email is used to receive panel message push'
         data['version'] = '1.1'
         data['date'] = '2022-08-10'
-        data['author'] = 'Infuze Panel'
+        data['author'] = 'iPanel'
         data['title'] = 'Email'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     def get_config(self,get):
@@ -154,7 +154,7 @@ class mail_msg:
         except:pass
         return msg,title
 
-    def send_msg(self,msg , title = 'Infuze Panel panel message push',to_email = None):
+    def send_msg(self,msg , title = 'iPanel panel message push',to_email = None):
         """
         邮箱发送
         @msg 消息正文

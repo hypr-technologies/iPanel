@@ -123,7 +123,7 @@ else:
 def M(table):
     """
         @name 访问面板数据库
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @table 被访问的表名(必需)
         @return db.Sql object
 
@@ -161,7 +161,7 @@ def MysqlConn(db_name: typing.Optional[str] = None, db_user: str = 'root', db_pw
 def HttpGet(url, timeout=6, headers={}):
     """
         @name 发送GET请求
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @url 被请求的URL地址(必需)
         @timeout 超时时间默认60秒
         @return string
@@ -183,7 +183,7 @@ def HttpGet(url, timeout=6, headers={}):
 def http_get_home(url, timeout, ex):
     """
         @name Get方式使用优选节点访问官网
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param url 当前官网URL地址
         @param timeout 用于测试超时时间
         @param ex 上一次错误的响应内容
@@ -192,7 +192,7 @@ def http_get_home(url, timeout, ex):
         如果已经是优选节点，将直接返回ex
     """
     try:
-        home = 'www.infuze.local'
+        home = 'www.hypr.local'
         if url.find(home) == -1: return ex
         hosts_file = "config/hosts.json"
         if not os.path.exists(hosts_file): return ex
@@ -213,13 +213,13 @@ def http_get_home(url, timeout, ex):
 # def set_home_host(host):
 #     """
 #         @name 设置官网hosts
-#         @author hwliang<hwl@infuze panel.com>
+#         @author hwliang<hwl@hypr panel.com>
 #         @param host IP地址
 #         @return void
 #     """
-#     ExecShell('sed -i "/www.infuze.local/d" /etc/hosts')
+#     ExecShell('sed -i "/www.hypr.local/d" /etc/hosts')
 #     ExecShell("echo '' >> /etc/hosts")
-#     ExecShell("echo '%s www.infuze.local' >> /etc/hosts" % host)
+#     ExecShell("echo '%s www.hypr.local' >> /etc/hosts" % host)
 #     ExecShell(r'sed -i "/^\s*$/d" /etc/hosts')
 
 def httpGet(url, timeout=6):
@@ -252,7 +252,7 @@ def HttpPost(url, data, timeout=6, headers={}):
 def httpPost(url, data, headers={}, timeout=6):
     """
         @name 发送POST请求
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param url 被请求的URL地址(必需)
         @param data POST参数，可以是字符串或字典(必需)
         @param timeout 超时时间默认60秒
@@ -268,7 +268,7 @@ def check_home():
 def Md5(strings):
     """
         @name 生成MD5
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param strings 要被处理的字符串
         @return string(32)
     """
@@ -287,7 +287,7 @@ def md5(strings):
 def FileMd5(filename):
     """
         @name 生成文件的MD5
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param filename 文件名
         @return string(32) or False
     """
@@ -307,7 +307,7 @@ def FileMd5(filename):
 def GetRandomString(length):
     """
        @name 取随机字符串
-       @author hwliang<hwl@infuze panel.com>
+       @author hwliang<hwl@hypr panel.com>
        @param length 要获取的长度
        @return string(length)
     """
@@ -324,7 +324,7 @@ def GetRandomString(length):
 def ReturnJson(status, msg, args=()):
     """
         @name 取通用Json返回
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param status  返回状态
         @param msg  返回消息
         @return string(json)
@@ -336,7 +336,7 @@ def ReturnJson(status, msg, args=()):
 def returnJson(status, msg, args=()):
     """
         @name 取通用Json返回
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param status  返回状态
         @param msg  返回消息
         @return string(json)
@@ -347,7 +347,7 @@ def returnJson(status, msg, args=()):
 def ReturnMsg(status, msg, args=()):
     """
         @name 取通用dict返回
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param status  返回状态
         @param msg  返回消息
         @return dict  {"status":bool,"msg":string}
@@ -384,7 +384,7 @@ def return_msg_gettext(status, msg, args=()):
 def returnMsg(status, msg, args=()):
     """
         @name 取通用dict返回
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param status  返回状态
         @param msg  返回消息
         @return dict  {"status":bool,"msg":string}
@@ -502,7 +502,7 @@ def fail_v2(res, format_args=()):
 def GetFileMode(filename):
     """
         @name 取文件权限字符串
-        @author hwliang<hwl@infuze panel.com>
+        @author hwliang<hwl@hypr panel.com>
         @param filename  文件全路径
         @return string  如：644/777/755
     """
@@ -649,11 +649,11 @@ def GetConfigValue(key):
     config = GetConfig()
     if not config:
         config = {"product": "Linux panel", "setup_path": "/www/server", "openlitespeed_path": "/usr/local",
-         "language": "English", "title": "Infuze Panel Linux panel", "brand": "Infuze Panel", "root_path": "/www",
-         "template": "default", "logs_path": "/www/wwwlogs", "home": "https://www.infuze panel.com", "recycle_bin": True}
+         "language": "English", "title": "iPanel Linux panel", "brand": "iPanel", "root_path": "/www",
+         "template": "default", "logs_path": "/www/wwwlogs", "home": "https://www.iPanel.com", "recycle_bin": True}
         writeFile('/www/server/panel/config/config.json',json.dumps(config))
     if not key in config.keys():
-        if key == 'download': return 'http://node.infuze panel.com'
+        if key == 'download': return 'http://node.iPanel.com'
         return None
     return config[key]
 
@@ -982,7 +982,7 @@ def get_timeout(url, timeout=3):
 
 
 def get_url(timeout=0.5):
-    return 'https://node.infuze panel.com'
+    return 'https://node.iPanel.com'
 
     import json
     try:
@@ -1017,7 +1017,7 @@ def get_url(timeout=0.5):
         else:  # 终选中等延迟，中等带宽
             mnode = sorted(mnode2, key=lambda x: x['ping'], reverse=False)
 
-        if not mnode: return 'https://node.infuze panel.com'
+        if not mnode: return 'https://node.iPanel.com'
 
         new_node_keys = new_node_list.keys()
         for i in range(len(node_list)):
@@ -1032,7 +1032,7 @@ def get_url(timeout=0.5):
         cache_set(pkey, node_url, 86400)
         return node_url
     except:
-        return 'https://node.infuze panel.com'
+        return 'https://node.iPanel.com'
 
 
 # 过滤输入
@@ -1771,7 +1771,7 @@ def err_collect(error_info, type, error_id):
     # 提交异常报告
     if not cache_get(pkey):
         try:
-            run_thread(httpPost, ("https://geterror.infuze panel.com/bt_error/index.php", error_infos))
+            run_thread(httpPost, ("https://geterror.iPanel.com/bt_error/index.php", error_infos))
             cache_set(pkey, 1, 1800)
         except Exception as e:
             pass  # 错误信息
@@ -1872,8 +1872,8 @@ def CheckMyCnf():
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-# CF='node.infuze panel.com'
-# HK='download.infuze.local'
+# CF='node.iPanel.com'
+# HK='download.hypr.local'
 # HK2='103.224.251.67'
 # US='128.1.164.196'
 # sleep 0.5;
@@ -1891,7 +1891,7 @@ export PATH
 #     nodeAddr=$CF
 # fi
 
-Download_Url=https://node.infuze panel.com
+Download_Url=https://node.iPanel.com
 
 
 MySQL_Opt()
@@ -3820,7 +3820,7 @@ def chdck_salt():
     for u_info in u_list:
         salt = GetRandomString(12)  # 12位随机
         pdata = {}
-        pdata['password'] = md5(md5(u_info['password'] + '_infuze.local') + salt)
+        pdata['password'] = md5(md5(u_info['password'] + '_hypr.local') + salt)
         pdata['salt'] = salt
         M('users').where('id=?', (u_info['id'],)).update(pdata)
 
@@ -3850,14 +3850,14 @@ def password_salt(password, username=None, uid=None):
             raise Exception('username或uid必需传一项')
         uid = M('users').where('username=?', (username,)).getField('id')
     salt = M('users').where('id=?', (uid,)).getField('salt')
-    return md5(md5(password + '_infuze.local') + salt)
+    return md5(md5(password + '_hypr.local') + salt)
 
 
 # 备份配置文件
 def back_file(file, act=None):
     """
         @name 备份配置文件
-        @author zhwen<zhw@infuze panel.com>
+        @author zhwen<zhw@hypr panel.com>
         @param file 需要备份的文件
         @param act 如果存在，则备份一份作为默认配置
     """
@@ -3871,7 +3871,7 @@ def back_file(file, act=None):
 def restore_file(file, act=None):
     """
         @name 还原配置文件
-        @author zhwen<zhw@infuze panel.com>
+        @author zhwen<zhw@hypr panel.com>
         @param file 需要还原的文件
         @param act 如果存在，则还原默认配置
     """
@@ -4220,7 +4220,7 @@ def check_domain_cloud(domain):
 
 
 def count_wp():
-    run_thread(httpPost('http://brandnew.infuze panel.com/api/setupCount/setupWP', {}))
+    run_thread(httpPost('http://brandnew.iPanel.com/api/setupCount/setupWP', {}))
 
 
 def cloud_check_domain(domain):
@@ -4881,7 +4881,7 @@ def check_app(check='app'):
 
 
 # #宝塔邮件报警
-# def send_mail(title,body,is_logs=False,is_type="infuze panel login reminder"):
+# def send_mail(title,body,is_logs=False,is_type="iPanel login reminder"):
 #     if is_logs:
 #         try:
 #             import send_mail
@@ -4914,7 +4914,7 @@ def check_app(check='app'):
 #             return False
 
 # 宝塔邮件报警
-def send_mail(title, body, is_logs=False, is_type="infuze panel login reminder"):
+def send_mail(title, body, is_logs=False, is_type="iPanel login reminder"):
     try:
         import panelPush
         msg_data = {
@@ -4928,7 +4928,7 @@ def send_mail(title, body, is_logs=False, is_type="infuze panel login reminder")
 
 
 # 发送钉钉告警
-def send_dingding(body, is_logs=False, is_type="infuze panel login reminder"):
+def send_dingding(body, is_logs=False, is_type="iPanel login reminder"):
     try:
         import panelPush
         if is_logs: WriteLog2(is_type, body)
@@ -4938,7 +4938,7 @@ def send_dingding(body, is_logs=False, is_type="infuze panel login reminder"):
 
 
 # 发送微信告警
-def send_weixin(body, is_logs=False, is_type="infuze panel login reminder"):
+def send_weixin(body, is_logs=False, is_type="iPanel login reminder"):
     try:
         import panelPush
         if is_logs: WriteLog2(is_type, body)
@@ -4948,7 +4948,7 @@ def send_weixin(body, is_logs=False, is_type="infuze panel login reminder"):
 
 
 # 发送飞书告警
-def send_feishu(body, is_logs=False, is_type="infuze panel login reminder"):
+def send_feishu(body, is_logs=False, is_type="iPanel login reminder"):
     try:
         import panelPush
         if is_logs: WriteLog2(is_type, body)
@@ -5139,7 +5139,7 @@ def get_free_ip_info(address):
     # try:
     #     param = get_user_info()
     #     param['ip'] = address
-    #     res = json.loads(httpPost('https://wafapi2.infuze panel.com/api/ip/info', param))
+    #     res = json.loads(httpPost('https://wafapi2.iPanel.com/api/ip/info', param))
     #
     #     if address in res:
     #         info = res[address]
@@ -5296,8 +5296,8 @@ def login_send_body(is_type, username, login_ip, port):
                 login_time=time.strftime('%Y-%m-%d %X', time.localtime())
             ))
         else:
-            info = get_push_info("Infuze Panel login alarm", plist)
-            info["push_type"] = "Infuze Panel login alarm"
+            info = get_push_info("iPanel login alarm", plist)
+            info["push_type"] = "iPanel login alarm"
         object.push_data(info)
 
         # if send_type == "dingding":
@@ -5316,7 +5316,7 @@ def login_send_body(is_type, username, login_ip, port):
 # body= 发送的body
 # is_logs= 是否记录日志
 # is_type=发送告警的类型
-def send_to_body(title, body, is_logs=False, is_type="Infuze Panel email alert"):
+def send_to_body(title, body, is_logs=False, is_type="iPanel email alert"):
     login_send_mail = "{}/data/login_send_mail.pl".format(get_panel_path())
     login_send_dingding = "{}/data/login_send_dingding.pl".format(get_panel_path())
     if os.path.exists(login_send_mail):
@@ -5903,7 +5903,7 @@ def error_not_login(e=None, _src=None):
             # result = {"status": False, "code": -8888, "redirect": get_admin_path(),
             #           "msg": "The current login session has been invalid, please login again!"}
 
-            # 修改为infuze panel通用返回方式
+            # 修改为iPanel通用返回方式
             result = {
                 "status": -1,
                 "timestamp": int(time.time()),
@@ -5920,7 +5920,7 @@ def error_not_login(e=None, _src=None):
             # result = {"status": False, "code": -8888, "redirect": "/login",
             #           "msg": "The current login session has been invalid, please login again!"}
 
-            # 修改为infuze panel通用返回方式
+            # 修改为iPanel通用返回方式
             result = {
                 "status": -1,
                 "timestamp": int(time.time()),
@@ -7335,11 +7335,11 @@ def check_auth_ip():
     """
     import http_requests
     result = {'www': '', 'api': ''}
-    res = http_requests.post('https://wafapi2.infuze panel.com/api/getIpAddress', data={}, timeout=5, headers={})
+    res = http_requests.post('https://wafapi2.iPanel.com/api/getIpAddress', data={}, timeout=5, headers={})
     if res.status_code == 200:
         result['www'] = res.text
 
-    res1 = http_requests.post('https://wafapi.infuze panel.com/api/getIpAddress', data={}, timeout=5, headers={})
+    res1 = http_requests.post('https://wafapi.iPanel.com/api/getIpAddress', data={}, timeout=5, headers={})
     if res1.status_code == 200:
         result['api'] = res1.text
 
@@ -7858,7 +7858,7 @@ def set_tasks_run(data):
 def Get_ip_info(get_speed=False, get_user=True):
     '''
     获取bt官网ip归属地列表
-    @author wzz <wzz@infuze panel.com>
+    @author wzz <wzz@hypr panel.com>
     @return: list[dict{}]
     '''
     host_list = json.loads(readFile("config/hosts_dict.json"))
@@ -7882,7 +7882,7 @@ def get_user_server_ipaddress(host_list, level):
     @return:
     '''
     ips_result = []
-    headers = {"host": "www.infuze.local"}
+    headers = {"host": "www.hypr.local"}
     for host in host_list:
         try:
             new_url = "https://{}/Api/getIpAddress".format(host["ip"])
@@ -7966,13 +7966,13 @@ def get_bt_hosts(get_speed, host_list, level):
 def set_home_host2(host):
     """
     @name 设置官网hosts
-    @author wzz<wzz@infuze panel.com>
+    @author wzz<wzz@hypr panel.com>
     @param host IP地址
     @return void
     """
-    msg = "请尝试点击【清理旧节点】,如果仍然不行,请联系堡塔运维! https://www.infuze.local/bbs"
-    www_set = ExecShell("echo \"{} www.infuze.local\" >> /etc/hosts".format(host))
-    api_set = ExecShell("echo \"{} api.infuze.local\" >> /etc/hosts".format(host))
+    msg = "请尝试点击【清理旧节点】,如果仍然不行,请联系堡塔运维! https://www.hypr.local/bbs"
+    www_set = ExecShell("echo \"{} www.hypr.local\" >> /etc/hosts".format(host))
+    api_set = ExecShell("echo \"{} api.hypr.local\" >> /etc/hosts".format(host))
     if not www_set[1] and not api_set[1]: return returnMsg(True, "节点设置成功")
     if www_set[1]: return returnMsg(False, "节点设置失败: {}, {}".format(www_set[1], msg))
     if api_set[1]: return returnMsg(False, "节点设置失败: {}, {}".format(api_set[1], msg))
@@ -7981,13 +7981,13 @@ def set_home_host2(host):
 
 def Clean_bt_host():
     '''
-    删除infuze.local相关的hosts绑定信息
-    @author wzz <wzz@infuze panel.com>
+    删除hypr.local相关的hosts绑定信息
+    @author wzz <wzz@hypr panel.com>
     @return:
     '''
-    check_hosts = ExecShell("grep \"infuze.local\" /etc/hosts")
+    check_hosts = ExecShell("grep \"hypr.local\" /etc/hosts")
     if check_hosts[0]:
-        result = ExecShell("sed -i \"/infuze.local/d\" /etc/hosts")
+        result = ExecShell("sed -i \"/hypr.local/d\" /etc/hosts")
         if result[1]: return returnMsg(False, "旧节点清理失败: {}".format(result[1]))
         return returnMsg(True, "旧节点已清理")
     return returnMsg(True, "hosts没有绑定旧节点无需清理")
@@ -7996,7 +7996,7 @@ def Clean_bt_host():
 def Set_bt_host(ip=None):
     '''
     设置bt官网(www && api)指定hosts节点
-    @author wzz <wzz@infuze panel.com>
+    @author wzz <wzz@hypr panel.com>
     @param get: 手动设置 get.ip 官网传ip地址,从public.Get_ip_info方法获取 | 自动设置
     @return:
     '''
@@ -8005,7 +8005,7 @@ def Set_bt_host(ip=None):
     if ip: return set_home_host2(ip)
     # 如果不传ip则自动设置
     ips_info = Get_ip_info(get_user=False)
-    headers = {"host": "www.infuze.local"}
+    headers = {"host": "www.hypr.local"}
     for host in ips_info:
         new_url = "https://{}".format(host['ip'])
         res = HttpGet(new_url, 1, headers=headers)
@@ -8569,7 +8569,7 @@ def redirect_to_login(default_callback_def=None):
         if x_http_token:
             # result = {"status": False, "code": -8888, "redirect": get_admin_path(),
             #           "msg": "The current login session has been invalid, please login again!"}
-            # 修改为infuze panel通用返回方式
+            # 修改为iPanel通用返回方式
             result = {
                 "status": -1,
                 "timestamp": int(time.time()),
@@ -8586,7 +8586,7 @@ def redirect_to_login(default_callback_def=None):
             # result = {"status": False, "code": -8888, "redirect": "/login",
             #           "msg": "The current login session has been invalid, please login again!"}
 
-            # 修改为infuze panel通用返回方式
+            # 修改为iPanel通用返回方式
             result = {
                 "status": -1,
                 "timestamp": int(time.time()),
@@ -8870,13 +8870,13 @@ def load_soft_list(force: bool = True, retry_count: int = 0):
 
 # 官网API根地址
 def OfficialApiBase():
-    return 'https://www.infuze panel.com'
-    # return 'http://dev.infuze panel.com'
+    return 'https://www.iPanel.com'
+    # return 'http://dev.iPanel.com'
 
 
 # 官网下载根地址
 def OfficialDownloadBase():
-    return 'https://node.infuze panel.com'
+    return 'https://node.iPanel.com'
 
 
 # 获取安装路径

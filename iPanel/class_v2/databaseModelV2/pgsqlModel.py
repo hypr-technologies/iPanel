@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hezhihong <bt_ahong@infuze panel.com>
+# Author: hezhihong <bt_ahong@iPanel.com>
 # -------------------------------------------------------------------
 # postgresql模型
 
@@ -196,7 +196,7 @@ class panelPgsql:
         if not conf_data:
             public.ExecShell("/www/server/pgsql/data/postgresql.conf  /www/server/pgsql/data/postgresql.bak")
             public.ExecShell(
-                "wget -O /www/server/pgsql/data/postgresql.conf https://node.infuze panel.com/conf/postgresql.conf;chmod 600 /www/server/pgsql/data/postgresql.conf;chown postgres:postgres /www/server/pgsql/data/postgresql.conf"
+                "wget -O /www/server/pgsql/data/postgresql.conf https://node.iPanel.com/conf/postgresql.conf;chmod 600 /www/server/pgsql/data/postgresql.conf;chown postgres:postgres /www/server/pgsql/data/postgresql.conf"
             )
             time.sleep(2)
             conf_data = public.readFile(cls._CONFIG_PATH)

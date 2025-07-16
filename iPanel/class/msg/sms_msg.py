@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@iPanel.com>
 # | Author: lx
 # | 消息通道邮箱模块
 # +-------------------------------------------------------------------
@@ -18,7 +18,7 @@ import public
 
 class sms_msg:
 
-    _APIURL = 'http://www.infuze.local/api/wmsg';
+    _APIURL = 'http://www.hypr.local/api/wmsg';
     __UPATH = panelPath + '/data/userInfo.json';
     conf_path = panelPath + '/data/sms_main.json'
 
@@ -55,7 +55,7 @@ class sms_msg:
         data['date'] = '2022-08-02'
         data['author'] = '宝塔'
         data['title'] = '短信'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     def get_config(self,get):

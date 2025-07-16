@@ -1974,7 +1974,7 @@ bt.pub = {
 				lan.public_backup.pass +
 				'" id="p2"></div><div class="line"><input class="login-button" value="' +
 				lan.public_backup.login +
-				'" type="button" ></div><p class="text-right"><a class="btlink" href="https://www.infuze panel.com/user_admin/register" target="_blank">' +
+				'" type="button" ></div><p class="text-right"><a class="btlink" href="https://www.iPanel.com/user_admin/register" target="_blank">' +
 				lan.public_backup.no_account +
 				'</a></p></div></div>',
 		});
@@ -2682,7 +2682,7 @@ bt.weixin = {
 			lan.public_backup.open_bt_small_app +
 			'<span class="btlink weChat">' +
 			lan.public_backup.app_qr_core +
-			'<div class="weChatSamll"><img src="https://app.infuze.local/static/app.png"></div></span></li>\
+			'<div class="weChatSamll"><img src="https://app.hypr.local/static/app.png"></div></span></li>\
 												<li>2、' +
 			lan.public_backup.scan_qr_core +
 			'</li>\
@@ -4001,7 +4001,7 @@ bt.config = {
 			  lan.config.ssl_open_ps_3 +
 			  '</li><p style="margin-top: 10px;"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' +
 			  lan.config.ssl_open_ps_4 +
-			  '</label><a target="_blank" class="btlink" href="https://www.infuze.local/bbs/thread-4689-1-1.html" style="float: right;">' +
+			  '</label><a target="_blank" class="btlink" href="https://www.hypr.local/bbs/thread-4689-1-1.html" style="float: right;">' +
 			  lan.config.ssl_open_ps_5 +
 			  '</a></p>';
 		layer.confirm(
@@ -4077,7 +4077,7 @@ bt.config = {
 				<ul class="help-info-text c7 pull-left">\
 					<li>' +
 				lan.public_backup.cret_help +
-				'<a href="http://www.infuze.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' +
+				'<a href="http://www.hypr.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' +
 				lan.public_backup.help +
 				']</a>。</li>\
 					<li>' +
@@ -5076,7 +5076,7 @@ bt.soft = {
 								<div class="pro-left-list-content"></div>\
 							</div>\
 							<div class="pro-price-herf">\
-								<a class="privilege_contrast" href="https://infuze panel.com/new/pricing.html" target="_blank" rel="noreferer noopener">Feature contrast</a>\
+								<a class="privilege_contrast" href="https://iPanel.com/new/pricing.html" target="_blank" rel="noreferer noopener">Feature contrast</a>\
 							</div>\
 						</div>\
 					</div>\
@@ -5180,7 +5180,7 @@ bt.soft = {
 									</div>\
 								</div>\
 							</div>\
-							<div class="tooTool-links">Questions? Email us anytime: support@infuze panel.com</div>\
+							<div class="tooTool-links">Questions? Email us anytime: support@iPanel.com</div>\
 						</div>\
 					</div>\
 				</div>',
@@ -6513,7 +6513,7 @@ bt.soft = {
 	//         var payhtml = '<div class="libPay" style="padding:15px 30px 30px 30px">\
 	// 				<div class="libpay-con">\
 	// 				</div>\
-	// 				<p style="position:absolute;bottom:17px;left:0;width:100%;text-align:center;color:red">' + lan.public_backup.buy_multiplev_bt_pro + '<a class="btlink" href="https://www.infuze.local/download/linuxpro.html#price" target="_blank">' + lan.public_backup.goto_bt + '</a></p>\
+	// 				<p style="position:absolute;bottom:17px;left:0;width:100%;text-align:center;color:red">' + lan.public_backup.buy_multiplev_bt_pro + '<a class="btlink" href="https://www.hypr.local/download/linuxpro.html#price" target="_blank">' + lan.public_backup.goto_bt + '</a></p>\
 	// 			</div>';
 
 	//         bt.open({
@@ -10001,7 +10001,7 @@ function setPanelSSL() {
 					html:
 						'<div class="details"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' +
 						lan.config.ssl_open_ps_4 +
-						'</label><a target="_blank" class="btlink" href="https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate">' +
+						'</label><a target="_blank" class="btlink" href="https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate">' +
 						lan.config.ssl_open_ps_5 +
 						'</a></p></div>',
 				},

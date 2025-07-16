@@ -22,7 +22,7 @@ class BusinessSSL(object):
     __BINDURL = f"{public.OfficialApiBase()}/api/user"  # 获取token 获取官网token
     __APIURL = f"{public.OfficialApiBase()}/api"
 
-    __CODEURL = "https://wafapi.infuze panel.com/Auth/GetBindCode"  # 获取绑定验证码
+    __CODEURL = "https://wafapi.iPanel.com/Auth/GetBindCode"  # 获取绑定验证码
     __UPATH = "data/userInfo.json"
     __PUBKEY = "data/public.key"
 
@@ -375,7 +375,7 @@ class BusinessSSL(object):
             verify_info['hosts'] = []
             if verify_info['data']['application']['status'] == 'ongoing':
                 return public.fail_v2(
-                    public.lang("In verification, please contact Infuze Panel if the audit still fails after 24 hours")
+                    public.lang("In verification, please contact iPanel if the audit still fails after 24 hours")
                 )
 
             for dinfo in verify_info['data']['dcvList']:

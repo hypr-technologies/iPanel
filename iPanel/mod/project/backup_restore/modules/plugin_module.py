@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: miku <miku@infuze.local>
+# Author: miku <miku@hypr.local>
 # -------------------------------------------------------------------
 import json
 import os
@@ -243,7 +243,7 @@ class PluginModule(BaseUtil, ConfigManager):
         """
         self.print_log("====================================================", "restore")
         self.print_log(public.lang("Start restoring plugin data"), "restore")
-        self.print_log(public.lang("If the migrated machine is not bound to a infuze panel user and upgraded to Professional version, plugin restoration failures may occur"), "restore")
+        self.print_log(public.lang("If the migrated machine is not bound to a iPanel user and upgraded to Professional version, plugin restoration failures may occur"), "restore")
 
         restore_data = self.get_restore_data_list(timestamp)
         plugin_info = restore_data['data_list']['plugin']

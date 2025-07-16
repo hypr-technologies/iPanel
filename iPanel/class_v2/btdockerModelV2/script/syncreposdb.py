@@ -1,11 +1,11 @@
 #!/www/server/panel/pyenv/bin/python3
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: wzz <wzz@infuze panel.com>
+# Author: wzz <wzz@hypr panel.com>
 # -------------------------------------------------------------------
 # docker模型sock 封装库 镜像库
 # -------------------------------------------------------------------

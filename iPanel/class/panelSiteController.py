@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -72,7 +72,7 @@ class panelSiteController:
             @param args<dict_obj> {
                 data: {
                     siteName: string<网站名称>,
-                    domains: list<域名列表>,  // 如：["www.infuze.local:80","infuze.local:80"]
+                    domains: list<域名列表>,  // 如：["www.hypr.local:80","hypr.local:80"]
                     parser_type: string<解释器类型>, // 从 get_parser_list 接口中获取
                     parser_version: string<解释器版本>, // 从 get_parser_versions 接口中获取
                     ps: string<网站备注>,

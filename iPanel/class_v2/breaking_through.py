@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hezhihong <hezhihong@infuze panel.com>
+# Author: hezhihong <hezhihong@iPanel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -38,7 +38,7 @@ class main(safeBase):
     _config={}
 
     def __init__(self):
-        self._types={'white':'infuze panel.ipv4.whitelist','black':'infuze panel.ipv4.blacklist'}
+        self._types={'white':'iPanel.ipv4.whitelist','black':'iPanel.ipv4.blacklist'}
         self._types_system={'white':'whitelist','black':'blacklist'}
         self._config_file='/www/server/panel/data/breaking_through.json'
         try:
@@ -48,7 +48,7 @@ class main(safeBase):
         self._breaking_white_file='{}/data/breaking_white.conf'.format(public.get_panel_path())
         self._limit_file='{}/data/limit_login.pl'.format(public.get_panel_path())
         self.__script_py = public.get_panel_path() + '/script/breaking_through_check.py'
-        self.__complier_group='infuze panel_complier'
+        self.__complier_group='iPanel_complier'
         self.__gcc_path=""
         if os.path.exists("/usr/bin/gcc"):
             self.__gcc_path="/usr/bin/gcc"
@@ -69,7 +69,7 @@ class main(safeBase):
   `black_reason` INTEGER
 )'''
 
-            #black_reason 0 手动添加 1 ssh爆破ip 2 infuze panel爆破ip 3 ftp爆破ip 4 历史记录爆破ip
+            #black_reason 0 手动添加 1 ssh爆破ip 2 iPanel爆破ip 3 ftp爆破ip 4 历史记录爆破ip
 
             sql.execute(black_white_sql, ())
             sql.close()
@@ -82,7 +82,7 @@ class main(safeBase):
         """
         # try:
         #     # 在循环外只查询指定 ipset集合
-        #     check_result = public.ExecShell('ipset list infuze panel.ipv4.whitelist && ipset list infuze panel.ipv4.blacklist')[0]
+        #     check_result = public.ExecShell('ipset list iPanel.ipv4.whitelist && ipset list iPanel.ipv4.blacklist')[0]
         #     for i in self._types:
         #         # check_result=public.ExecShell('ipset list')[0]
         #         if self._types[i] not in check_result:
@@ -258,7 +258,7 @@ class main(safeBase):
                 for line in line_list:
                     if line =='' or len(line)<50 :continue
                     
-                    # ssh_info={"user":"","exptime":"","ip":"","authservice":"infuze panel safe","country_code":"","logintime":"","service":"","country_name":"","timeleft":"","lock_status":'unlock'}
+                    # ssh_info={"user":"","exptime":"","ip":"","authservice":"iPanel safe","country_code":"","logintime":"","service":"","country_name":"","timeleft":"","lock_status":'unlock'}
                     ssh_info={"user":"","exptime":"","ip":"","authservice":"","country_code":"","logintime":"","service":"","country_name":"","timeleft":"","lock_status":'unlock'}
                     user='root'
                     ip='127.0.0.1'
@@ -291,7 +291,7 @@ class main(safeBase):
                         user='-'
                     ssh_info['ip']=ip
                     ssh_info['user']=user
-                    check_result=public.ExecShell('ipset test infuze panel.ipv4.blacklist '+ip)[1]
+                    check_result=public.ExecShell('ipset test iPanel.ipv4.blacklist '+ip)[1]
                     if 'is in set' in check_result:ssh_info['lock_status']='lock'
 
                     #取时间
@@ -462,23 +462,23 @@ class main(safeBase):
         if not self._config['global_status']:
             return 
         # public.print_log('防爆破脚本开始运行...')
-        infuze panel_login_info=[]
+        iPanel_login_info=[]
         now_time=old_limit=time.time()
         if  self._config['username_status']:
             limit_time=int(self._config['based_on_username']['limit'])*60
             count=int(self._config['based_on_username']['count'])
             
             start_time=public.format_date(times=now_time-limit_time)
-            infuze panel_login_info=public.M('logs').where('type=? and addtime>=? and log LIKE ?',('Login',start_time,'%is incorrec%')).select()
-            infuze panel_login_limit=now_time+limit_time
+            iPanel_login_info=public.M('logs').where('type=? and addtime>=? and log LIKE ?',('Login',start_time,'%is incorrec%')).select()
+            iPanel_login_limit=now_time+limit_time
             try:
                 old_limit=int(public.readFile(self._limit_file))
             except:old_limit=now_time
-            if len(infuze panel_login_info)>=count and old_limit<=now_time:
-                public.writeFile(self._limit_file,str(infuze panel_login_limit))
+            if len(iPanel_login_info)>=count and old_limit<=now_time:
+                public.writeFile(self._limit_file,str(iPanel_login_limit))
                 # public.print_log('统计到面板登录最大尝试次数')
                 # public.print_log('当前时间为：{}'.format(public.format_date(times=now_time)))
-                # public.print_log('限制时间为：{}'.format(public.format_date(times=infuze panel_login_limit)))
+                # public.print_log('限制时间为：{}'.format(public.format_date(times=iPanel_login_limit)))
             
             
         if self._config['ip_status']:
@@ -559,7 +559,7 @@ class main(safeBase):
         keyword=get.keyword.strip()
         result=[]
         limit_time=int(self._config['history_limit'])*60  #默认最近1小时
-        infuze panel_user=public.M('users').where("id=?", (1,)).getField('username')
+        iPanel_user=public.M('users').where("id=?", (1,)).getField('username')
         start_time=public.format_date(times=now_time-limit_time)
         if self._config['history_start'] !=0 and int(time.time())-int(self._config['history_start'])<limit_time:
             start_time=public.format_date(times=self._config['history_start'])
@@ -574,16 +574,16 @@ class main(safeBase):
                     timeleft= 0 if now_time>public.to_date(i['addtime'])+limit_time else now_time-(public.to_date(i['addtime'])+limit_time)
                     tt_time=public.format_date(times=public.to_date(times=i['addtime'])+limit_time)
                     single_info={"timeleft":timeleft,
-                    "user":infuze panel_user,
+                    "user":iPanel_user,
                     "ip":ip,
-                    "authservice":"infuze panel",
+                    "authservice":"iPanel",
                     "exptime":tt_time,#当前时间-超时时间-登录时间
                     "country_code":"",
                     "logintime":i['addtime'],
-                    "service":"infuze panel",
+                    "service":"iPanel",
                     "country_name":""
                     }
-                    if keyword !='' and (keyword in infuze panel_user or keyword in ip or keyword in "infuze panel" or keyword in i['addtime']) :result.append(single_info)
+                    if keyword !='' and (keyword in iPanel_user or keyword in ip or keyword in "iPanel" or keyword in i['addtime']) :result.append(single_info)
                     if keyword =='':result.append(single_info)
             #取ssh记录
             ssh_info=self.get_ssh_intrusion(start_time)
@@ -592,7 +592,7 @@ class main(safeBase):
         elif get.types == 'ip':
             ip_info=public.M('black_white').where('add_type=? and timeout !=? and add_time>?', ('black',0,start_time )).select()
             for i in ip_info:
-                if keyword !='' and (keyword not in i['ip'] and keyword in "infuze panel" and  keyword in i['addtime']) :continue
+                if keyword !='' and (keyword not in i['ip'] and keyword in "iPanel" and  keyword in i['addtime']) :continue
                 add_time=int(public.to_date(times=i['add_time']))
                 exptime=add_time+i['timeout']
                 timeleft= 0 if now_time>exptime else exptime-now_time
@@ -602,10 +602,10 @@ class main(safeBase):
                 "begin":i['add_time'],
                 "country_code":"",
                 "note":"",
-                "action":"infuze panel",
+                "action":"iPanel",
                 "country_name":"",
                 'lock_status':'blocked',
-                'block_reason':'Trigger SSH explosion-proof rule breaking' if i['black_reason']==1 else 'Trigger infuze panel explosion-proof rule breaking'
+                'block_reason':'Trigger SSH explosion-proof rule breaking' if i['black_reason']==1 else 'Trigger iPanel explosion-proof rule breaking'
                 }
                 result.append(single_info)
                 
@@ -655,7 +655,7 @@ class main(safeBase):
         #清除历史记录
         clear_ips=public.M('black_white').where('add_type=? and timeout !=?', ('black',0)).select()
         for clear_info in clear_ips:
-            check_result=public.ExecShell('ipset test infuze panel.ipv4.blacklist '+clear_info['ip'])[1]
+            check_result=public.ExecShell('ipset test iPanel.ipv4.blacklist '+clear_info['ip'])[1]
             if 'is in set' in check_result:
                 public.ExecShell('ipset del '+self._types['black']+' '+clear_info['ip'])
         public.M('black_white').where('add_type=? and timeout !=?', ('black',0)).delete()
@@ -940,7 +940,7 @@ class main(safeBase):
         """
         @name 获取防护配置
         """
-        result={'based_on_username':['infuze panel'],'based_on_ip':['ssh']}
+        result={'based_on_username':['iPanel'],'based_on_ip':['ssh']}
             
         return public.return_message(0,0,result)
     

@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel x3
+# | iPanel x3
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: zhw <zhw@infuze panel.com>
+# | Author: zhw <zhw@iPanel.com>
 # +-------------------------------------------------------------------
 
 import public

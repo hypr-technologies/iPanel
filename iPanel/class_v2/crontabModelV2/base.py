@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# infuze panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 #-------------------------------------------------------------------
 import os,sys,time,json
 panelPath = '/www/server/panel'
@@ -24,7 +24,7 @@ class crontabBase:
         self.check_column()
         self.sync_scripts()
         self.sync_types() 
-        self.check_infuze panel_column()
+        self.check_iPanel_column()
 
     def exists_column(self, sql_pbj,table,column):
         '''
@@ -64,7 +64,7 @@ class crontabBase:
         if sql_obj.table('types').where('type_id=?',3).getField('name') != 'Alarm notification':
             sql_obj.table('types').where('type_id=?',3).update({'name':'Alarm notification','title':'Script for sending various alarm notifications'})
 
-    def check_infuze panel_column(self):
+    def check_iPanel_column(self):
         dbfile = public.get_panel_path() + '/data/default.db'
         sql_obj = db.Sql().dbfile(dbfile)
         if not sql_obj: return

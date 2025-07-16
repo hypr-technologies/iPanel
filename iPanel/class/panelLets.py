@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@iPanel.com>
 # +-------------------------------------------------------------------
 import os,sys,json,time,re
 setup_path = '/www/server/panel'

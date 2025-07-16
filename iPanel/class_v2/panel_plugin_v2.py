@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@hypr panel.com>
 #-------------------------------------------------------------------
 import threading
 
@@ -563,7 +563,7 @@ class panelPlugin:
         try:
             token = panelAuth.panelAuth().create_serverid(None)['token']
         except:
-            # return public.returnMsg(False,'Please log in as Infuze Panel account first')
+            # return public.returnMsg(False,'Please log in as iPanel account first')
             token = None
         if 'download' in pluginInfo['versions'][0]:
             tmp_path = '/www/server/panel/temp'
@@ -736,7 +736,7 @@ class panelPlugin:
         if force > 0:
             public.ExecShell('rm -f /tmp/bmac_*')
             public.run_thread(self.getCloudPHPExt)
-            # 专业版和企业版到期提醒，Infuze Panel目前没有先注释
+            # 专业版和企业版到期提醒，iPanel目前没有先注释
             # self.expire_msg(softList)
 
         try:
@@ -2555,7 +2555,7 @@ class panelPlugin:
     def getCloudPlugin(self,get):
         if session.get('getCloudPlugin') and get != None: return public.return_message(0, 0,'Your plugin list is already the latest version {}!',("-1",))
         import json
-        if not session.get('download_url'): session['download_url'] = 'http://node.infuze panel.com'
+        if not session.get('download_url'): session['download_url'] = 'http://node.iPanel.com'
 
         #获取列表
         try:
@@ -2716,7 +2716,7 @@ class panelPlugin:
                 data = json.loads(public.ReadFile(p_info).decode('utf-8-sig'))
             data['size'] = public.get_path_size(tmp_path)
             if not 'author' in data: data['author'] = public.lang("Unknown")
-            if not 'home' in data: data['home'] = 'https://www.infuze panel.com/forum'
+            if not 'home' in data: data['home'] = 'https://www.iPanel.com/forum'
 
             plugin_path = '/www/server/panel/plugin/' + data['name'] + '/info.json'
             data['old_version'] = '0'
@@ -2775,7 +2775,7 @@ class panelPlugin:
                 data = json.loads(public.ReadFile(p_info).decode('utf-8-sig'))
             data['size'] = public.get_path_size(tmp_path)
             if not 'author' in data: data['author'] = public.lang("Unknown")
-            if not 'home' in data: data['home'] = 'https://www.infuze panel.com/forum'
+            if not 'home' in data: data['home'] = 'https://www.iPanel.com/forum'
 
             plugin_path = '/www/server/panel/plugin/' + data['name'] + '/info.json'
             data['old_version'] = '0'
@@ -3120,7 +3120,7 @@ class panelPlugin:
 
             plugin_data_info['size'] = public.get_path_size(s_tmp_path)
             if not 'author' in plugin_data_info:
-                plugin_data_info['author'] = 'infuze panel'
+                plugin_data_info['author'] = 'iPanel'
             if not 'home' in plugin_data_info:
                 plugin_data_info['home'] = '{}'.format(public.OfficialApiBase())
 

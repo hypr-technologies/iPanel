@@ -15,7 +15,7 @@ class TestGitTool(TestCase):
     def runTest(self):
         # g = GitTool(
         #     project_path="/www/test/git_test",
-        #     git_url="http://git.infuze.local/baozi/bt_sync.git",
+        #     git_url="http://git.hypr.local/baozi/bt_sync.git",
         #     user_config={
         #         "name": "baozi",
         #         "password": "swt258452.",
@@ -28,7 +28,7 @@ class TestGitTool(TestCase):
         get = GET_CLASS()
         get.git_path = "/www/test/git_test"
         get.site_name = "git_test"
-        get.url = "http://git.infuze.local/baozi/bt_sync.git"
+        get.url = "http://git.hypr.local/baozi/bt_sync.git"
         get.config = json.dumps({
                 "name": "baozi",
                 "password": "swt258452.",

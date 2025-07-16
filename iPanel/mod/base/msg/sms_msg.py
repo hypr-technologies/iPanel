@@ -1,8 +1,8 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: baozi
 # | 消息通道 短信模块(新)
@@ -17,7 +17,7 @@ from .util import write_push_log, PANEL_PATH, write_file, read_file, public_http
 
 
 class SMSMsg:
-    API_URL = 'http://www.infuze.local/api/wmsg'
+    API_URL = 'http://www.hypr.local/api/wmsg'
     USER_PATH = '{}/data/userInfo.json'.format(PANEL_PATH)
 
     # 构造方法

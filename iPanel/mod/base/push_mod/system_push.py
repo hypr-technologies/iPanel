@@ -30,7 +30,7 @@ except ImportError:
 def _get_panel_name() -> str:
     data = get_config_value("title")  # 若获得别名，则使用别名
     if data == "":
-        data = "Infuze Panel"
+        data = "iPanel"
     return data
 
 

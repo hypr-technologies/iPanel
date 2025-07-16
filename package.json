@@ -1,0 +1,97 @@
+{
+  "name": "ipanel",
+  "version": "1.0.1",
+  "description": "iPanel - Web-based Server Management Panel",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "version:current": "python scripts/version_manager.py current",
+    "version:patch": "python scripts/version_manager.py increment patch",
+    "version:minor": "python scripts/version_manager.py increment minor",
+    "version:major": "python scripts/version_manager.py increment major",
+    "version:prerelease": "python scripts/version_manager.py increment prerelease",
+    "version:set": "python scripts/version_manager.py set",
+    "build": "python scripts/version_manager.py build",
+    "lint:commits": "commitlint --from=HEAD~10 --to=HEAD --verbose",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ipanel.git"
+  },
+  "keywords": [
+    "server",
+    "management",
+    "panel",
+    "web",
+    "administration",
+    "hosting",
+    "control-panel"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/ipanel/issues"
+  },
+  "homepage": "https://github.com/yourusername/ipanel#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "semantic-release": "^22.0.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.py": [
+      "black --check",
+      "flake8"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "develop",
+        "prerelease": "alpha"
+      },
+      {
+        "name": "release/*",
+        "prerelease": "beta"
+      },
+      {
+        "name": "hotfix/*",
+        "prerelease": "hotfix"
+      }
+    ]
+  }
+}

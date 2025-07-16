@@ -1,0 +1,138 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: production
+    environment:
+      - FLASK_ENV=production
+      - GUNICORN_WORKERS=4
+      - GUNICORN_WORKER_CLASS=gevent
+      - GUNICORN_MAX_REQUESTS=1000
+      - GUNICORN_MAX_REQUESTS_JITTER=100
+      - DATABASE_URL=postgresql://ipanel:${POSTGRES_PASSWORD}@postgres:5432/ipanel
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=${SECRET_KEY}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+    volumes:
+      - app_data:/app/data
+      - app_logs:/app/logs
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  postgres:
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    command: >
+      postgres
+      -c shared_preload_libraries=pg_stat_statements
+      -c pg_stat_statements.max=10000
+      -c pg_stat_statements.track=all
+      -c max_connections=200
+      -c shared_buffers=256MB
+      -c effective_cache_size=1GB
+      -c maintenance_work_mem=64MB
+      -c checkpoint_completion_target=0.9
+      -c wal_buffers=16MB
+      -c default_statistics_target=100
+      -c random_page_cost=1.1
+      -c effective_io_concurrency=200
+      -c work_mem=4MB
+      -c min_wal_size=1GB
+      -c max_wal_size=4GB
+      -c max_worker_processes=8
+      -c max_parallel_workers_per_gather=4
+      -c max_parallel_workers=8
+      -c max_parallel_maintenance_workers=4
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '1.0'
+          memory: 1G
+
+  redis:
+    command: >
+      redis-server
+      --appendonly yes
+      --appendfsync everysec
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
+      --tcp-keepalive 60
+      --timeout 0
+      --databases 16
+      --save 900 1
+      --save 300 10
+      --save 60 10000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  nginx:
+    volumes:
+      - ./docker/nginx.prod.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/ssl:/etc/ssl/certs:ro
+      - static_files:/app/static:ro
+      - app_logs:/var/log/nginx
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+
+  # Add backup service for production
+  backup:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:ro
+      - ./backups:/backups
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    command: >
+      sh -c "
+        while true; do
+          pg_dump -h postgres -U ipanel -d ipanel | gzip > /backups/backup_$(date +%Y%m%d_%H%M%S).sql.gz
+          find /backups -name '*.sql.gz' -mtime +7 -delete
+          sleep 86400
+        done
+      "
+    depends_on:
+      - postgres
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+volumes:
+  app_logs:
+
+networks:
+  ipanel-network:
+    driver: overlay
+    attachable: true

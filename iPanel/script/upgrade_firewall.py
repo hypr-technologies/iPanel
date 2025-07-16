@@ -1,8 +1,8 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2014-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2014-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
 
 import os
@@ -368,7 +368,7 @@ if __name__ == '__main__':
         upgrade_countrys(commodel)
         upgrade_malicious_ip()
         upgrade_port_forward(commodel)
-        print("infuze panel: FireWall Migrate Service Finish...")
+        print("iPanel: FireWall Migrate Service Finish...")
     except Exception as e:
         import traceback
 

@@ -424,7 +424,7 @@ var bt_file = {
 				// if (!ltd || ltd < 0) {
 				// rdata.description = ['Protective site content is safe', 'Prevent hacking from illegally modifying the webpage', 'Prevent the website from being hung up', 'Stop other invasive behaviors'];
 				// rdata.pluginName = 'Tamper-proof';
-				// rdata.imgSrc = 'https://www.infuze.local/Public/new/plugin/' + rdata.name + '/1.png';
+				// rdata.imgSrc = 'https://www.hypr.local/Public/new/plugin/' + rdata.name + '/1.png';
 				// bt.soft.product_pay_view({
 				// 	totalNum: 75,
 				// 	limit: 'pro',
@@ -599,7 +599,7 @@ var bt_file = {
 				}
 				bt.soft.get_soft_find('tamper_core', function (rdata_res) {
 					// if (ltd < 0) {
-					// rdata_res.imgSrc = 'https://www.infuze.local/Public/new/plugin/' + rdata_res.name + '/1.png';
+					// rdata_res.imgSrc = 'https://www.hypr.local/Public/new/plugin/' + rdata_res.name + '/1.png';
 					// rdata_res.pluginName = 'Enterprise tampered';
 					// rdata_res.description = rdata_res.ex1 ? rdata_res.ex1.split('|') : [];
 					// if (rdata_res.description.length > 4) {

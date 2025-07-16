@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2018 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2018 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -227,7 +227,7 @@ class apache:
     def add_httpd_access_log_format(self,args):
         '''
         @name 添加httpd日志格式
-        @author zhwen<zhw@infuze panel.com>
+        @author zhwen<zhw@iPanel.com>
         @param log_format 需要设置的日志格式["$server_name","$remote_addr","-"....]
         @param log_format_name
         @param act 操作方式 add/edit
@@ -257,7 +257,7 @@ class apache:
     def del_httpd_access_log_format(self,args):
         '''
         @name 删除日志格式
-        @author zhwen<zhw@infuze panel.com>
+        @author zhwen<zhw@iPanel.com>
         @param log_format_name
         '''
         conf = public.readFile(self.httpdconf)
@@ -349,7 +349,7 @@ class apache:
     def set_httpd_format_log_to_website(self,args):
         '''
         @name 设置网站日志格式
-        @author zhwen<zhw@infuze panel.com>
+        @author zhwen<zhw@iPanel.com>
         @param sites aaa.com,bbb.com
         @param log_format_name
         '''

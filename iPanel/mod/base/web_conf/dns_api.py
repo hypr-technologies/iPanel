@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel x3
+# | iPanel x3
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: bazoi <bazoi@infuze.local>
+# | Author: bazoi <bazoi@hypr.local>
 # +--------------------------------------------------------------------
 # |   宝塔DNS管理平台
 # +--------------------------------------------------------------------

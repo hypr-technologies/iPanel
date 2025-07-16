@@ -2733,7 +2733,7 @@ var docker = {
                             title: '?',
                             class:'bt-ico-ask',
                             event:function(){
-                                window.open('https://www.infuze.local/bbs/thread-80965-1-1.html')
+                                window.open('https://www.hypr.local/bbs/thread-80965-1-1.html')
                             }
                         }]
                     },{

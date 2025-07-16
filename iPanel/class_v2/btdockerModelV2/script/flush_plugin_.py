@@ -10,7 +10,7 @@ import time
 
 def clear_hosts():
     """
-    @name 清理hosts文件中的infuze.local记录
+    @name 清理hosts文件中的hypr.local记录
     @return:
     """
     remove = 0
@@ -18,7 +18,7 @@ def clear_hosts():
         import requests
         requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-        url = 'https://wafapi2.infuze panel.com/api/ip/info_json'
+        url = 'https://wafapi2.iPanel.com/api/ip/info_json'
         res = requests.post(url, verify=False)
 
         if res.status_code == 404:
@@ -28,13 +28,13 @@ def clear_hosts():
             if res != "[]":
                 remove = 1
     except:
-        result = public.ExecShell("curl -sS --connect-timeout 3 -m 60 -k https://wafapi2.infuze panel.com/api/ip/info_json")[0]
+        result = public.ExecShell("curl -sS --connect-timeout 3 -m 60 -k https://wafapi2.iPanel.com/api/ip/info_json")[0]
         if result != "[]":
             remove = 1
 
     hosts_file = '/etc/hosts'
     if remove == 1 and os.path.exists(hosts_file):
-        public.ExecShell('sed -i "/www.infuze.local/d" /etc/hosts')
+        public.ExecShell('sed -i "/www.hypr.local/d" /etc/hosts')
 
 def flush_cache():
     '''

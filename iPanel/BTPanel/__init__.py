@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +---
 
 from public.hook_import import hook_import
@@ -324,7 +324,7 @@ def request_check():
         auth = request.authorization
         if not comm.get_sk(): return
         if not auth: return send_authenticated()
-        tips = '_infuze.local'
+        tips = '_hypr.local'
         if public.md5(auth.username.strip() + tips) != app.config['BASIC_AUTH_USERNAME'] \
                 or public.md5(auth.password.strip() + tips) != app.config['BASIC_AUTH_PASSWORD']:
             return send_authenticated()
@@ -620,7 +620,7 @@ REQUEST_FORM: {request_form}
     # 提交异常报告
     if not public.cache_get(pkey):
         try:
-            public.run_thread(public.httpPost, ("https://geterror.infuze panel.com/bt_error/index.php", error_infos))
+            public.run_thread(public.httpPost, ("https://geterror.iPanel.com/bt_error/index.php", error_infos))
             public.cache_set(pkey, 1, 1800)
         except Exception as e:
             pass
@@ -3083,7 +3083,7 @@ def sock_shell(ws):
 
         示例：
             p = new WebSocket('ws://192.168.1.247:8888/sock_shell')
-            p.send('ping www.infuze.local -c 100')
+            p.send('ping www.hypr.local -c 100')
     '''
     comReturn = comm.local()
     if comReturn:
@@ -3172,7 +3172,7 @@ def close_sock_shell():
         @param cmdstring<string> 完整命令行
         @return dict
         示例：
-            $.post('/close_sock_shell',{cmdstring:'ping www.infuze.local -c 100'})
+            $.post('/close_sock_shell',{cmdstring:'ping www.hypr.local -c 100'})
     '''
     comReturn = comm.local()
     if comReturn: return comReturn
@@ -5802,7 +5802,7 @@ def sock_shell_v2(ws):
 
         示例：
             p = new WebSocket('ws://192.168.1.247:8888/sock_shell')
-            p.send('ping www.infuze.local -c 100')
+            p.send('ping www.hypr.local -c 100')
     '''
     comReturn = comm.local()
     if comReturn:
@@ -5867,7 +5867,7 @@ def close_sock_shell_v2():
         @param cmdstring<string> 完整命令行
         @return dict
         示例：
-            $.post('/close_sock_shell',{cmdstring:'ping www.infuze.local -c 100'})
+            $.post('/close_sock_shell',{cmdstring:'ping www.hypr.local -c 100'})
     '''
     comReturn = comm.local()
     if comReturn: return comReturn
@@ -6204,10 +6204,10 @@ def breaking_through_v2(pdata=None):
     return publicObject(breakingObject, defs, None, pdata)
 
 @app.route(route_v2 + '/virtual/<def_name>', methods=method_all)
-@app.route(route_v2 + '/infuze panelsub/<def_name>', methods=method_all)
-@app.route('/infuze panelsub/<def_name>', methods=method_all)
+@app.route(route_v2 + '/iPanelsub/<def_name>', methods=method_all)
+@app.route('/iPanelsub/<def_name>', methods=method_all)
 def virtualModel_v2(def_name):
-    if request.method in ['GET'] and request.path.startswith('/infuze panelsub'):
+    if request.method in ['GET'] and request.path.startswith('/iPanelsub'):
         return index_new(request.path)
     path_split = request.path.split("/")
     if len(path_split) < 3: return

@@ -55,7 +55,7 @@ def request_check():
         auth = request.authorization
         if not comm.get_sk(): return
         if not auth: return send_authenticated()
-        tips = '_infuze.local'
+        tips = '_hypr.local'
         if public.md5(auth.username.strip() + tips) != app.config['BASIC_AUTH_USERNAME'] \
                 or public.md5(auth.password.strip() + tips) != app.config['BASIC_AUTH_PASSWORD']:
             return send_authenticated()

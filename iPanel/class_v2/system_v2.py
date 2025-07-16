@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel x3
+# | iPanel x3
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze.local>
+# | Author: hwliang <hwl@hypr.local>
 # +-------------------------------------------------------------------
 import json
 

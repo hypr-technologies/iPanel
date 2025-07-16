@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: miku <wzz@infuze.local>
+# Author: miku <wzz@hypr.local>
 # -------------------------------------------------------------------
 import datetime
 import json
@@ -536,7 +536,7 @@ class main(DataManager):
                 if migrate_config['run_type'] == "COMPLETED":
                     migrate_config['migrate_progress'] = 100
                     migrate_config['migrate_err_msg'] = None
-                    migrate_config['migrate_msg'] = public.lang("infuze panel installation completed!")
+                    migrate_config['migrate_msg'] = public.lang("iPanel installation completed!")
                     try:
                         migrate_config['panel_addr'] = migrate_config['task_info']['panel_info']['panel_url']
                         migrate_config['panel_user'] = migrate_config['task_info']['panel_info']['username']
@@ -555,7 +555,7 @@ class main(DataManager):
                 run_name = public.lang("Migration Task")
                 err_info = []
                 if migrate_config['run_type'] == "PANEL_INSTALL":
-                    run_name = public.lang("infuze panel Installation")
+                    run_name = public.lang("iPanel Installation")
                 elif migrate_config['run_type'] == "LOCAL_BACKUP":
                     run_name = public.lang("Local Backup")
                 elif migrate_config['run_type'] == "UPLOAD_FILE":

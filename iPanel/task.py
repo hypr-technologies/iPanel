@@ -1,11 +1,11 @@
 #!/bin/python
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 
 # ------------------------------
@@ -886,7 +886,7 @@ def daemon_service():
 
 
 def update_panel():
-    os.system("curl -k https://node.infuze panel.com/install/update_7.x_en.sh|bash &")
+    os.system("curl -k https://node.iPanel.com/install/update_7.x_en.sh|bash &")
 
 
 def service_panel(action='reload'):
@@ -991,7 +991,7 @@ def push_msg():
 def JavaProDaemons():
     '''
         @name Java 项目守护进程
-        @author lkq@infuze panel.com
+        @author lkq@hypr panel.com
         @time 2022-07-19
         @param None
     '''
@@ -1273,7 +1273,7 @@ def update_vulnerabilities():
         if type(load_time) != dict: return
 
         def get_yun_infos(page):
-            url = "https://wafapi2.infuze panel.com/api/bt_waf/get_wordpress_scan?size=100&p=" + str(page)
+            url = "https://wafapi2.iPanel.com/api/bt_waf/get_wordpress_scan?size=100&p=" + str(page)
             yun_infos = requests.get(url, verify=False, timeout=60).json()
             for i in yun_infos['res']:
                 if i['data_time'] > load_time['data_time']:
@@ -1306,7 +1306,7 @@ def update_vulnerabilities():
         check_sql=M("plugin_error", "plugin_error").order("id desc").limit("1").field("id").find()
         if type(check_sql) != dict: return
         time.sleep(30)
-        url = "https://wafapi2.infuze panel.com/api/bt_waf/plugin_error_list"
+        url = "https://wafapi2.iPanel.com/api/bt_waf/plugin_error_list"
         try:
             res = requests.get(url, verify=False, timeout=60).json()
         except:
@@ -1338,7 +1338,7 @@ def update_vulnerabilities():
         import random
         def get_plugin_time(id):
             time.sleep(30)
-            url = "https://wafapi2.infuze panel.com/api/bt_waf/get_wordpress_not_update?p=" + str(id)
+            url = "https://wafapi2.iPanel.com/api/bt_waf/get_wordpress_not_update?p=" + str(id)
             try:
                 res = requests.get(url, verify=False, timeout=60).json()
                 if len(res['res']) == 0:

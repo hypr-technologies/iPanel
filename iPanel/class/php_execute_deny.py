@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: zhwen <zhw@infuze panel.com>
+# Author: zhwen <zhw@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------
@@ -24,7 +24,7 @@ class PhpExecuteDeny:
     def get_php_deny(self,args):
         '''
         # 添加某个网站禁止运行PHP
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :return:
         '''
@@ -82,7 +82,7 @@ class PhpExecuteDeny:
     def set_php_deny(self,args):
         '''
         # 添加某个网站禁止运行PHP
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :param args: deny_name 规则名称 str
         :param args: suffix 禁止访问的后续名 str
@@ -183,7 +183,7 @@ class PhpExecuteDeny:
     def del_php_deny(self,args):
         '''
         # 添加某个网站禁止运行PHP
-        author: zhwen<zhw@infuze panel.com>
+        author: zhwen<zhw@iPanel.com>
         :param args: website 网站名 str
         :param args: deny_name 规则名称 str
         :return:

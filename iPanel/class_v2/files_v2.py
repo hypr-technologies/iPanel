@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding:utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 from base64 import b64encode
 import sys
@@ -4088,7 +4088,7 @@ CREATE TABLE index_tb(
     def restore_website(self, args):
         """
             @name 恢复站点文件
-            @author zhwen<zhw@infuze panel.com>
+            @author zhwen<zhw@hypr panel.com>
             @parma file_name 备份得文件名
             @parma site_id 网站id
         """
@@ -4099,7 +4099,7 @@ CREATE TABLE index_tb(
     def get_progress(self, args):
         """
             @name 获取进度日志
-            @author zhwen<zhw@infuze panel.com>
+            @author zhwen<zhw@hypr panel.com>
         """
         import panel_restore_v2 as panel_restore
         pr = panel_restore.panel_restore()

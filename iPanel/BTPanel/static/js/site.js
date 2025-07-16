@@ -2271,7 +2271,7 @@ var site = {
                       <li>Analyzed log data contains intercepted requests</li>\
                       <li>By default, the last scan data is displayed (if not, please click log scan)</li>\
                       <li>If the log file is too large, scanning may take a long time, please be patient</li>\
-                      <li><a class="btlink" href="https://www.infuze panel.com/forum/d/3351-nginx-waf-instructions" target="_blank">Infuze Panel WAF</a> can effectively block such attacks</li>\
+                      <li><a class="btlink" href="https://www.iPanel.com/forum/d/3351-nginx-waf-instructions" target="_blank">iPanel WAF</a> can effectively block such attacks</li>\
                       </ul>';
 					$('#bt_site_table table thead th:eq(9)>span').css({ width: '42px', display: 'initial' }); //设置扫描th大小
 					//追加tips并设置样式
@@ -2644,7 +2644,7 @@ var site = {
 				</div>\
 				<ul class="bt_select_list"></ul>\
 			</div>\
-			<span style="display:inline-block; margin-left:10px;vertical-align: bottom;" class="feedback-btn"><span class="flex" style="align-items: center;margin-right:16px;width:100px;"><i class="icon-demand"></i><a class="btlink" onClick="javascript:bt.openFeedback({title:\'Infuze Panel demand feedback collection\',placeholder:\'<span>If you encounter any problems or imperfect functions during use, please describe <br> your problems or needs to us in detail, we will try our best to solve or improve for <br> you</span>\',recover:\'We pay special attention to your requirements feedback, and we conduct regular weekly requirements reviews. I hope I can help you better\',key:993,proType:2});" style="margin-left: 5px;">Feedback</a></span></span>'
+			<span style="display:inline-block; margin-left:10px;vertical-align: bottom;" class="feedback-btn"><span class="flex" style="align-items: center;margin-right:16px;width:100px;"><i class="icon-demand"></i><a class="btlink" onClick="javascript:bt.openFeedback({title:\'iPanel demand feedback collection\',placeholder:\'<span>If you encounter any problems or imperfect functions during use, please describe <br> your problems or needs to us in detail, we will try our best to solve or improve for <br> you</span>\',recover:\'We pay special attention to your requirements feedback, and we conduct regular weekly requirements reviews. I hope I can help you better\',key:993,proType:2});" style="margin-left: 5px;">Feedback</a></span></span>'
 		);
 		bt.site.get_type(function (res) {
 			site.reader_site_type(res);
@@ -5544,7 +5544,7 @@ var site = {
 														var _form_data = bt.render_form_line(datas[i]);
 														_html.append(_form_data.html);
 														var _other =
-															bt.os == 'Linux' && i == 0 ? '<span>Rewrite rule converter：<a href="https://www.infuze.local/Tools" target="_blank" style="color:#20a53a">Apache to Nginx</a></span>' : '';
+															bt.os == 'Linux' && i == 0 ? '<span>Rewrite rule converter：<a href="https://www.hypr.local/Tools" target="_blank" style="color:#20a53a">Apache to Nginx</a></span>' : '';
 														_html.find('.info-r').append(_other);
 														clicks = clicks.concat(_form_data.clicks);
 													}
@@ -6342,7 +6342,7 @@ var site = {
 					_html.append(_form_data.html);
 					var _other =
 						bt.os == 'Linux' && i == 0
-							? '<span>' + lan.site.rewrite_change_tools + '：<a href="https://www.infuze.local/Tools" target="_blank" style="color:#20a53a">' + lan.site.ap_change_ng + '</a></span>'
+							? '<span>' + lan.site.rewrite_change_tools + '：<a href="https://www.hypr.local/Tools" target="_blank" style="color:#20a53a">' + lan.site.ap_change_ng + '</a></span>'
 							: '';
 					_html.find('.info-r').append(_other);
 					clicks = clicks.concat(_form_data.clicks);
@@ -8047,7 +8047,7 @@ var site = {
                       <li>Analyzed log data contains intercepted requests</li>\
                       <li>By default, the last scan data is displayed (if not, please click log scan)</li>\
                       <li>If the log file is too large, scanning may take a long time, please be patient</li>\
-                      <li><a class="btlink" href="https://www.infuze panel.com/forum/d/3351-nginx-waf-instructions" target="_blank">Infuze Panel WAF</a> can effectively block such attacks</li>\
+                      <li><a class="btlink" href="https://www.iPanel.com/forum/d/3351-nginx-waf-instructions" target="_blank">iPanel WAF</a> can effectively block such attacks</li>\
                       </ul>';
 
 							robj.append(analyes_log_btn + '<div class="analyse_log_table"></div>' + analyse_help);
@@ -10032,7 +10032,7 @@ var site = {
 															lan.site.set_ssl.check_oneself +
 															'<p style="white-space: pre-wrap;">' +
 															lan.site.set_ssl.check_self_tip +
-															'</p><div><a class="btlink" style="white-space: pre-wrap;" href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">' +
+															'</p><div><a class="btlink" style="white-space: pre-wrap;" href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">' +
 															lan.site.set_ssl.how_verify +
 															'?</a></div></li><li style="position: relative;padding-left: 15px;">Labor Service Purchase<p style="white-space: pre-wrap;">Need deployment assistance? Human customer service available.</p><div><button class="btn btn-success btn-xs btn-title service_buy" type="button" data-oid="' +
 															item.uc_id +
@@ -10443,7 +10443,7 @@ var site = {
 															break;
 														case 1:
 															if (item.indexOf('*') != 0) {
-																set_info_tips(el, { msg: "Wildcard domain name format error, correct writing '*.infuze.local'", color: 'red' });
+																set_info_tips(el, { msg: "Wildcard domain name format error, correct writing '*.hypr.local'", color: 'red' });
 																status = false;
 															}
 															break;
@@ -10456,7 +10456,7 @@ var site = {
 																status = false;
 															}
 															if (item.indexOf('*') != 0) {
-																set_info_tips(el, { msg: "Wildcard domain name format error, correct writing '*.infuze.local'", color: 'red' });
+																set_info_tips(el, { msg: "Wildcard domain name format error, correct writing '*.hypr.local'", color: 'red' });
 																status = false;
 															}
 															break;
@@ -10691,7 +10691,7 @@ var site = {
 										var html =
 											'<span style="color:red">fail[' +
 											res +
-											']</span><a href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="bt-ico-ask" style="cursor: pointer;">?</a>';
+											']</span><a href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="bt-ico-ask" style="cursor: pointer;">?</a>';
 										if (res === 1) {
 											html = '<a class="btlink">pass</a>';
 										}
@@ -10724,7 +10724,7 @@ var site = {
 													? '<a class="btlink">pass</a>'
 													: '<span style="color:red">fail[' +
 													  paths[i].status +
-													  ']</span><a href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="bt-ico-ask" style="cursor: pointer;">?</a>') +
+													  ']</span><a href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="bt-ico-ask" style="cursor: pointer;">?</a>') +
 												'</td><td style="text-align:right;"><a href="javascript:bt.pub.copy_pass(\'' +
 												paths[i].url +
 												'\');" class="btlink">copy</a> | <a href="' +
@@ -10755,7 +10755,7 @@ var site = {
 											data.info.fileContent +
 											'">copy</span></div></div>' +
 											check_html +
-											'<div class="parsing_tips" style="font-size:13px;line-height: 24px;">· The verification result is verified by [this server], and the actual verification will be verified by [CA server]. Please wait patiently</br>· Please ensure that all items in the above list are successfully verified and click [Verify domain name] to submit verification again</br>· If the authentication fails for a long time, please change it to [DNS authentication] through [Modify Authentication method].</br>· SSL Adds the file authentication mode ->> <a href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="btlink" >View the tutorial</a></div>\
+											'<div class="parsing_tips" style="font-size:13px;line-height: 24px;">· The verification result is verified by [this server], and the actual verification will be verified by [CA server]. Please wait patiently</br>· Please ensure that all items in the above list are successfully verified and click [Verify domain name] to submit verification again</br>· If the authentication fails for a long time, please change it to [DNS authentication] through [Modify Authentication method].</br>· SSL Adds the file authentication mode ->> <a href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank" class="btlink" >View the tutorial</a></div>\
 															<div class="parsing_parem" style="padding: 0 0px;"><button type="submit" class="btn btn-success verify_ssl_domain">Verify Domain</button><button type="submit" class="btn btn-default set_verify_type">Modify Auth Mode</button><button type="submit" class="btn btn-default return_ssl_list">Return list</button></div>\
 													</div>';
 									} else {
@@ -10779,7 +10779,7 @@ var site = {
 											'" readonly="readonly" /><span class="parsing_icon" data-clipboard-text="' +
 											data.info.dnsValue +
 											'">copy</span></div></div>\
-													<div class="parsing_tips" style="font-size:13px;line-height: 24px;">· The verification result is verified by [this server], and the actual verification will be verified by [CA server]. Please wait patiently</br>· Please ensure that all items in the above list are successfully verified and click [Verify domain name] to submit verification again</br>· If the authentication fails for a long time, please change it to [DNS authentication] through [Modify Authentication method].</br>· How to add domain name resolution，And consult the server operator</br>· <a class="btlink" href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">How do I verify commercial certificates?</a></div>\
+													<div class="parsing_tips" style="font-size:13px;line-height: 24px;">· The verification result is verified by [this server], and the actual verification will be verified by [CA server]. Please wait patiently</br>· Please ensure that all items in the above list are successfully verified and click [Verify domain name] to submit verification again</br>· If the authentication fails for a long time, please change it to [DNS authentication] through [Modify Authentication method].</br>· How to add domain name resolution，And consult the server operator</br>· <a class="btlink" href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">How do I verify commercial certificates?</a></div>\
 													<div class="parsing_parem" style="padding: 0 0px;"><button type="submit" class="btn btn-success verify_ssl_domain">Verify Domain</button><button type="submit" class="btn btn-default set_verify_type">Modify Auth Mode</button><button type="submit" class="btn btn-default return_ssl_list">Return list</button></div>\
 											</div>';
 									}
@@ -11416,7 +11416,7 @@ var site = {
 													ssl_service_tips.html(
 														index
 															? index === 1
-																? 'Infuze Panel provides manual deployment certificate deployment services from China time 9:00 -18:30 to help customers troubleshoot deployment certificate validity problems and quickly go online'
+																? 'iPanel provides manual deployment certificate deployment services from China time 9:00 -18:30 to help customers troubleshoot deployment certificate validity problems and quickly go online'
 																: '宝塔提供9:00 - 24:00的人工部署国密算法证书部署服务，帮助客户排查部署证书部署生效问题，快速上线'
 															: ''
 													);
@@ -11526,9 +11526,9 @@ var site = {
 												'\')">Select a website domain name</span><textarea id="dns_hide_domains" name="domains"></textarea></div></div><div class="dns_domains_verify"><button class="btn btn-default btn-xs isdnsbtn" onclick="site.check_domain_dns()">Refreshing DNS interface information</button><span class="dns_multi_warring_tips"></span></div>';
 										} else {
 											if (isWildcard) {
-												placeholder = 'single domain wildcard certificate, for example, *.infuze.local';
+												placeholder = 'single domain wildcard certificate, for example, *.hypr.local';
 											} else {
-												placeholder = 'single domain name certificate, for example, www.infuze.local';
+												placeholder = 'single domain name certificate, for example, www.hypr.local';
 											}
 											site.domain_dns_type = 'one';
 											html =
@@ -11676,8 +11676,8 @@ var site = {
 												(isMulti ? '' : 'display: none;') +
 												'">Multiple domain names support only DNS authentication</li>\
 														<li tyle="color:red">https or http authentication: Ensure that the website can be accessed through http/https</li>\
-														<li tyle="color:red">The domain name prefix is www, reminding users to resolve the upper-level root domain name, such as www.infuze.local, please ensure that the resolution of infuze.local</li>\
-														<li><a class="btlink" href="https://www.infuze panel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">How do I verify commercial certificates?</a></li>\
+														<li tyle="color:red">The domain name prefix is www, reminding users to resolve the upper-level root domain name, such as www.hypr.local, please ensure that the resolution of hypr.local</li>\
+														<li><a class="btlink" href="https://www.iPanel.com/forum/d/19277-business-ssl-certificate-tutorial" target="_blank">How do I verify commercial certificates?</a></li>\
 													</ul>\
 													<ul class="help-info-text c7 ssl_help_info" style="display:' +
 												(config.code.indexOf('ov') > -1 || config.code.indexOf('ev') > -1 ? 'block' : 'none') +
@@ -12246,7 +12246,7 @@ var site = {
 												name: 'bt_register',
 												type: 'button',
 												callback: function (sdata) {
-													window.open('https://www.infuze panel.com/user_admin/register');
+													window.open('https://www.iPanel.com/user_admin/register');
 												},
 											},
 										],
@@ -12430,7 +12430,7 @@ var site = {
 																			_form.title = lan.site.set + '【' + _val_obj.title + '】' + lan.site.interface;
 																			if (_val_obj.help == 'How to get API Token') {
 																				_val_obj.help =
-																					'<a class="btlink"  target="_blank" href="https://www.infuze panel.com/forum/d/3375-3375-set-the-clouldflare-apt-token-for-dns-editing-permissions">' +
+																					'<a class="btlink"  target="_blank" href="https://www.iPanel.com/forum/d/3375-3375-set-the-clouldflare-apt-token-for-dns-editing-permissions">' +
 																					_val_obj.help +
 																					'</a>';
 																			}

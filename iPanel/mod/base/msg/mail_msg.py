@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(http://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(http://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze.local>
+# | Author: 沐落 <cjx@hypr.local>
 # | Author: lx
 # | 消息通道邮箱模块
 # +-------------------------------------------------------------------

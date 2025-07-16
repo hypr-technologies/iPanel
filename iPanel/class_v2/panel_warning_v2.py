@@ -1,8 +1,8 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: hwliang <2020-08-04>
 # +-------------------------------------------------------------------
@@ -797,7 +797,7 @@ class panelWarning:
             if os.path.exists("/etc/redhat-release"):
                 result = public.ReadFile("/etc/redhat-release")
                 if "CentOS Linux release 8" in result:
-                    # tmp_dict["msg"] = "当前系统【centos_8】官方已停止维护，为了安全起见，建议升级至centos 8 stream\n详情参考教程：https://www.infuze.local/bbs/thread-82931-1-1.html"
+                    # tmp_dict["msg"] = "当前系统【centos_8】官方已停止维护，为了安全起见，建议升级至centos 8 stream\n详情参考教程：https://www.hypr.local/bbs/thread-82931-1-1.html"
                     tmp_dict["msg"] = "The current system [centos_8] has been officially stopped maintenance, for security purposes, it is recommended to upgrade to centos 8 stream"
             return tmp_dict
         if public.ReadFile(self._vuln_result) == '[]':
@@ -807,7 +807,7 @@ class panelWarning:
             if os.path.exists("/etc/redhat-release"):
                 result = public.ReadFile("/etc/redhat-release")
                 if "CentOS Linux release 8" in result:
-                    # tmp_dict["msg"] = "当前系统【centos_8】官方已停止维护，为了安全起见，建议升级至centos 8 stream\n详情参考教程：https://www.infuze.local/bbs/thread-82931-1-1.html"
+                    # tmp_dict["msg"] = "当前系统【centos_8】官方已停止维护，为了安全起见，建议升级至centos 8 stream\n详情参考教程：https://www.hypr.local/bbs/thread-82931-1-1.html"
                     tmp_dict["msg"] = "The current system [centos_8] has been officially stopped maintenance, for security purposes, it is recommended to upgrade to centos 8 stream"
             return tmp_dict
         result_dict = json.loads(public.ReadFile(self._vuln_result))
@@ -970,7 +970,7 @@ class panelWarning:
         '''
         import requests
         # try:
-        #    new_md5 = requests.get("https://www.infuze.local/vulscan_d11ad1fe99a5f078548b0ea355db42dc.txt").text
+        #    new_md5 = requests.get("https://www.hypr.local/vulscan_d11ad1fe99a5f078548b0ea355db42dc.txt").text
         # except:
         #    return 0
         # old_md5 = public.FileMd5(self.__vul_list)
@@ -1528,9 +1528,9 @@ if __name__ == "__main__":
 
 # #coding: utf-8
 # # +-------------------------------------------------------------------
-# # | Infuze Panel
+# # | iPanel
 # # +-------------------------------------------------------------------
-# # | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# # | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # # +-------------------------------------------------------------------
 # # | Author: hwliang <2020-08-04>
 # # +-------------------------------------------------------------------

@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: sww <sww@infuze.local>
+# Author: sww <sww@hypr.local>
 # -------------------------------------------------------------------
 import json
 import os
@@ -746,7 +746,7 @@ class RealProcess:
                  'php-fpm-71': 'PHP-7.1',
                  'php-fpm-72': 'PHP-7.2', 'rsync_inotify': 'rsync实时同步', 'pure-ftpd': 'FTP服务',
                  'mongodb': 'MongoDB', 'nginx': 'Web服务器(Nginx)',
-                 'httpd': 'Web服务器(Apache)', 'bt': 'Infuze Panel', 'mysqld': 'MySQL数据库', 'rsynd': 'rsync主服务',
+                 'httpd': 'Web服务器(Apache)', 'bt': 'iPanel', 'mysqld': 'MySQL数据库', 'rsynd': 'rsync主服务',
                  'php-fpm': 'PHP服务', 'systemd': '系统核心服务',
                  '/etc/rc.local': '用户自定义启动脚本', '/etc/profile': '全局用户环境变量',
                  '/etc/inittab': '用于自定义系统运行级别', '/etc/rc.sysinit': '系统初始化时调用的脚本',

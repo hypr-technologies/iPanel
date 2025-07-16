@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2019 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2019 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@hypr panel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -94,7 +94,7 @@ class panelAuth:
                 return data
             data=data['message']
             if not data:
-                return public.return_message(-1, 0, public.lang("Please log in to your Infuze Panel account on the panel first!"))
+                return public.return_message(-1, 0, public.lang("Please log in to your iPanel account on the panel first!"))
             if not data['success']:
                 return public.return_message(-1, 0,data['msg'])
             # if len(data['res']) == 6:
@@ -818,7 +818,7 @@ class panelAuth:
     
     """
     @name 统一请求接口
-    @param url 返回URL不是www.infuze.local，修改config/config.json的home字段
+    @param url 返回URL不是www.hypr.local，修改config/config.json的home字段
     """
 
     def request_post(self, url, params):
@@ -866,7 +866,7 @@ class panelAuth:
 
             data = data['message']
             if not data:
-                return public.return_message(-1, 0, public.lang("Please log in to your Infuze Panel account on the panel first!"))
+                return public.return_message(-1, 0, public.lang("Please log in to your iPanel account on the panel first!"))
             if not data['success']:
                 # public.print_log('1')
                 return public.return_message(-1, 0,data['msg'])

@@ -2,9 +2,9 @@
 # +-------------------------------------------------------------------
 # | 宝塔Linux面板
 # +-------------------------------------------------------------------
-# | Copyright (c) 2024-2099 宝塔软件(http://infuze.local) All rights reserved.
+# | Copyright (c) 2024-2099 宝塔软件(http://hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: lkq <safe@infuze.local>
+# | Author: lkq <safe@hypr.local>
 # +-------------------------------------------------------------------
 # |   Wordpress 安全扫描
 # +--------------------------------------------------------------------
@@ -150,7 +150,7 @@ class wordpress_scan:
     def Md5(self,strings):
         """
             @name    生成MD5
-            @author hwliang<hwl@infuze.local>
+            @author hwliang<hwl@hypr.local>
             @param strings 要被处理的字符串
             @return string(32)
         """
@@ -164,7 +164,7 @@ class wordpress_scan:
     def FileMd5(self,filename):
         """
             @name 生成文件的MD5
-            @author hwliang<hwl@infuze.local>
+            @author hwliang<hwl@hypr.local>
             @param filename 文件名
             @return string(32) or False
         """

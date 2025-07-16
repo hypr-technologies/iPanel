@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@hypr panel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -29,18 +29,18 @@ except:
 class panelSSL:
     # __APIURL = public.GetConfigValue('home') + '/api/Auth'
     # __APIURL2 = public.GetConfigValue('home') + '/api/Cert'
-    # __BINDURL = 'https://wafapi.infuze panel.com/Auth/GetAuthToken'   # 获取token 获取官网token
+    # __BINDURL = 'https://wafapi.iPanel.com/Auth/GetAuthToken'   # 获取token 获取官网token
 
 
 
 
     __BINDURL = '{}/api/user'.format(public.OfficialApiBase())  # 获取token 获取官网token
-    # __BINDURL = 'http://dev.infuze panel.com/api/user'  # 获取token 获取官网token
+    # __BINDURL = 'http://dev.iPanel.com/api/user'  # 获取token 获取官网token
 
-    __CODEURL = 'https://wafapi.infuze panel.com/Auth/GetBindCode'  # 获取绑定验证码
+    __CODEURL = 'https://wafapi.iPanel.com/Auth/GetBindCode'  # 获取绑定验证码
     __UPATH = 'data/userInfo.json'
 
-    # __APIURL = 'http://dev.infuze panel.com/api'
+    # __APIURL = 'http://dev.iPanel.com/api'
     __APIURL = '{}/api'.format(public.OfficialApiBase())
 
     __PUBKEY = 'data/public.key'
@@ -139,7 +139,7 @@ class panelSSL:
         data['environment_info'] = json.dumps(public.fetch_env_info())
 
         try:
-            # https://www.infuze panel.com
+            # https://www.iPanel.com
             isPro = False
             if hasattr(get, 'isPro') and get.isPro:
                 isPro = True
@@ -543,7 +543,7 @@ class panelSSL:
         verify_info['paths'] = []
         verify_info['hosts'] = []
         if verify_info['data']['application']['status'] == 'ongoing':
-            return public.return_message(-1, 0, public.lang("In verification, please contact Infuze Panel if the audit still fails after 24 hours"))
+            return public.return_message(-1, 0, public.lang("In verification, please contact iPanel if the audit still fails after 24 hours"))
 
         for dinfo in verify_info['data']['dcvList']:
             is_https = dinfo['dcvMethod'] == 'HTTPS_CSR_HASH'
@@ -627,7 +627,7 @@ class panelSSL:
     #     # /api/common/stripe/{out_trade_no}
     #     # result = self.request_test('order/pay')
     #     result = public.return_msg_gettext(False, '测试用 模拟支付!')
-    #     url = "https://dev.infuze panel.com/api/common/stripe/" + out_trade_no
+    #     url = "https://dev.iPanel.com/api/common/stripe/" + out_trade_no
     #     response_data = public.httpGet(url)
     #
     #     # public.print_log("******************** url: {}".format(url))
@@ -1520,7 +1520,7 @@ class panelSSL:
         except Exception as ex:
             error = str(ex)
             if error.lower().find('json') >= 0:
-                error = '<br>错误：连接宝塔官网异常，请按照以下方法排除问题后重试：<br>解决方法：<a target="_blank" class="btlink" href="https://www.infuze.local/bbs/thread-87257-1-1.html">https://www.infuze.local/bbs/thread-87257-1-1.html</a><br>'
+                error = '<br>错误：连接宝塔官网异常，请按照以下方法排除问题后重试：<br>解决方法：<a target="_blank" class="btlink" href="https://www.hypr.local/bbs/thread-87257-1-1.html">https://www.hypr.local/bbs/thread-87257-1-1.html</a><br>'
                 # raise public.PanelError(error)
                 return public.return_message(-1, 0, 6)
             else:

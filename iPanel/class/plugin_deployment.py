@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 
 #+--------------------------------------------------------------------
@@ -77,7 +77,7 @@ class plugin_deployment:
         if sys.version_info[0] == 2: filename = filename.encode('utf-8')
         if os.path.exists(filename): 
             if os.path.getsize(filename) > 100: return pinfo
-        public.ExecShell("wget -O " + filename + ' https://www.infuze.local' + m_uri + " &")
+        public.ExecShell("wget -O " + filename + ' https://www.hypr.local' + m_uri + " &")
         return pinfo
 
     #获取插件列表
@@ -104,7 +104,7 @@ class plugin_deployment:
         try:
             jsonFile = self.__setupPath + '/deployment_list.json'
             if not 'package' in session or not os.path.exists(jsonFile) or hasattr(get,'force'):
-                downloadUrl = 'http://www.infuze.local/api/panel/get_deplist'
+                downloadUrl = 'http://www.hypr.local/api/panel/get_deplist'
                 pdata = public.get_pdata()
                 tmp = json.loads(public.httpPost(downloadUrl,pdata,3))
                 if not tmp: return public.returnMsg(False,'Failed to get from the cloud!')
@@ -270,12 +270,12 @@ class plugin_deployment:
         #下载文件
         if isDownload:
             self.WriteLogs(json.dumps({'name':'Downloading file ...','total':0,'used':0,'pre':0,'speed':0}))
-            if pinfo['versions'][0]['download']: self.DownloadFile('http://www.infuze.local/api/Pluginother/get_file?fname=' + pinfo['versions'][0]['download'], packageZip)
+            if pinfo['versions'][0]['download']: self.DownloadFile('http://www.hypr.local/api/Pluginother/get_file?fname=' + pinfo['versions'][0]['download'], packageZip)
 
         if not os.path.exists(packageZip): return public.returnMsg(False,'File download failed!' + packageZip)
 
         pinfo = self.set_temp_file(packageZip,path)
-        if not pinfo: return public.returnMsg(False,'Cannot find [Infuze Panel Auto Deployment Configuration File] in the installation package')
+        if not pinfo: return public.returnMsg(False,'Cannot find [iPanel Auto Deployment Configuration File] in the installation package')
 
         #设置权限
         self.WriteLogs(json.dumps({'name':'Setting permissions','total':0,'used':0,'pre':0,'speed':0}))
@@ -471,7 +471,7 @@ class plugin_deployment:
         p = panelAuth.panelAuth()
         pdata = p.create_serverid(None);
         pdata['pid'] = id;
-        p_url = 'http://www.infuze.local/api/pluginother/create_order_okey'
+        p_url = 'http://www.hypr.local/api/pluginother/create_order_okey'
         public.httpPost(p_url,pdata)
 
     #获取进度

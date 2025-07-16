@@ -1,8 +1,8 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: lx
 # | 消息通道飞书通知模块
@@ -46,9 +46,9 @@ class feishu_msg:
         data['ps'] = 'Feishu is used to receive panel message push'
         data['version'] = '1.2'
         data['date'] = '2022-08-10'
-        data['author'] = 'Infuze Panel'
+        data['author'] = 'iPanel'
         data['title'] = 'Feishu'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
 
@@ -103,7 +103,7 @@ class feishu_msg:
                 return public.returnMsg(False, public.lang("Note name cannot exceed 7 characters"))
 
         self.__feishu_info  = {"feishu_url": get.url.strip(), "isAtAll": isAtAll, "user":1,"title":title}
-        ret = self.send_msg('Infuze Panel alarm test')
+        ret = self.send_msg('iPanel alarm test')
         if ret['status']:
             if 'default' in get and get['default']:
                 public.writeFile(self.__default_pl, self.__module_name)
@@ -123,7 +123,7 @@ class feishu_msg:
         """
         try:
             import re
-            title = 'Infuze Panel warning notification'
+            title = 'iPanel warning notification'
             if msg.find("####") >= 0:
                 try:
                     title = re.search(r"####(.+)", msg).groups()[0]

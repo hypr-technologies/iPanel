@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: zhwwen <zhw@infuze panel.com>
+# Author: zhwwen <zhw@iPanel.com>
 # -------------------------------------------------------------------
 #
 # ------------------------------
@@ -127,7 +127,7 @@ class panel_restore:
     def restore_website_backup(self,args):
         """
             @name 恢复站点文件
-            @author zhwen<zhw@infuze panel.com>
+            @author zhwen<zhw@iPanel.com>
             @parma file_name 备份得文件名
             @parma site_id 网站id
         """
@@ -171,7 +171,7 @@ class panel_restore:
     def get_progress(self, get):
         """
             @name 获取进度日志
-            @author zhwen<zhw@infuze panel.com>
+            @author zhwen<zhw@iPanel.com>
         """
         # result = public.GetNumLines(self._progress_file, 20)
         result = public.ExecShell('tail -n 20 {}'.format(self._progress_file))[0]
@@ -183,7 +183,7 @@ class panel_restore:
     def restore_db_backup(self,args):
         """
             @name 恢复站点文件
-            @author zhwen<zhw@infuze panel.com>
+            @author zhwen<zhw@iPanel.com>
             @parma file_name 备份得文件名 /www/backup/database/db_test_com_20200817_112722.sql.gz|Google Drive|db_test_com_20200817_112722.sql.gz
             @parma obj_name 数据库名
         """

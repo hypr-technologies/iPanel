@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -1729,7 +1729,7 @@ class backup:
         return title
 
     def generate_failture_title(self, task_name):
-        title = "infuze panel Plan Task Backup Failure Reminder".format(task_name)
+        title = "iPanel Plan Task Backup Failure Reminder".format(task_name)
         return title
 
     def generate_all_failture_notice(self, task_name, msg, backup_type, remark=""):

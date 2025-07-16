@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@iPanel.com>
 # | Author: lx
 # | 消息通道邮箱模块
 # +-------------------------------------------------------------------
@@ -46,7 +46,7 @@ class wx_account_msg:
         data['date'] = '2022-08-15'
         data['author'] = '宝塔'
         data['title'] = '微信公众号'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     def get_local_ip(self):
@@ -118,7 +118,7 @@ class wx_account_msg:
 
     def get_web_info(self,get):
         if self.user_info is None: return public.returnMsg(False, public.lang("The user binding information was not obtained"))
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/info"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/info"
         data = {
             "uid": self.user_info["uid"],
             "access_key": 'B' * 32,
@@ -140,7 +140,7 @@ class wx_account_msg:
 
     def get_web_info2(self):
         if self.user_info is None: return public.returnMsg(False, public.lang("The user binding information was not obtained"))
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/info"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/info"
         data = {
             "uid": self.user_info["uid"],
             "access_key": 'B' * 32,
@@ -160,7 +160,7 @@ class wx_account_msg:
 
     def get_auth_url(self,get):
         if self.user_info is None: return public.returnMsg(False, public.lang("The user binding information was not obtained"))
-        url = "https://wafapi2.infuze panel.com/api/v2/user/wx_web/get_auth_url"
+        url = "https://wafapi2.iPanel.com/api/v2/user/wx_web/get_auth_url"
         data = {
             "uid": self.user_info["uid"],
             "access_key": 'B' * 32,
@@ -220,7 +220,7 @@ class wx_account_msg:
             return public.returnMsg(False, public.lang("No user information was obtained"))
 
         msg,title = self.get_send_msg(msg)
-        url="https://wafapi2.infuze panel.com/api/v2/user/wx_web/send_template_msg_v2"
+        url="https://wafapi2.iPanel.com/api/v2/user/wx_web/send_template_msg_v2"
         datassss = {
             "first": {
                 "value": "堡塔主机告警",

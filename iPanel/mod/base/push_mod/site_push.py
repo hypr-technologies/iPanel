@@ -159,7 +159,7 @@ class SSLCertificateTask(BaseTask):
 
     def to_sms_msg(self, push_data: dict, push_public_data: dict) -> Tuple[str, dict]:
         # 构造sms特殊消息体
-        return 'ssl_end|Infuze Panel SSL Expiration Reminder', {
+        return 'ssl_end|iPanel SSL Expiration Reminder', {
             "name": push_public_data["ip"],
             # "domain": self.ssl_list[0]['domain'],
             'time': self.ssl_list[0]["notAfter"],
@@ -171,7 +171,7 @@ class SSLCertificateTask(BaseTask):
         msg = WxAccountMsg.new_msg()
         msg.thing_type = "SSL expiration reminder"
         msg.msg = "There are {} domains whose certificates will expire, affecting access".format(len(self.ssl_list))
-        msg.next_msg = "Please login to the Infuze Panel and renew in the certificates"
+        msg.next_msg = "Please login to the iPanel and renew in the certificates"
         return msg
 
     # 不需要额外hook
@@ -291,7 +291,7 @@ class SSLTask(BaseTask):
         return "Site Certificate (SSL) expiration -- Website [{}]".format(task_data["project"])
 
     def to_sms_msg(self, push_data: dict, push_public_data: dict) -> Tuple[str, dict]:
-        return 'ssl_end|Infuze Panel SSL Expiration Reminder', {
+        return 'ssl_end|iPanel SSL Expiration Reminder', {
             "name": push_public_data["ip"],
             "website": self.ssl_list[0]['site_name'],
             'time': self.ssl_list[0]["notAfter"],
@@ -302,7 +302,7 @@ class SSLTask(BaseTask):
         msg = WxAccountMsg.new_msg()
         msg.thing_type = "Website SSL expiration reminder"
         msg.msg = "There are {} sites whose certificates will expire, affecting access".format(len(self.ssl_list))
-        msg.next_msg = "Please login to the Infuze Panel and renew in the [Website]"
+        msg.next_msg = "Please login to the iPanel and renew in the [Website]"
         return msg
 
     def check_task_data(self, task_data: dict) -> Union[dict, str]:
@@ -430,7 +430,7 @@ class SiteEndTimeTask(BaseTask):
         msg = WxAccountMsg.new_msg()
         msg.thing_type = "Website expiration reminders"
         msg.msg = "There are {} sites that are about to expire and may affect site visits".format(len(self.push_keys))
-        msg.next_msg = "Please log in to the Infuze Panel and check the details on the website"
+        msg.next_msg = "Please log in to the iPanel and check the details on the website"
         return msg
 
     def task_run_end_hook(self, res) -> None:
@@ -458,8 +458,8 @@ class PanelPwdEndTimeTask(BaseTask):
     def __init__(self):
         super().__init__()
         self.source_name = "panel_pwd_end_time"
-        self.template_name = "Infuze Panel password expiration date"
-        self.title = "Infuze Panel password expiration date"
+        self.template_name = "iPanel password expiration date"
+        self.title = "iPanel password expiration date"
 
         self.limit_days = 0
 
@@ -498,7 +498,7 @@ class PanelPwdEndTimeTask(BaseTask):
 
     def to_wx_account_msg(self, push_data: dict, push_public_data: dict) -> WxAccountMsg:
         msg = WxAccountMsg.new_msg()
-        msg.thing_type = "Infuze Panel password expiration reminder"
+        msg.thing_type = "iPanel password expiration reminder"
         msg.msg = "The login password will expire after {} days".format(self.limit_days)
         msg.next_msg = "Log in to the panel and change your password in Settings"
         return msg
@@ -512,8 +512,8 @@ class PanelLoginTask(BaseTask):
         # public.print_log("panel_login")
         super().__init__()
         self.source_name = "panel_login"
-        self.template_name = "Infuze Panel login alarm"
-        self.title = "Infuze Panel login alarm"
+        self.template_name = "iPanel login alarm"
+        self.title = "iPanel login alarm"
 
     def check_task_data(self, task_data: dict) -> Union[dict, str]:
         return {}
@@ -528,7 +528,7 @@ class PanelLoginTask(BaseTask):
         return template
 
     def to_sms_msg(self, push_data: dict, push_public_data: dict) -> Tuple[str, dict]:
-        return "login_panel|Infuze Panel login reminders", {
+        return "login_panel|iPanel login reminders", {
             'name': '[' + push_data.get("ip") + ']',
             'time': time.strftime('%Y-%m-%d %X', time.localtime()),
             'type': '[' + push_data.get("is_type") + ']',
@@ -537,7 +537,7 @@ class PanelLoginTask(BaseTask):
 
     def to_wx_account_msg(self, push_data: dict, push_public_data: dict) -> WxAccountMsg:
         msg = WxAccountLoginMsg.new_msg()
-        msg.thing_type = "Infuze Panel login reminders"
+        msg.thing_type = "iPanel login reminders"
         msg.login_name = push_data.get("username")
         msg.login_ip = push_data.get("login_ip")
         msg.login_type = push_data.get("is_type")
@@ -961,8 +961,8 @@ class PanelSafePushTask(BaseTask):
     def __init__(self):
         super().__init__()
         self.source_name = "panel_safe_push"
-        self.template_name = "Infuze Panel safety alarm"
-        self.title = "Infuze Panel safety alarm"
+        self.template_name = "iPanel safety alarm"
+        self.title = "iPanel safety alarm"
 
         self.msg_list = []
 
@@ -1095,7 +1095,7 @@ class PanelSafePushTask(BaseTask):
 
     def to_wx_account_msg(self, push_data: dict, push_public_data: dict) -> WxAccountMsg:
         msg = WxAccountMsg.new_msg()
-        msg.thing_type = "Infuze Panel security alarms"
+        msg.thing_type = "iPanel security alarms"
         the_msg = []
         for d in self.msg_list:
             if d.find("Change of logged-in user"):
@@ -1184,8 +1184,8 @@ class PanelUpdateTask(BaseTask):
     def __init__(self):
         super().__init__()
         self.source_name = "panel_update"
-        self.template_name = "Infuze Panel update reminders"
-        self.title = "Infuze Panel update reminders"
+        self.template_name = "iPanel update reminders"
+        self.title = "iPanel update reminders"
         self.new_ver = ''
 
     def _get_no_user_tip(self) -> str:
@@ -1234,7 +1234,7 @@ class PanelUpdateTask(BaseTask):
         if self.user_can_request_hour() != datetime.now().hour:
             return
         # 面板更新日志  todo 暂时隐藏  后期可改成 ajax?action=UpdatePanel 获取更新日志
-        s_url = 'https://wafapi2.infuze panel.com/api/panel/updateLinux'
+        s_url = 'https://wafapi2.iPanel.com/api/panel/updateLinux'
         try:
             res = json.loads(public_http_post(s_url, {}))
             if not res:
@@ -1269,7 +1269,7 @@ class PanelUpdateTask(BaseTask):
 
     def to_wx_account_msg(self, push_data: dict, push_public_data: dict) -> WxAccountMsg:
         msg = WxAccountMsg.new_msg()
-        msg.thing_type = "Infuze Panel update reminders"
+        msg.thing_type = "iPanel update reminders"
         msg.msg = "最新版:{}已发布".format(self.new_ver)
         msg.next_msg = "您可以登录面板，执行更新"
         return msg

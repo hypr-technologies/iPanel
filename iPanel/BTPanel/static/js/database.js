@@ -525,7 +525,7 @@ var database = {
 						content:
 							'<div class="check_delete_site_main pd30">' +
 							'<i class="layui-layer-ico layui-layer-ico0"></i>' +
-							'<div class="check_layer_title">Infuze Panel kindly reminds you, please calm down for a few seconds, and then confirm whether you want to delete the data.</div>' +
+							'<div class="check_layer_title">iPanel kindly reminds you, please calm down for a few seconds, and then confirm whether you want to delete the data.</div>' +
 							'<div class="check_layer_content">' +
 							'<div class="check_layer_item">' +
 							'<div class="check_layer_site"></div>' +
@@ -1343,7 +1343,7 @@ var mysql = {
 			],
 success: function () {
 			$('.feedback-btn').remove();
-			$('.tootls_group.tootls_top .pull-left').append('<span style="display:inline-block; margin-left:10px;vertical-align: bottom;" class="feedback-btn"><span class="flex" style="align-items: center;margin-right:16px;width:100px;"><i class="icon-demand"></i><a class="btlink" onClick="javascript:bt.openFeedback({title:\'Infuze Panel demand feedback collection\',placeholder:\'<span>If you encounter any problems or imperfect functions during use, please describe <br> your problems or needs to us in detail, we will try our best to solve or improve for <br> you</span>\',recover:\'We pay special attention to your requirements feedback, and we conduct regular weekly requirements reviews. I hope I can help you better\',key:993,proType:2});" style="margin-left: 5px;">Feedback</a></span></span>');
+			$('.tootls_group.tootls_top .pull-left').append('<span style="display:inline-block; margin-left:10px;vertical-align: bottom;" class="feedback-btn"><span class="flex" style="align-items: center;margin-right:16px;width:100px;"><i class="icon-demand"></i><a class="btlink" onClick="javascript:bt.openFeedback({title:\'iPanel demand feedback collection\',placeholder:\'<span>If you encounter any problems or imperfect functions during use, please describe <br> your problems or needs to us in detail, we will try our best to solve or improve for <br> you</span>\',recover:\'We pay special attention to your requirements feedback, and we conduct regular weekly requirements reviews. I hope I can help you better\',key:993,proType:2});" style="margin-left: 5px;">Feedback</a></span></span>');
 					
 			}
 		});

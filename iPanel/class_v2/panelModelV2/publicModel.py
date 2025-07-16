@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: cjxin <cjxin@infuze panel.com>
+# Author: cjxin <cjxin@iPanel.com>
 # -------------------------------------------------------------------
 
 # 备份
@@ -39,8 +39,8 @@ class main(panelBase):
             if res:
                 return public.return_message(0, 0, res)
 
-            # res = public.httpPost('https://wafapi2.infuze panel.com/api/getUpdateLogs?type=Linux',{})
-            res = public.httpPost('https://wafapi2.infuze panel.com/Api/getUpdateLogs?type=Linux',{})
+            # res = public.httpPost('https://wafapi2.iPanel.com/api/getUpdateLogs?type=Linux',{})
+            res = public.httpPost('https://wafapi2.iPanel.com/Api/getUpdateLogs?type=Linux',{})
 
             start_index = res.find('(') + 1
             end_index = res.rfind(')')

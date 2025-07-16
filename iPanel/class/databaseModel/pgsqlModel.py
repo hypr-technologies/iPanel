@@ -1,10 +1,10 @@
 #coding: utf-8
 #-------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 #-------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 #-------------------------------------------------------------------
-# Author: hezhihong <bt_ahong@infuze panel.com>
+# Author: hezhihong <bt_ahong@iPanel.com>
 #-------------------------------------------------------------------
 
 #------------------------------

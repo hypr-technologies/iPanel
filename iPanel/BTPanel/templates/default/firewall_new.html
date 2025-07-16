@@ -246,7 +246,7 @@
             $.post('/firewall_new?action=GetList', { p: page, search: search,collback:'firewall.get_list' }, function (rdata) {
 
                 $('.firewallBody').html(rdata.page);
-                var ports_ps = { "3306": "MySQL service default port", "888": "phpMyAdmin default port", "22": "SSH remote service", "20": "FTP active mode data port", "21": "FTP protocol default port", "39000-40000": "FTP passive mode port range", "30000-40000": "FTP passive mode port range","11211":"Memcached service port","873":"Rsync data synchronization service","8888":"Infuze Panel Linux panel default port"}
+                var ports_ps = { "3306": "MySQL service default port", "888": "phpMyAdmin default port", "22": "SSH remote service", "20": "FTP active mode data port", "21": "FTP protocol default port", "39000-40000": "FTP passive mode port range", "30000-40000": "FTP passive mode port range","11211":"Memcached service port","873":"Rsync data synchronization service","8888":"iPanel Linux panel default port"}
 				var _tab =  bt.render({
 					table:'#firewallBody',
 					columns:[
@@ -273,7 +273,7 @@
 									break;
 							}
 							return status;
-						},help:'https://www.infuze.local/bbs/thread-4708-1-1.html'},
+						},help:'https://www.hypr.local/bbs/thread-4708-1-1.html'},
                         { field: 'addtime', title: "{{data['lan']['TH4']}}"},
                         { field: 'ps', title: "{{data['lan']['TH5']}}", templet: function (item) {
                             if (item.port in ports_ps) return ports_ps[item.port];

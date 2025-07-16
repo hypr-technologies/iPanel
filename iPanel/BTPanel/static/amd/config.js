@@ -505,7 +505,7 @@ define(['require', 'exports', './snabbdom', './public/public', './panelConfig', 
 									'span',
 									null,
 									'I already understand, ',
-									this.$link({ title: 'How to release the port?', href: 'https://www.infuze panel.com/forum/d/599-how-to-release-the-infuze panel-port' })
+									this.$link({ title: 'How to release the port?', href: 'https://www.iPanel.com/forum/d/599-how-to-release-the-iPanel-port' })
 								),
 								model: 'agreement',
 								id: 'checkPanelPort',

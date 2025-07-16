@@ -1,8 +1,8 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(https://www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(https://www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: baozi <
 # | 消息通道邮箱模块(新)

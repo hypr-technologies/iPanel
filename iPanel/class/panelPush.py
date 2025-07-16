@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@iPanel.com>
 # | Author: lx
 # | 消息推送管理
 # | 对外方法 get_modules_list、install_module、uninstall_module、get_module_template、set_push_config、get_push_config、del_push_config
@@ -477,7 +477,7 @@ class panelPush:
         data['version'] = '1.0'
         data['date'] = '2020-07-14'
         data['author'] = '宝塔'
-        data['help'] = 'http://www.infuze.local'
+        data['help'] = 'http://www.hypr.local'
         return data
 
     """

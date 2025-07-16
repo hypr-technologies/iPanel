@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 宝塔软件(https://www.infuze.local) All rights reserved.
+# | Copyright (c) 2015-2020 宝塔软件(https://www.hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: baozi <baozi@infuze panel.com>
+# | Author: baozi <baozi@hypr panel.com>
 # | Author: baozi
 # +-------------------------------------------------------------------
 import sys,os,re,json
@@ -83,8 +83,8 @@ class tamper_push(base_push):
         data['ps'] = 'Tamper-proof for Enterprise'
         data['version'] = '1.0'
         data['date'] = '2023-03-24'
-        data['author'] = 'Infuze Panel'
-        data['help'] = 'http://www.infuze.local/bbs'
+        data['author'] = 'iPanel'
+        data['help'] = 'http://www.hypr.local/bbs'
         return data
 
     # 获取模块推送参数

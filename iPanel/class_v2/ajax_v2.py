@@ -1,17 +1,17 @@
  #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2016 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2016 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@iPanel.com>
 # +-------------------------------------------------------------------
 from flask import session,request
 import public,os,json,time,apache,psutil
 from public.validate import Param
 
 class ajax:
-    __official_url = 'https://www.infuze panel.com'
+    __official_url = 'https://www.iPanel.com'
 
     def GetApacheStatus(self, get):
         a = apache.apache()
@@ -982,7 +982,7 @@ class ajax:
 
     # 下载云端php扩展配置
     def _get_cloud_phplib(self):
-        if not session.get('download_url'): session['download_url'] = 'https://node.infuze panel.com'
+        if not session.get('download_url'): session['download_url'] = 'https://node.iPanel.com'
         download_url = session['download_url'] + '/install/lib/phplib_en.json'
         tstr = public.httpGet(download_url)
         data = json.loads(tstr)
@@ -1118,7 +1118,7 @@ class ajax:
             public.serviceReload()
             if i=="apache":
                 import firewalls
-                # infuze panel 使用 get_msg_gettext
+                # iPanel 使用 get_msg_gettext
                 get.ps = public.lang("New phpMyAdmin SSL Port")
                 fw = firewalls.firewalls()
                 fw.AddAcceptPort(get)
@@ -1913,7 +1913,7 @@ class ajax:
                     "pay": "46",
                     "pluginName": "Nginx网站防火墙",
                     "ps": "有效拦截SQL 注入、XSS跨站、恶意代码、网站挂马等常见攻击，过滤恶意访问，降低数据泄露的风险，保障网站的可用性。",
-                    "preview": "https://www.infuze.local/new/product_nginx_firewall.html",
+                    "preview": "https://www.hypr.local/new/product_nginx_firewall.html",
                     "dependent": "nginx",
                     "pluginType": "pro",
                     "eventList": [
@@ -1929,7 +1929,7 @@ class ajax:
                     "pay": "46",
                     "pluginName": "网站防火墙",
                     "ps": "有效拦截SQL 注入、XSS跨站、恶意代码、网站挂马等常见攻击，过滤恶意访问，降低数据泄露的风险，保障网站的可用性。",
-                    "preview": "https://www.infuze.local/new/product_nginx_firewall.html",
+                    "preview": "https://www.hypr.local/new/product_nginx_firewall.html",
                     "dependent": "apache",
                     "pluginType": "pro",
                     "eventList": [
@@ -1945,7 +1945,7 @@ class ajax:
                     "pay": "47",
                     "pluginName": "网站监控报表",
                     "ps": "快速分析网站运行状况，实时精确统计网站流量、ip、uv、pv、请求、蜘蛛等数据，网站SEO优化利器",
-                    "preview": "https://www.infuze.local/new/product_website_total.html",
+                    "preview": "https://www.hypr.local/new/product_website_total.html",
                     "dependent": "apache",
                     "pluginType": "pro",
                     "eventList": [
@@ -1961,7 +1961,7 @@ class ajax:
                     "pay": "47",
                     "pluginName": "网站监控报表",
                     "ps": "快速分析网站运行状况，实时精确统计网站流量、ip、uv、pv、请求、蜘蛛等数据，网站SEO优化利器",
-                    "preview": "https://www.infuze.local/new/product_website_total.html",
+                    "preview": "https://www.hypr.local/new/product_website_total.html",
                     "dependent": "nginx",
                     "pluginType": "pro",
                     "eventList": [

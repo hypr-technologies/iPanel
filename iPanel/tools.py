@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 
 #------------------------------
@@ -250,13 +250,13 @@ def CreateSSL():
     domains = get_host_all()
     pdata = {
         "action":"get_domain_cert",
-        "company":"infuze panel.com",
+        "company":"iPanel.com",
         "domain":','.join(domains),
         "uid":userInfo['uid'],
         "access_key":userInfo['access_key'],
         "panel":1
     }
-    cert_api = 'https://api.infuze panel.com/infuze panel_cert'
+    cert_api = 'https://api.iPanel.com/iPanel_cert'
     result = json.loads(public.httpPost(cert_api,{'data': json.dumps(pdata)}))
     if 'status' in result:
         if result['status']:
@@ -445,7 +445,7 @@ def setup_idc():
         filename = panelPath + '/data/o.pl'
         if not os.path.exists(filename): return False
         o = public.readFile(filename).strip()
-        c_url = 'https://wafapi2.infuze panel.com/api/idc/get_idc_info_bycode?o=%s' % o
+        c_url = 'https://wafapi2.iPanel.com/api/idc/get_idc_info_bycode?o=%s' % o
         idcInfo = json.loads(public.httpGet(c_url))
         if not idcInfo['status']: return False
         pFile = panelPath + '/config/config.json'
@@ -457,7 +457,7 @@ def setup_idc():
         titleNew = (pInfo['brand'] + public.GetMsg("PANEL")).encode('utf-8')
         if os.path.exists(tFile):
             title = public.GetConfigValue('title')
-            if title == 'Infuze Panel' or title == '':
+            if title == 'iPanel' or title == '':
                 public.writeFile(tFile,titleNew)
                 public.SetConfigValue('title',titleNew)
         else:
@@ -503,7 +503,7 @@ def bt_cli(u_input = 0):
         print("(24) Turn off Google Authenticator          (17) Set log cutting on/off compression")
         print("(25) Save copy when modify file in panel    (18) Set whether to back up the panel automatically")
         # if not os.path.exists('/www/server/panel/data/panel_pro.pl'):
-        #     print("                                            (19) Update to infuze panel pro version")
+        #     print("                                            (19) Update to iPanel pro version")
         print("(26) Keep/Remove local backup when backing up to cloud storage")
         print("(27) Turn on/off panel SSL                  (28) Modify panel security entrance")
         print("(33) lift the explosion-proof limit on the panel")
@@ -728,13 +728,13 @@ def bt_cli(u_input = 0):
     elif u_input == 16:
         pro_path = '/www/server/panel/data/panel_pro.pl'
         if os.path.exists(pro_path):
-            print("|-Updating infuze panel version to pro version...")
-            os.system("curl -k https://node.infuze panel.com/install/update_pro_en.sh|bash")
+            print("|-Updating iPanel version to pro version...")
+            os.system("curl -k https://node.iPanel.com/install/update_pro_en.sh|bash")
         else:
             # os.system("/www/server/panel/pyenv/bin/pip install cachelib")
             only_update_pyenv312 = '/tmp/only_update_pyenv312.pl'
             if os.path.exists(only_update_pyenv312): os.remove(only_update_pyenv312)
-            os.system("curl -k https://node.infuze panel.com/install/update_7.x_en.sh|bash")
+            os.system("curl -k https://node.iPanel.com/install/update_7.x_en.sh|bash")
     elif u_input == 17:
         l_path = '/www/server/panel/data/log_not_gzip.pl'
         if os.path.exists(l_path):
@@ -757,8 +757,8 @@ def bt_cli(u_input = 0):
             print("|-Panel auto-backup function turned off")
     elif u_input == 19:
         if os.path.exists('/tmp/update_to7.pl'):os.remove('/tmp/update_to7.pl')
-        print("|-Updating infuze panel version to pro version...")
-        os.system("curl -k https://node.infuze panel.com/install/update_pro_en.sh|bash")
+        print("|-Updating iPanel version to pro version...")
+        os.system("curl -k https://node.iPanel.com/install/update_pro_en.sh|bash")
     elif u_input == 22:
         os.system('tail -100 /www/server/panel/logs/error.log')
     elif u_input == 23:

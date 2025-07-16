@@ -1,0 +1,105 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: base
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./iPanel:/app/iPanel
+      - app_data:/app/data
+    environment:
+      - FLASK_ENV=development
+      - PYTHONPATH=/app
+      - DATABASE_URL=sqlite:///app/data/panel.db
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ipanel
+      - POSTGRES_USER=ipanel
+      - POSTGRES_PASSWORD=ipanel_password
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/ssl:/etc/ssl/certs:ro
+      - static_files:/app/static
+    depends_on:
+      - app
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./docker/grafana/provisioning:/etc/grafana/provisioning:ro
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    networks:
+      - ipanel-network
+    restart: unless-stopped
+
+volumes:
+  app_data:
+  redis_data:
+  postgres_data:
+  static_files:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  ipanel-network:
+    driver: bridge

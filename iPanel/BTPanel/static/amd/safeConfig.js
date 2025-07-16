@@ -238,7 +238,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 																	content: {
 																			data: { cert_type: certSource.cert_type ? parseInt(certSource.cert_type) : 1, email: certSource.email || '', certPem: certPem, privateKey: privateKey, agreement: false },
 																			template: function () {
-																					var lineWidth = '80px', inputWidth = '280px', helpHref = 'https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate';
+																					var lineWidth = '80px', inputWidth = '280px', helpHref = 'https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate';
 																					return ((0, snabbdom_1.jsx)("div", { class: this.$class('bt-form'), style: this.$style('padding: 20px 50px;') },
 																							this.$warningTitle(lan.config.ssl_open_ps),
 																							this.$ul({ className: 'explainDescribeList pd15' }, [
@@ -266,7 +266,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 																											model: 'agreement',
 																											id: 'checkSSL',
 																											title: (0, snabbdom_1.jsx)("span", null, lan.config.ssl_open_ps_4),
-																											link: this.$link({ title: lan.config.ssl_open_ps_5, href: 'https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate' }),
+																											link: this.$link({ title: lan.config.ssl_open_ps_5, href: 'https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate' }),
 																									}))));
 																			},
 																	},
@@ -366,7 +366,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 																											(0, snabbdom_1.jsx)("span", null,
 																													lan.config.ps,
 																													" ",
-																													this.$link({ title: "[".concat(lan.config.help, "]"), href: 'http://www.infuze.local/bbs/thread-704-1-1.html' }),
+																													this.$link({ title: "[".concat(lan.config.help, "]"), href: 'http://www.hypr.local/bbs/thread-704-1-1.html' }),
 																													"."),
 																									],
 																									[lan.config.ps1],
@@ -431,7 +431,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 															title: (0, snabbdom_1.jsx)("span", null, "I already know the details and are willing to take risks"),
 															model: 'agreement',
 															id: 'checkBasicAuth',
-															link: this.$link({ title: 'What is BasicAuth authentication?', href: 'https://www.infuze.local/bbs/thread-34374-1-1.html' }),
+															link: this.$link({ title: 'What is BasicAuth authentication?', href: 'https://www.hypr.local/bbs/thread-34374-1-1.html' }),
 													})));
 									},
 							},
@@ -534,7 +534,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 															title: 'I already know the details and are willing to take risks',
 															model: 'agreement',
 															id: 'checkAuthenticator',
-															link: this.$link({ title: 'Learn more', href: 'https://www.infuze panel.com/forum/d/357-how-to-use-google-authenticator-in-the-infuze panel' }),
+															link: this.$link({ title: 'Learn more', href: 'https://www.iPanel.com/forum/d/357-how-to-use-google-authenticator-in-the-iPanel' }),
 													})));
 									},
 							},
@@ -611,7 +611,7 @@ define(["require", "exports", "./snabbdom", "./configMixin"], function (require,
 																			[
 																					(0, snabbdom_1.jsx)("span", null,
 																							"Tips: Please use the \"Google Authenticator APP\" binding to support Android, IOS system.",
-																							this.$link({ title: 'Use tutorial', href: 'https://www.infuze panel.com/forum/d/357-how-to-use-google-authenticator-in-the-infuze panel' })),
+																							this.$link({ title: 'Use tutorial', href: 'https://www.iPanel.com/forum/d/357-how-to-use-google-authenticator-in-the-iPanel' })),
 																			],
 																			['Once you have turned on the service, use the Google Authenticator app binding now to avoid having to sign in.', 'red'],
 																	])));

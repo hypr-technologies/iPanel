@@ -1,8 +1,8 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: hwliang <2020-05-18>
 # +-------------------------------------------------------------------
@@ -42,7 +42,7 @@ class panelMessage:
     """
     def get_cloud_messages(self,args):
 
-        # infuze panel 暂时不用
+        # iPanel 暂时不用
         return public.returnMsg(True, public.lang("Synchronization success!"))
 
         try:

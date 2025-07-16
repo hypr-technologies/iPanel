@@ -1,11 +1,11 @@
 #!/usr/bin/python
 #coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze.local>
+# Author: hwliang <hwl@hypr.local>
 # -------------------------------------------------------------------
 
 # -------------------------------------------------------------------
@@ -51,8 +51,8 @@ test11
 test1
 test2
 test123
-infuze.local
-www.infuze.local
+hypr.local
+www.hypr.local
 admin
 root
 12345
@@ -1120,7 +1120,7 @@ def password_salt(password,username=None,uid=None):
             salt = salt[0]
         else:
             salt = ""
-    return public.md5(public.md5(password+'_infuze.local')+salt)
+    return public.md5(public.md5(password+'_hypr.local')+salt)
 
 
 def is_strong_password(password):

@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@iPanel.com>
 # +-------------------------------------------------------------------
 import public,os,json,time
 class panelApi:
@@ -24,7 +24,7 @@ class panelApi:
 
         data['limit_addr'] = '\n'.join(data['limit_addr'])
         data['bind'] = self.get_bind_token()
-        qrcode = (public.getPanelAddr() + "|" + data['token'] + "|" + data['key'] + '|' + data['bind']['token']+'|infuze panel').encode('utf-8')
+        qrcode = (public.getPanelAddr() + "|" + data['token'] + "|" + data['key'] + '|' + data['bind']['token']+'|iPanel').encode('utf-8')
         data['qrcode'] = public.base64.b64encode(qrcode).decode('utf-8')
         data['apps'] = sorted(data['apps'],key=lambda x: x['time'],reverse=True)
         del(data['key'])

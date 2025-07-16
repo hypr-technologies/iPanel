@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@iPanel.com>
 # +-------------------------------------------------------------------
 
 import public,os,sys,db,time,json,re
@@ -166,7 +166,7 @@ class userlogin:
             # 提交
             if not public.cache_get(pkey):
                 try:
-                    public.run_thread(public.httpPost, ("https://geterror.infuze panel.com/bt_error/index.php", error_infos))
+                    public.run_thread(public.httpPost, ("https://geterror.iPanel.com/bt_error/index.php", error_infos))
                     public.cache_set(pkey, 1, 1800)
                 except Exception as e:
                     pass

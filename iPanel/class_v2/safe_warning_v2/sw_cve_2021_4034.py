@@ -3,9 +3,9 @@
 # -------------------------------------------------------------------
 # 宝塔Linux面板
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 宝塔软件(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 宝塔软件(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: lkq <lkq@infuze.local>
+# Author: lkq <lkq@hypr.local>
 # -------------------------------------------------------------------
 # Time: 2022-08-10
 # -------------------------------------------------------------------
@@ -32,7 +32,7 @@ def check_run():
     '''
         @name CVE-2021-4034 polkit pkexec 本地提权漏洞检测
         @time 2022-08-12
-        @author lkq@infuze.local
+        @author lkq@hypr.local
     '''
 
     st = os.stat('/usr/bin/pkexec')

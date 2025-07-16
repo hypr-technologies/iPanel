@@ -1,8 +1,8 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
 # | Author: lotk
 # +-------------------------------------------------------------------
@@ -56,7 +56,7 @@ class userRegister:
         try:
 
             # public.print_log("传参2   {}".format(params))
-            # sUrl = 'http://dev.infuze panel.com/api/user/register_on_panel'
+            # sUrl = 'http://dev.iPanel.com/api/user/register_on_panel'
             # 判断 普通版 or Pro版
             if hasattr(post, 'isPro') and post.isPro:
                 sUrl = '{}/pro/api/user/register_on_panel'.format(public.OfficialApiBase())
@@ -100,7 +100,7 @@ class userRegister:
         data['password'] = get.password
         data['from_panel'] = self.en_code_rsa('1')  # 1 代表从面板登录
         try:
-            # APIURL1 = 'http://dev.infuze panel.com/api/user/login'
+            # APIURL1 = 'http://dev.iPanel.com/api/user/login'
             APIURL1 = '{}/api/user/login'.format(public.OfficialApiBase())
             rtmp = public.httpPost(APIURL1, data)
             result = json.loads(rtmp)

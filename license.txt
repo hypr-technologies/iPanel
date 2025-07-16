@@ -1,54 +1,54 @@
-INFUZE PANEL Open Source License Agreement
+IPANEL Open Source License Agreement
 
 Important Notice: Users are hereby reminded to carefully read and fully understand this Agreement, and users should carefully read and fully understand the terms of this Agreement, including the exemption clauses that are exempted or restricted and the clauses that restrict the rights of users. The user shall carefully read and choose to accept or not accept this agreement, unless the user accepts all the terms of this agreement, the user has no right to install or use the software and related services. The user's installation, use, login and other behaviors will be deemed to be an acceptance of this agreement and agree to be bound by the terms of this agreement.
 
 Definition of terms:
-User: natural person, legal person and other organizations who obtain infuze panel panel and use infuze panel-related services through infuze panel authorization
-infuze panel:infuze panel panel (main body: Dongguan Baita Network Technology Co., Ltd.)
-User license definition: An agreement entered into by a user who actively installs, uses, registers, and manages the software based on an obvious description of the purpose, and agrees to the provision of related services by infuze panel
+User: natural person, legal person and other organizations who obtain iPanel panel and use iPanel-related services through iPanel authorization
+iPanel:iPanel panel (main body: Hypr Technologies)
+User license definition: An agreement entered into by a user who actively installs, uses, registers, and manages the software based on an obvious description of the purpose, and agrees to the provision of related services by iPanel
 
-1. Aapanel's Agreements
+1. iPanel's Agreements
 1.1 Ensure that all code is readable by users, except for paid plugins.
-1.2 Ensure that after the completion of all environment deployment, users can run permanently without relying on infuze panel cloud support.
+1.2 Ensure that after the completion of all environment deployment, users can run permanently without relying on Hypr Technologies cloud support.
 1.3 Encryption and obfuscation of the source code is prohibited, except for paid plugins.
 1.4 It is forbidden to automatically install encryption codes in any way without the user's permission.
 1.5 It is forbidden to collect user data in any way without the user's permission.
 1.6 It is forbidden to remotely control the User Panel in any way without the user's permission.
-1.7 It is forbidden to insert advertisements on the User Panel that are not related to INFUZE PANEL.
-1.8 From now on, it is forbidden to change the free functions officially provided by AApanel to paid functions.
+1.7 It is forbidden to insert advertisements on the User Panel that are not related to IPANEL.
+1.8 From now on, it is forbidden to change the free functions officially provided by iPanel to paid functions.
 
 2. The agreement that the user needs to abide by
-2.1 For your own use, you may use Infuze Panel for profit or non-profit projects without any restrictions.
+2.1 For your own use, you may use iPanel for profit or non-profit projects without any restrictions.
 2.2 For personal use, the source code of the program can be modified arbitrarily on the premise of retaining the copyright mark, but it is not allowed to be publicly released.
-2.3 It is forbidden to undermine the commercial authorization mechanism of infuze panel in any way (including but not limited to operating services of the same type and nature as infuze panel after collecting the source code of infuze panel).
-2.4 Users are prohibited from using INFUZE PANEL to publish, transmit, disseminate, and store content that violates national laws, endangers national security, social stability, public order and good customs, or any inappropriate, insulting, defamatory, obscene, violent, and any content that violates national laws, regulations and policies.
-2.5 The user is prohibited from using infuze panel to make, publish and disseminate software that steals related or other software and the exclusive information and property of others.
+2.3 It is forbidden to undermine the commercial authorization mechanism of iPanel in any way (including but not limited to operating services of the same type and nature as iPanel after collecting the source code of iPanel).
+2.4 Users are prohibited from using IPANEL to publish, transmit, disseminate, and store content that violates national laws, endangers national security, social stability, public order and good customs, or any inappropriate, insulting, defamatory, obscene, violent, and any content that violates national laws, regulations and policies.
+2.5 The user is prohibited from using iPanel to make, publish and disseminate software that steals related or other software and the exclusive information and property of others.
 
 3. API Usage Agreement
-3.1 infuze panel welcomes and appreciates the development of various API-based applications for the software, which can be released for free or for a fee.
-3.2 The application developed by the user based on the infuze panel API mechanism shall not contain any damage or modification of the infuze panel code.
+3.1 iPanel welcomes and appreciates the development of various API-based applications for the software, which can be released for free or for a fee.
+3.2 The application developed by the user based on the iPanel API mechanism shall not contain any damage or modification of the iPanel code.
 
-4. Release or integrate AApanel without changes
-4.1 Infuze Panel welcomes and thanks you for posting Infuze Panel on your website, corporate website or other third-party websites.
-4.2 Infuze Panel welcomes and thanks you for integrating Infuze Panel into other systems and publishing it together, including cloud service images, operating system distributions, etc.
-4.3 When publishing or integrating infuze panel, the user shall not make any changes to the infuze panel source code.
+4. Release or integrate iPanel without changes
+4.1 iPanel welcomes and thanks you for posting iPanel on your website, corporate website or other third-party websites.
+4.2 iPanel welcomes and thanks you for integrating iPanel into other systems and publishing it together, including cloud service images, operating system distributions, etc.
+4.3 When publishing or integrating iPanel, the user shall not make any changes to the iPanel source code.
 
 5. Intellectual Property Rights Statement
-Infuze Panel is developed by Infuze Panel's development team, and Infuze Panel's intellectual property rights and all information content related to Infuze Panel, including but not limited to: text, graphics, interface design, layout framework, and related data are protected by the relevant intellectual property laws and regulations of the International Cybersecurity Law.
+iPanel is developed by iPanel's development team, and iPanel's intellectual property rights and all information content related to iPanel, including but not limited to: text, graphics, interface design, layout framework, and related data are protected by the relevant intellectual property laws and regulations of the International Cybersecurity Law.
 
 6. Disclaimer of Warranties
-6.1 The user uses infuze panel voluntarily, you must understand the risks of using this software, and infuze panel does not make any kind of warranty, whether express or implied, including but not limited to direct, indirect, incidental, special and consequential damages and risks arising from the use or inability to use infuze panel under any circumstances, and BIOTOPT does not assume any responsibility.
-6.2 The user is aware of the particularity of Internet software, infuze panel, like most Internet software, is affected by factors including but not limited to user reasons, network service quality, social environment and other factors, and may be subject to various security problems, such as other software downloaded and installed by the user or other websites visited contain viruses such as "Trojan horses", which threaten the security of the user's computer information and data, and then affect the normal use of infuze panel, etc., the user should strengthen the protection of information security and use data. so as not to suffer losses
-6.3 The "third-party application" in the infuze panel interface is legally authorized by infuze panel from the third party, if any dispute caused by the user's use of the third-party software or technology is resolved by the third party, infuze panel does not provide services to the third-party software or technology, if the user needs to get support, please contact the third party.
-6.4 The user violates national laws and regulations by using infuze panel,
+6.1 The user uses iPanel voluntarily, you must understand the risks of using this software, and iPanel does not make any kind of warranty, whether express or implied, including but not limited to direct, indirect, incidental, special and consequential damages and risks arising from the use or inability to use iPanel under any circumstances, and Hypr Technologies does not assume any responsibility.
+6.2 The user is aware of the particularity of Internet software, iPanel, like most Internet software, is affected by factors including but not limited to user reasons, network service quality, social environment and other factors, and may be subject to various security problems, such as other software downloaded and installed by the user or other websites visited contain viruses such as "Trojan horses", which threaten the security of the user's computer information and data, and then affect the normal use of iPanel, etc., the user should strengthen the protection of information security and use data. so as not to suffer losses
+6.3 The "third-party application" in the iPanel interface is legally authorized by iPanel from the third party, if any dispute caused by the user's use of the third-party software or technology is resolved by the third party, iPanel does not provide services to the third-party software or technology, if the user needs to get support, please contact the third party.
+6.4 The user violates national laws and regulations by using iPanel,
 
 7. Exceptions to Authorization
-7.1 If the above terms do not meet your requirements to use the software, you can contact infuze panel to sign an additional contract for a more flexible license.
+7.1 If the above terms do not meet your requirements to use the software, you can contact iPanel to sign an additional contract for a more flexible license.
 
 8. Termination of Contract
-8.1 If the user violates any of the terms of this agreement, this license agreement will be automatically terminated, and infuze panel reserves the right to pursue liability through legal means if the user's behavior damages the rights of infuze panel or any other third party.
+8.1 If the user violates any of the terms of this agreement, this license agreement will be automatically terminated, and iPanel reserves the right to pursue liability through legal means if the user's behavior damages the rights of iPanel or any other third party.
 
 9. Miscellaneous
 9.1 If any provision of this Agreement is partially or completely invalid, the validity of the other provisions shall not be affected.
-9.2 The interpretation, validity and dispute resolution of the agreement shall be governed by the laws of the People's Republic of China, and if any dispute or controversy occurs between the user and infuze panel, it shall first be settled through friendly negotiation, and if the negotiation fails, the user fully agrees to submit the dispute or controversy to the jurisdiction of the court with jurisdiction in Dongguan City, where infuze panel is located.
-9.3 INFUZE PANEL reserves all rights to interpret this Agreement
+9.2 The interpretation, validity and dispute resolution of the agreement shall be governed by the laws of the People's Republic of China, and if any dispute or controversy occurs between the user and iPanel, it shall first be settled through friendly negotiation, and if the negotiation fails, the user fully agrees to submit the dispute or controversy to the jurisdiction of the court with jurisdiction in Dongguan City, where iPanel is located.
+9.3 IPANEL reserves all rights to interpret this Agreement

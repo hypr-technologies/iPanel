@@ -1,14 +1,14 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@hypr panel.com>
 # | Author: lx
 # | 消息通道邮箱模块
 # | 常用功能
-#   字体加粗  **bold**  ，[这是一个链接](http://www.infuze panel.com)，代码段：`code`
+#   字体加粗  **bold**  ，[这是一个链接](http://www.iPanel.com)，代码段：`code`
 #   支持3种字体颜色 <font color="info">绿色</font> <font color="comment">灰色</font> <font color="warning">橙红色</font>
 # +-------------------------------------------------------------------
 
@@ -47,9 +47,9 @@ class weixin_msg:
         data['ps'] = 'Wecom used to receive panel message push'
         data['version'] = '1.2'
         data['date'] = '2022-08-10'
-        data['author'] = 'Infuze Panel'
+        data['author'] = 'iPanel'
         data['title'] = 'Wecom'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     def __get_default_channel(self):
@@ -132,7 +132,7 @@ class weixin_msg:
             info = public.get_push_info('Message channel configuration reminder',['>configuration status: <font color=#20a53a>Success</font>\n\n'])
             ret = self.send_msg(info['msg'])
         except:
-            ret = self.send_msg('Infuze Panel alarm test')
+            ret = self.send_msg('iPanel alarm test')
 
         if ret['status']:
 
@@ -153,7 +153,7 @@ class weixin_msg:
         @name 处理md格式
         """
         try:
-            title = 'Infuze Panel warning notification'
+            title = 'iPanel warning notification'
             if msg.find("####") >= 0:
                 msg = msg.replace("\n\n","""
                 """).strip()

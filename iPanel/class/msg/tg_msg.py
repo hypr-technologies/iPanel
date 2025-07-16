@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: jose <zhw@infuze panel.com>
+# | Author: jose <zhw@hypr panel.com>
 # | 消息通道电报模块
 # +-------------------------------------------------------------------
 
@@ -50,9 +50,9 @@ class tg_msg:
         data['ps'] = 'Use telegram bots to send receive panel notifications'
         data['version'] = '1.0'
         data['date'] = '2022-08-10'
-        data['author'] = 'Infuze Panel'
+        data['author'] = 'iPanel'
         data['title'] = 'Telegram'
-        data['help'] = 'http://www.infuze panel.com'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     def get_config(self, get):
@@ -90,7 +90,7 @@ class tg_msg:
                                         ['>Configuration status：<font color=#20a53a>successfully</font>\n\n'])
             ret = self.send_msg(info['msg'])
         except:
-            ret = self.send_msg('Infuze Panel alarm test')
+            ret = self.send_msg('iPanel alarm test')
         if ret:
 
             if 'default' in get and get['default']:
@@ -106,7 +106,7 @@ class tg_msg:
         @name 处理md格式
         """
         try:
-            title = 'Infuze Panel notifications'
+            title = 'iPanel notifications'
             if msg.find("####") >= 0:
                 try:
                     title = re.search(r"####(.+)", msg).groups()[0]

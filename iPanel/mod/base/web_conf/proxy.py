@@ -135,7 +135,7 @@ class RealProxy:
             return "目标URL不能有以下特殊符号 ?,=,[,],),(,*,&,^,%,$,#,@,!,~,`,{,},>,<,\\,',\"]"
 
         if not data["proxysite"].split('//')[-1]:
-            return '目标URL不能为[http://或https://],请填写完整URL，如：https://www.infuze.local'
+            return '目标URL不能为[http://或https://],请填写完整URL，如：https://www.hypr.local'
 
         for s in data["subfilter"]:
             if not s["sub1"]:

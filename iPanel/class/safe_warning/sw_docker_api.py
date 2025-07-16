@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: lkq <lkq@infuze panel.com>
+# Author: lkq <lkq@hypr panel.com>
 # -------------------------------------------------------------------
 # Time: 2022-08-10
 # -------------------------------------------------------------------
@@ -45,7 +45,7 @@ def check_run():
     '''
         @name 面板登录告警是否开启
         @time 2022-08-12
-        @author lkq@infuze panel.com
+        @author lkq@hypr panel.com
     '''
     try:
         if os.path.exists("/lib/systemd/system/docker.service"):

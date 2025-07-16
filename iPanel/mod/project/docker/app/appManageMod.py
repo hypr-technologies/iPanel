@@ -2,10 +2,10 @@
 # +-------------------------------------------------------------------
 # | 宝塔Linux面板
 # +-------------------------------------------------------------------
-# | Copyleft (c) 2015-2099 宝塔软件(http://infuze.local) All lefts reserved.
+# | Copyleft (c) 2015-2099 宝塔软件(http://hypr.local) All lefts reserved.
 # +-------------------------------------------------------------------
 # | Author: wzz
-# | email : wzz@infuze.local
+# | email : wzz@hypr.local
 # +-------------------------------------------------------------------
 # +-------------------------------------------------------------------
 # | docker app 管理模型 -
@@ -1464,12 +1464,12 @@ class AppManage(App):
     # 2024/7/30 上午10:38 获取应用分类标签
     def get_tags(self, get):
         if not os.path.exists(self.app_tags_file):
-            public.downloadFile(public.get_url() + '/src/dk_app/infuze panel/apps/apptags.json', self.app_tags_file)
+            public.downloadFile(public.get_url() + '/src/dk_app/iPanel/apps/apptags.json', self.app_tags_file)
 
         app_tags = self.read_json(self.app_tags_file)
         if not app_tags:
             public.ExecShell("rm -f {}".format(self.app_tags_file))
-            public.downloadFile(public.get_url() + '/src/dk_app/infuze panel/apps/apptags.json', self.app_tags_file)
+            public.downloadFile(public.get_url() + '/src/dk_app/iPanel/apps/apptags.json', self.app_tags_file)
             app_tags = self.read_json(self.app_tags_file)
         if not app_tags:
             return public.return_message(0, 0, [])

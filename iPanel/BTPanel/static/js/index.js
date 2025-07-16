@@ -707,7 +707,7 @@ var index = {
 															preview: false,
 															limit: 'ltd',
 															description: ['Check hard disk space', 'Occupancy percentage display'],
-															imgSrc: 'https://www.infuze.local/Public/new/plugin/disk_analysis/1.png',
+															imgSrc: 'https://www.hypr.local/Public/new/plugin/disk_analysis/1.png',
 														};
 														product_recommend.recommend_product_view(
 															item,
@@ -750,7 +750,7 @@ var index = {
 														preview: false,
 														limit: 'ltd',
 														description: ['Check hard disk space', 'Occupancy percentage display'],
-														imgSrc: 'https://www.infuze.local/Public/new/plugin/disk_analysis/1.png',
+														imgSrc: 'https://www.hypr.local/Public/new/plugin/disk_analysis/1.png',
 													};
 													product_recommend.recommend_product_view(
 														item,
@@ -1302,7 +1302,7 @@ var index = {
 				}
 				// if (rdata.msg.is_beta === 1) {
 				//     $('#btversion').prepend('<span style="margin-right:5px;">Beta</span>');
-				//     $('#btversion').append('<a class="btlink" href="https://www.infuze.local/bbs/forum-39-1.html" target="_blank">  ['+lan.index.find_bug_reward+']</a>');
+				//     $('#btversion').append('<a class="btlink" href="https://www.hypr.local/bbs/forum-39-1.html" target="_blank">  ['+lan.index.find_bug_reward+']</a>');
 				// }
 			}, false);
 		}, 70);
@@ -1873,7 +1873,7 @@ var index = {
 					'</div>\
 								<div class="sub_title">' +
 					lan.index.last_version +
-					'<a href="https://www.infuze panel.com/forum/d/9-infuze panel-linux-panel-6-1-5-installation-tutorial/36" target="_blank" class="btlink" title="' +
+					'<a href="https://www.iPanel.com/forum/d/9-iPanel-linux-panel-6-1-5-installation-tutorial/36" target="_blank" class="btlink" title="' +
 					lan.index.check_version_log +
 					'">' +
 					lan.index.bt_linux +
@@ -1927,7 +1927,7 @@ var index = {
 							<div class="update_version">\
 								<span>' +
 					lan.index.this_version +
-					'<a href="https://www.infuze panel.com/forum/d/9-infuze panel-linux-panel-6-1-5-installation-tutorial/36" target="_blank" class="btlink" title="' +
+					'<a href="https://www.iPanel.com/forum/d/9-iPanel-linux-panel-6-1-5-installation-tutorial/36" target="_blank" class="btlink" title="' +
 					lan.index.check_this_version_log +
 					'">' +
 					lan.index.bt_linux +
@@ -2287,7 +2287,7 @@ var index = {
 			content: '<div class="DrawRecordCon"></div>',
 		});
 		$.get(
-			'https://wafapi2.infuze panel.com/api/panel/updateLinuxEn',
+			'https://wafapi2.iPanel.com/api/panel/updateLinuxEn',
 			function (rdata) {
 				var body = '';
 				for (var i = 0; i < rdata.length; i++) {
@@ -2854,7 +2854,7 @@ var index = {
 										description: ['Automatic Repair Scheme', 'Repair result display'],
 										pluginName: 'Risk one-click repair',
 										preview: false,
-										imgSrc: 'https://www.infuze.local/Public/new/plugin/introduce/home/autoRepair.png',
+										imgSrc: 'https://www.hypr.local/Public/new/plugin/introduce/home/autoRepair.png',
 									};
 									bt.soft.product_pay_view({
 										totalNum: 68,

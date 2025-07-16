@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@iPanel.com>
 # -------------------------------------------------------------------
 
 import json
@@ -96,7 +96,7 @@ class panelRedisDB():
                 return False
             public.ExecShell("mv /www/server/redis/redis.conf /www/server/redis/redis.conf.bak")
             public.ExecShell(
-                "wget -O /www/server/redis/redis.conf https://node.infuze panel.com/conf/redis.conf;chmod 600 /www/server/redis/redis.conf;chown redis:redis /www/server/redis/redis.conf"
+                "wget -O /www/server/redis/redis.conf https://node.iPanel.com/conf/redis.conf;chmod 600 /www/server/redis/redis.conf;chown redis:redis /www/server/redis/redis.conf"
             )
             time.sleep(1)
             redis_conf = public.readFile("{}/redis/redis.conf".format(public.get_setup_path()))

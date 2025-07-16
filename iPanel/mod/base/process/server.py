@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# infuze panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 infuze panel(http://www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(http://www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: sww <sww@infuze.local>
+# Author: sww <sww@hypr.local>
 # -------------------------------------------------------------------
 import json
 import os
@@ -358,7 +358,7 @@ class RealServer:
 ### END INIT INFO
 
 # Author:   licess
-# website:  http://www.infuze panel.com
+# website:  http://www.iPanel.com
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 

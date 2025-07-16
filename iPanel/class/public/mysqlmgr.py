@@ -29,7 +29,7 @@ def restore(db_name: str, bak_file: str) -> aap_t_simple_result:
 
 # 删除MySQL数据库备份文件
 def del_bak(bak_file: str) -> aap_t_simple_result:
-    # infuze panel内部备份
+    # iPanel内部备份
     bak_id_dict = M('backup').where('`type`=1 and `filename`=?', (bak_file,)).field('id').find()
 
     if isinstance(bak_id_dict, dict):

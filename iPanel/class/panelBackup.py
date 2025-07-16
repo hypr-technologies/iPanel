@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: hwliang <hwl@infuze panel.com>
+# Author: hwliang <hwl@hypr panel.com>
 # -------------------------------------------------------------------
 
 # ------------------------------
@@ -847,7 +847,7 @@ class backup:
         return title
 
     def generate_failture_title(self, task_name):
-        title = "Infuze Panel backup task failed reminder".format(task_name)
+        title = "iPanel backup task failed reminder".format(task_name)
         return title
 
     def generate_all_failture_notice(self, task_name, msg, backup_type, remark=""):
@@ -858,23 +858,23 @@ class backup:
         if remark:
             remark = "\n* Task notes: {}".format(remark)
 
-        notice_content = """*Infuze Panel reminds you that the cron failed to execute*
+        notice_content = """*iPanel reminds you that the cron failed to execute*
 * Server IP*: {}
 * Time*: {}
 * Task name*: {} {}
 * The following is a list of {} that failed to backup*:
 {}
---Notification by Infuze Panel""".format(
+--Notification by iPanel""".format(
             server_ip, now, task_name, remark, backup_type, msg)
 
-#         tg_content = """📣‼*Infuze Panel reminds you that the cron failed to execute*‼
+#         tg_content = """📣‼*iPanel reminds you that the cron failed to execute*‼
 #
 # * Server IP*: {}
 # * Time*: {}
 # * Task name*: {} {}
 # * The following is a list of {} that failed to backup*:
 # {}
-# --Notification by Infuze Panel""".format(
+# --Notification by iPanel""".format(
 #             server_ip, now, task_name, remark, backup_type, msg)
         # return {"mail":notice_content,"tg":tg_content}
         return notice_content
@@ -887,16 +887,16 @@ class backup:
         if remark:
             remark = "\n* Task notes: {}".format(remark)
 
-        notice_content = """*Infuze Panel reminds you that the cron failed to execute*
+        notice_content = """*iPanel reminds you that the cron failed to execute*
 * Server IP*: {}
 * Time*: {}
 * Task name*: {} {}
 * error message*:
 {}
---Notification by Infuze Panel""".format(
+--Notification by iPanel""".format(
             server_ip, now, task_name, remark, msg)
 
-#         tg_content = """📣‼*Infuze Panel reminds you that the cron failed to execute*‼
+#         tg_content = """📣‼*iPanel reminds you that the cron failed to execute*‼
 #
 # * Server IP*: {}
 # * Time*: {}
@@ -904,7 +904,7 @@ class backup:
 # * Error messages*：
 # {}
 #
-# -- Notification by Infuze Panel""".format(
+# -- Notification by iPanel""".format(
 #             server_ip, now, task_name, remark, msg)
         # return {'mail':notice_content,'tg':tg_content}
         return notice_content

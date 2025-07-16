@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2019 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2019 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 import os
 import sys
@@ -45,7 +45,7 @@ class wxapp():
     # 返回二维码地址
     def login_qrcode(self, get):
         tid = public.GetRandomString(32)
-        qrcode_str = 'https://app.infuze.local/app.html?&panel_url='+public.getPanelAddr()+'&v=' + public.GetRandomString(3)+'?login&tid=' + tid
+        qrcode_str = 'https://app.hypr.local/app.html?&panel_url='+public.getPanelAddr()+'&v=' + public.GetRandomString(3)+'?login&tid=' + tid
         data = public.get_session_id() + ':' + str(time.time()) + ':' + tid + ':' + tid
         public.writeFile(self.app_path + "app_login_check.pl", data)
         cache.set(tid,public.get_session_id(),360)
@@ -101,7 +101,7 @@ class wxapp():
             import config
             config.config().reload_session()
             public.writeFile(login_type,'True')
-            public.login_send_body("Infuze Panel Mobile",userInfo['username'],public.GetClientIp(),str(request.environ.get('REMOTE_PORT')))
+            public.login_send_body("iPanel Mobile",userInfo['username'],public.GetClientIp(),str(request.environ.get('REMOTE_PORT')))
             return public.returnMsg(True, public.lang("login successful!"))
         except:
             return public.returnMsg(False, public.lang("Login failed 2"))

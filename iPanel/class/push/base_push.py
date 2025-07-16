@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(https://www.infuze.local) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(https://www.hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: baozi <baozi@infuze panel.com>
+# | Author: baozi <baozi@iPanel.com>
 # | Author: baozi
 # +-------------------------------------------------------------------
 import sys,os,re,json

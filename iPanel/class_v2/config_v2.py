@@ -1,10 +1,10 @@
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel x3
+# | iPanel x3
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2017 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2017 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 import base64
 import public, re, os, nginx, apache, json, time, ols
@@ -94,8 +94,8 @@ class config:
         # 自定义邮件
         self.mail.qq_stmp_insert(get.email.strip(), get.stmp_pwd.strip(), get.hosts.strip(), get.port.strip())
         # 测试发送
-        if self.mail.qq_smtp_send(get.email.strip(), public.get_msg_gettext('Infuze Panel Alert Test Email'),
-                                  public.get_msg_gettext('Infuze Panel Alert Test Email')):
+        if self.mail.qq_smtp_send(get.email.strip(), public.get_msg_gettext('iPanel Alert Test Email'),
+                                  public.get_msg_gettext('iPanel Alert Test Email')):
             if not get.email.strip() in self.__mail_list:
                 self.__mail_list.append(get.email.strip())
                 public.writeFile(self.__mail_list_data, json.dumps(self.__mail_list))
@@ -714,7 +714,7 @@ class config:
             public.WriteLog('TYPE_PANEL', 'PANEL_SET_SUCCESS', (newPort,))
 
         if "webname" in get and get.webname != session['title']:
-            if get.webname.strip() == '': get.webname = 'Infuze Panel Linux'
+            if get.webname.strip() == '': get.webname = 'iPanel Linux'
             session['title'] = public.xssencode2(get.webname)
             public.SetConfigValue('title', public.xssencode2(get.webname))
             public.WriteLog('TYPE_PANEL', 'PANEL_SET_SUCCESS', ('TITLE', get.webname))
@@ -1015,7 +1015,7 @@ class config:
         @author hezhihong
         """
         # 取国际标准0时时间戳
-        time_str = public.HttpGet('https://wafapi2.infuze panel.com'+ '/api/index/get_time')
+        time_str = public.HttpGet('https://wafapi2.iPanel.com'+ '/api/index/get_time')
 
         try:
             new_time = int(time_str) - 28800
@@ -1317,13 +1317,13 @@ class config:
         domains = self.get_host_all()
         pdata = {
             "action": "get_domain_cert",
-            "company": "infuze panel.com",
+            "company": "iPanel.com",
             "domain": ','.join(domains),
             "uid": userInfo['uid'],
             "access_key": 'B' * 32,
             "panel": 1
         }
-        cert_api = 'https://api.infuze panel.com/infuze panel_cert'
+        cert_api = 'https://api.iPanel.com/iPanel_cert'
         result = json.loads(public.httpPost(cert_api, {'data': json.dumps(pdata)}))
         if 'status' in result:
             if result['status']:
@@ -1795,7 +1795,7 @@ class config:
                 self.CreateSSL()
                 cert['info'] = public.get_cert_data(cert_file)
             if cert['info']:
-                if cert['info']['issuer'] == 'infuze panel.com':
+                if cert['info']['issuer'] == 'iPanel.com':
                     if os.path.exists('ssl/baota_root.pfx'):
                         cert['download_root'] = True
                         cert['root_password'] = public.readFile('ssl/root_password.pl')
@@ -2284,7 +2284,7 @@ class config:
     def set_basic_auth(self, get):
         is_open = False
         if get.open == 'True': is_open = True
-        tips = '_infuze.local'
+        tips = '_hypr.local'
         path = 'config/basic_auth.json'
         ba_conf = None
         if is_open:
@@ -2494,7 +2494,7 @@ class config:
                 try:
                     panel_name = json.loads(public.readFile(self._setup_path + '/config/config.json'))['title']
                 except:
-                    panel_name = 'Infuze Panel'
+                    panel_name = 'iPanel'
                 data = pyotp.totp.TOTP(secret_key).provisioning_uri(username,
                                                                     issuer_name='{}--{}'.format(panel_name, local_ip))
                 public.writeFile(self._core_fle_path + '/qrcode.txt', str(data))
@@ -2579,7 +2579,7 @@ class config:
     # 获取菜单列表
     def get_menu_list(self, get = None) -> public.return_message:
         """
-            @name 获取infuze panel菜单列表
+            @name 获取iPanel菜单列表
             @author hwliang<2020-08-31>
             @param get<dict_obj>
             @return list
@@ -2948,7 +2948,7 @@ class config:
         public.create_logs()
         import page
         page = page.Page()
-        count = public.M('logs2').where('type=?', (u'infuze panel login reminder',)).field('log,addtime').count()
+        count = public.M('logs2').where('type=?', (u'iPanel login reminder',)).field('log,addtime').count()
         limit = 7
         info = {}
         info['count'] = count
@@ -2963,7 +2963,7 @@ class config:
         data = {}
         # 获取分页数据
         data['page'] = page.GetPage(info, '1,2,3,4,5,8')
-        data['data'] = public.M('logs2').where('type=?', (u'infuze panel login reminder',)).field('log,addtime').order(
+        data['data'] = public.M('logs2').where('type=?', (u'iPanel login reminder',)).field('log,addtime').order(
             'id desc').limit(
             str(page.SHIFT) + ',' + str(page.ROW)).field('log,addtime').select()
         return data
@@ -3294,7 +3294,7 @@ class config:
 
     def install_msg_module(self, get):
         """
-        infuze panel 不与面板相同，不删除通道模块
+        iPanel 不与面板相同，不删除通道模块
         安装/更新消息通道模块
         @name 需要安装的模块名称
         """
@@ -3338,7 +3338,7 @@ class config:
 
     def uninstall_msg_module(self, get):
         """
-        infuze panel 不与面板相同，不删除通道模块，只删除配置文件
+        iPanel 不与面板相同，不删除通道模块，只删除配置文件
         @module_name 是删除配置文件
         """
         module_name = get.name

@@ -449,7 +449,7 @@ define(['require', 'exports', './snabbdom', './configMixin'], function (require,
 										},
 										template: function () {
 											var lineWidth = '125px',
-												helpHref = 'https://www.infuze panel.com/forum/d/482-api-interface-tutorial';
+												helpHref = 'https://www.iPanel.com/forum/d/482-api-interface-tutorial';
 											return (0, snabbdom_1.jsx)(
 												'div',
 												{ class: this.$class('bt-form'), style: this.$style('padding: 15px 25px;') },
@@ -731,8 +731,8 @@ define(['require', 'exports', './snabbdom', './configMixin'], function (require,
 							return [
 								4,
 								this.$confirm({
-									title: 'Unbind Infuze Panel account',
-									msg: 'Unbind the Infuze Panel account and continue!',
+									title: 'Unbind iPanel account',
+									msg: 'Unbind the iPanel account and continue!',
 								}),
 							];
 						case 1:

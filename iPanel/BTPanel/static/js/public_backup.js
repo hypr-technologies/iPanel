@@ -1630,7 +1630,7 @@ bt.pub = {
             area: ['420px', '360px'],
             closeBtn: 2,
             shadeClose: false,
-            content: '<div class="libLogin pd20" ><div class="bt-form text-center"><div class="line mb15"><h3 class="c2 f16 text-center mtb20">' + lan.public_backup.bind_bt_account + '</h3></div><div class="line"><input class="bt-input-text" name="username2" type="text" placeholder="' + lan.public_backup.mobile_phone_or_email + '" id="p1"></div><div class="line"><input autocomplete="new-password" class="bt-input-text" type="password" name="password2"  placeholder="' + lan.public_backup.pass + '" id="p2"></div><div class="line"><input class="login-button" value="' + lan.public_backup.login + '" type="button" ></div><p class="text-right"><a class="btlink" href="https://brandnew.infuze panel.com/user_admin/login" target="_blank">' + lan.public_backup.no_account + '</a></p></div></div>'
+            content: '<div class="libLogin pd20" ><div class="bt-form text-center"><div class="line mb15"><h3 class="c2 f16 text-center mtb20">' + lan.public_backup.bind_bt_account + '</h3></div><div class="line"><input class="bt-input-text" name="username2" type="text" placeholder="' + lan.public_backup.mobile_phone_or_email + '" id="p1"></div><div class="line"><input autocomplete="new-password" class="bt-input-text" type="password" name="password2"  placeholder="' + lan.public_backup.pass + '" id="p2"></div><div class="line"><input class="login-button" value="' + lan.public_backup.login + '" type="button" ></div><p class="text-right"><a class="btlink" href="https://brandnew.iPanel.com/user_admin/login" target="_blank">' + lan.public_backup.no_account + '</a></p></div></div>'
         });
         setTimeout(function() {
             $('.login-button').click(function() {
@@ -2163,7 +2163,7 @@ bt.weixin = {
 										<div id="QRcode"></div>\
 										<div class="codeTip">\
 											<ul>\
-												<li>1、' + lan.public_backup.open_bt_small_app + '<span class="btlink weChat">' + lan.public_backup.app_qr_core + '<div class="weChatSamll"><img src="https://app.infuze.local/static/app.png"></div></span></li>\
+												<li>1、' + lan.public_backup.open_bt_small_app + '<span class="btlink weChat">' + lan.public_backup.app_qr_core + '<div class="weChatSamll"><img src="https://app.hypr.local/static/app.png"></div></span></li>\
 												<li>2、' + lan.public_backup.scan_qr_core + '</li>\
 											</ul>\
 											<span><a href="javascript:;" title="' + lan.public_backup.return_bind_list + '" class="btlink" style="margin: 0 auto" onclick="bt.weixin.get_user_details(true)">' + lan.public_backup.read_bind_list + '</a></span>\
@@ -3204,7 +3204,7 @@ bt.config = {
         });
     },
     set_panel_ssl: function(status, callback) {
-        var msg = status ? lan.config.ssl_close_msg : '<a style="font-weight: bolder;font-size: 16px;">' + lan.config.ssl_open_ps + '</a><li style="margin-top: 12px;color:red;">' + lan.config.ssl_open_ps_1 + '</li><li>' + lan.config.ssl_open_ps_2 + '</li><li>' + lan.config.ssl_open_ps_3 + '</li><p style="margin-top: 10px;"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' + lan.config.ssl_open_ps_4 + '</label><a target="_blank" class="btlink" href="https://www.infuze.local/bbs/thread-4689-1-1.html" style="float: right;">' + lan.config.ssl_open_ps_5 + '</a></p>';
+        var msg = status ? lan.config.ssl_close_msg : '<a style="font-weight: bolder;font-size: 16px;">' + lan.config.ssl_open_ps + '</a><li style="margin-top: 12px;color:red;">' + lan.config.ssl_open_ps_1 + '</li><li>' + lan.config.ssl_open_ps_2 + '</li><li>' + lan.config.ssl_open_ps_3 + '</li><p style="margin-top: 10px;"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' + lan.config.ssl_open_ps_4 + '</label><a target="_blank" class="btlink" href="https://www.hypr.local/bbs/thread-4689-1-1.html" style="float: right;">' + lan.config.ssl_open_ps_5 + '</a></p>';
         layer.confirm(msg, {
             title: lan.config.ssl_title,
             closeBtn: 2,
@@ -3260,7 +3260,7 @@ bt.config = {
 					</div>\
 				</div>\
 				<ul class="help-info-text c7 pull-left">\
-					<li>' + lan.public_backup.cret_help + '<a href="http://www.infuze.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' + lan.public_backup.help + ']</a>。</li>\
+					<li>' + lan.public_backup.cret_help + '<a href="http://www.hypr.local/bbs/thread-704-1-1.html" class="btlink" target="_blank">[' + lan.public_backup.help + ']</a>。</li>\
 					<li>' + lan.public_backup.cret_err + '</li><li>' + lan.public_backup.pem_format + '</li>\
 				</ul>\
 			</div>'
@@ -4186,7 +4186,7 @@ bt.soft = {
 							<div class="pro-left-list-content"></div>\
 						</div>\
 						<div class="pro-price-herf">\
-							<a class="privilege_contrast" href="https://infuze panel.com/new/pricing.html" target="_blank" rel="noreferer noopener">Feature contrast</a>\
+							<a class="privilege_contrast" href="https://iPanel.com/new/pricing.html" target="_blank" rel="noreferer noopener">Feature contrast</a>\
 						</div>\
 					</div>\
 				</div>\
@@ -5301,7 +5301,7 @@ bt.soft = {
     //         var payhtml = '<div class="libPay" style="padding:15px 30px 30px 30px">\
 	// 				<div class="libpay-con">\
 	// 				</div>\
-	// 				<p style="position:absolute;bottom:17px;left:0;width:100%;text-align:center;color:red">' + lan.public_backup.buy_multiplev_bt_pro + '<a class="btlink" href="https://www.infuze.local/download/linuxpro.html#price" target="_blank">' + lan.public_backup.goto_bt + '</a></p>\
+	// 				<p style="position:absolute;bottom:17px;left:0;width:100%;text-align:center;color:red">' + lan.public_backup.buy_multiplev_bt_pro + '<a class="btlink" href="https://www.hypr.local/download/linuxpro.html#price" target="_blank">' + lan.public_backup.goto_bt + '</a></p>\
 	// 			</div>';
 
     //         bt.open({
@@ -8338,7 +8338,7 @@ function setPanelSSL(){
                     }
                 },
               {
-                  html: '<div class="details"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' + lan.config.ssl_open_ps_4 + '</label><a target="_blank" class="btlink" href="https://www.infuze panel.com/forum/d/167-common-problems-after-opening-the-panel-certificate">' + lan.config.ssl_open_ps_5 + '</a></p></div>'
+                  html: '<div class="details"><input type="checkbox" id="checkSSL" /><label style="font-weight: 400;margin: -1px 5px 0px;" for="checkSSL">' + lan.config.ssl_open_ps_4 + '</label><a target="_blank" class="btlink" href="https://www.iPanel.com/forum/d/167-common-problems-after-opening-the-panel-certificate">' + lan.config.ssl_open_ps_5 + '</a></p></div>'
               }
 
             ],

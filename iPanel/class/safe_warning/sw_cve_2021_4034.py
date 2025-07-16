@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: lkq <lkq@infuze panel.com>
+# Author: lkq <lkq@hypr panel.com>
 # -------------------------------------------------------------------
 # Time: 2022-08-10
 # -------------------------------------------------------------------
@@ -32,7 +32,7 @@ def check_run():
     '''
         @name CVE-2021-4034 polkit pkexec 本地提权漏洞检测
         @time 2022-08-12
-        @author lkq@infuze panel.com
+        @author lkq@hypr panel.com
     '''
 
     st = os.stat('/usr/bin/pkexec')

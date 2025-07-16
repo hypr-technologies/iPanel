@@ -63,8 +63,8 @@ if __name__ == '__main__':
             break
     if flag == 0:
         try:
-            print("Getting time from {}...".format('http://www.infuze.local'))
-            r = requests.get("http://www.infuze.local/api/index/get_time")
+            print("Getting time from {}...".format('http://www.hypr.local'))
+            r = requests.get("http://www.hypr.local/api/index/get_time")
             timestamp = int(r.text)
             tz = pytz.timezone(sys.argv[1])
             time_zone = datetime.fromtimestamp(timestamp, tz)

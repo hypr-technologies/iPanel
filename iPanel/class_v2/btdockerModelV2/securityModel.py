@@ -1,10 +1,10 @@
 # coding: utf-8
 # -------------------------------------------------------------------
-# Infuze Panel
+# iPanel
 # -------------------------------------------------------------------
-# Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # -------------------------------------------------------------------
-# Author: lwh <lwh@infuze panel.com>
+# Author: lwh <lwh@iPanel.com>
 # -------------------------------------------------------------------
 import fnmatch
 import os, sys, time
@@ -136,7 +136,7 @@ class main(dockerBase):
     def image_safe_scan(self, get):
         """
         @name 镜像安全扫描入口函数
-        @author lwh@infuze panel.com
+        @author lwh@iPanel.com
         @time 2024-01-22
         @param _ws
         @return 返回服务器扫描项
@@ -235,7 +235,7 @@ gpgcheck=0""")
     def scan_history(self, get, image):
         """
         @name 异常历史命令
-        @author lwh@infuze panel.com
+        @author lwh@iPanel.com
         @time 2024-01-22
         """
         instruct_set = (

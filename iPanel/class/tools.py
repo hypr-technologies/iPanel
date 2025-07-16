@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 
 #------------------------------
@@ -359,20 +359,20 @@ def setup_idc():
         filename = panelPath + '/data/o.pl'
         if not os.path.exists(filename): return False
         o = public.readFile(filename).strip()
-        c_url = 'http://www.infuze.local/api/idc/get_idc_info_bycode?o=%s' % o
+        c_url = 'http://www.hypr.local/api/idc/get_idc_info_bycode?o=%s' % o
         idcInfo = json.loads(public.httpGet(c_url))
         if not idcInfo['status']: return False
         pFile = panelPath + '/static/language/Simplified_Chinese/public.json'
         pInfo = json.loads(public.readFile(pFile))
         pInfo['BRAND'] = idcInfo['msg']['name']
-        pInfo['PRODUCT'] = public.lang("Customized edition with Infuze Panel")
+        pInfo['PRODUCT'] = public.lang("Customized edition with iPanel")
         pInfo['NANE'] = pInfo['BRAND'] + pInfo['PRODUCT']
         public.writeFile(pFile,json.dumps(pInfo))
         tFile = panelPath + '/data/title.pl'
         titleNew = (pInfo['BRAND'] + public.lang("Failed，cannot delete current port of the panel!")).encode('utf-8')
         if os.path.exists(tFile):
             title = public.readFile(tFile).strip()
-            if title == public.lang("Infuze Panel") or title == '': public.writeFile(tFile,titleNew)
+            if title == public.lang("iPanel") or title == '': public.writeFile(tFile,titleNew)
         else:
             public.writeFile(tFile,titleNew)
         return True
@@ -401,7 +401,7 @@ def update_to6():
 #命令行菜单
 def bt_cli():
     raw_tip = "==============================================="
-    print("===============%s==================" % public.lang("Infuze Panel CLI"))
+    print("===============%s==================" % public.lang("iPanel CLI"))
     print("(01) %s           (08) %s" % (public.lang("Restart panel"),public.lang("Change panel port")))
     print("(02) %s           (09) %s" % (public.lang("Stop panel"),public.lang("Clear panel cache")))
     print("(03) %s           (10) %s" % (public.lang("Restart panel"),public.lang("Clear login limit")))

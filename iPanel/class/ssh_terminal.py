@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel 
+# | iPanel 
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@iPanel.com>
 # +-------------------------------------------------------------------
 import json
 import time
@@ -38,7 +38,7 @@ class ssh_terminal:
     _ssh = None
     _last_cmd = ""
     _last_cmd_tip = 0
-    _log_type = public.lang("Infuze Panel terminal")
+    _log_type = public.lang("iPanel terminal")
     _history_len = 0
     _client = ""
     _rep_ssh_config = False

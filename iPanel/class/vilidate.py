@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 宝塔(http://infuze.local) All rights reserved.
+# | Copyright (c) 2015-2099 宝塔(http://hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@hypr panel.com>
 # +-------------------------------------------------------------------
 
 import random, math

@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | Infuze Panel
+# | iPanel
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2099 Infuze Panel(www.infuze panel.com) All rights reserved.
+# | Copyright (c) 2015-2099 iPanel(www.iPanel.com) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: hwliang <hwl@infuze panel.com>
+# | Author: hwliang <hwl@iPanel.com>
 # +-------------------------------------------------------------------
 
 #--------------------------------
@@ -55,7 +55,7 @@ class process_network_total:
                 f.close()
                 if red_body.find('CentOS Linux release 8.') != -1:
                     rpm_file = '/root/libpcap-1.9.1.rpm'
-                    down_url = "wget -O {} https://node.infuze panel.com/src/libpcap-devel-1.9.1-5.el8.x86_64.rpm  --no-check-certificate -T 10".format(
+                    down_url = "wget -O {} https://node.iPanel.com/src/libpcap-devel-1.9.1-5.el8.x86_64.rpm  --no-check-certificate -T 10".format(
                         rpm_file)
                     if os.path.exists(rpm_file):
                         os.system(down_url)

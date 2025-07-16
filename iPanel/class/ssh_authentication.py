@@ -2,7 +2,7 @@
 # +-------------------------------------------------------------------
 # | version :1.0
 # +-------------------------------------------------------------------
-# | Author: 梁凯强 <1249648969@infuze panel.com>
+# | Author: 梁凯强 <1249648969@iPanel.com>
 # +-------------------------------------------------------------------
 # | SSH 双因子认证
 # +--------------------------------------------------------------------
@@ -100,7 +100,7 @@ class ssh_authentication:
     def install_pam_python(self,check):
         so_path=check[2]
         so_name=check[2].split('/')[-1]
-        public.ExecShell('/usr/local/curl/bin/curl -k -o %s https://download.infuze.local/btwaf_rule/pam_python_so/%s'%(so_path,so_name))
+        public.ExecShell('/usr/local/curl/bin/curl -k -o %s https://download.hypr.local/btwaf_rule/pam_python_so/%s'%(so_path,so_name))
         public.ExecShell("chmod 600 " + so_path)
         return True
     

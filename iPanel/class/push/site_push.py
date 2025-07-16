@@ -1,10 +1,10 @@
 #coding: utf-8
 # +-------------------------------------------------------------------
-# | infuze panel Windows面板
+# | iPanel Windows面板
 # +-------------------------------------------------------------------
-# | Copyright (c) 2015-2020 infuze panel(https://www.infuze.local) All rights reserved.
+# | Copyright (c) 2015-2020 iPanel(https://www.hypr.local) All rights reserved.
 # +-------------------------------------------------------------------
-# | Author: 沐落 <cjx@infuze panel.com>
+# | Author: 沐落 <cjx@hypr panel.com>
 # +-------------------------------------------------------------------
 import sys, os, time, json, re, psutil
 
@@ -39,8 +39,8 @@ class site_push:
         data['ps'] = ''
         data['version'] = '1.0'
         data['date'] = '2020-08-10'
-        data['author'] = 'Infuze Panel'
-        data['help'] = 'http://www.infuze panel.com'
+        data['author'] = 'iPanel'
+        data['help'] = 'http://www.iPanel.com'
         return data
 
     """
@@ -527,12 +527,12 @@ class site_push:
                 public.set_cache_func(skey,user_str)
             else:
                 if user_str != tmp:
-                    s_list.append(">Infuze Panel login account or password changed")
+                    s_list.append(">iPanel login account or password changed")
                     public.set_cache_func(skey,user_str)
 
 
         if len(s_list) > 0:
-            sdata = public.get_push_info('Infuze Panel security warning',s_list)
+            sdata = public.get_push_info('iPanel security warning',s_list)
             for m_module in data['module'].split(','):
                 if m_module == 'sms': continue
                 result[m_module] = sdata
@@ -588,7 +588,7 @@ class site_push:
 
                         s_list.append(">Website: {} Expires: {}".format(x['name'],x['edate']))
 
-                    sdata = public.get_push_info('Infuze Panel Website Expiration Reminder',s_list)
+                    sdata = public.get_push_info('iPanel Website Expiration Reminder',s_list)
                     result[m_module] = sdata
                 return result
 
@@ -605,7 +605,7 @@ class site_push:
                     if m_module == 'sms': continue
 
                     s_list = [">Alarm type: Login password is about to expire",">Days remaining: <font color=#ff0000>{} days</font>".format(res['expire_day'])]
-                    sdata = public.get_push_info('Infuze Panel password expiration reminder',s_list)
+                    sdata = public.get_push_info('iPanel password expiration reminder',s_list)
                     result[m_module] = sdata
                 return result
         elif data['type'] in ['clear_bash_history']:
@@ -668,7 +668,7 @@ class site_push:
                 if m_module == 'sms': continue
 
                 s_list = [">alert type:Trojan detects alarms",">Content of notification: <font color=#ff0000> Found suspected Trojan files {}</font>".format(len(f_list)),">listed files:[{}]".format('、'.join(f_list))]
-                sdata = public.get_push_info('Infuze Panel trojan detects alarms',s_list)
+                sdata = public.get_push_info('iPanel trojan detects alarms',s_list)
                 result[m_module] = sdata
             return result
 
@@ -799,7 +799,7 @@ class site_push:
                 sdata = self.__push.format_msg_data()
                 if m_module in ['sms']:
 
-                    sdata['sm_type'] = 'ssl_end|Infuze Panel SSL Expiration Reminder'
+                    sdata['sm_type'] = 'ssl_end|iPanel SSL Expiration Reminder'
                     sdata['sm_args'] = public.check_sms_argv({
                         'name':public.get_push_address(),
                         'website':public.push_argv(clist[0]["siteName"]),
@@ -811,7 +811,7 @@ class site_push:
                     for x in clist:
                         s_list.append(">Website: {} Expires: {}".format(x['siteName'],x['notAfter']))
 
-                    sdata = public.get_push_info('Infuze Panel SSL expiration reminder',s_list)
+                    sdata = public.get_push_info('iPanel SSL expiration reminder',s_list)
 
                 result[m_module] = sdata
         return result
