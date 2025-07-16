@@ -11,7 +11,18 @@
 # 宝塔公共库
 # --------------------------------
 
-import json,os,sys,time,re,socket,importlib,binascii,base64,io,string,psutil
+import json
+import os
+import sys
+import time
+import re
+import socket
+import importlib
+import binascii
+import base64
+import io
+import string
+import psutil
 import gettext
 es = gettext.translation('en', localedir='/www/server/panel/BTPanel/static/language', languages=['en'])
 es.install()
@@ -167,13 +178,12 @@ def FileMd5(filename):
     if not os.path.isfile(filename): return False
     import hashlib
     my_hash = hashlib.md5()
-    f = open(filename,'rb')
-    while True:
-        b = f.read(8096)
-        if not b :
-            break
-        my_hash.update(b)
-    f.close()
+    with open(filename,'rb') as f:
+        while True:
+            b = f.read(8096)
+            if not b :
+                break
+            my_hash.update(b)
     return my_hash.hexdigest()
 
 def GetRandomString(length):
@@ -1286,18 +1296,22 @@ def getStrBetween(startStr,endStr,srcStr):
 
 #取CPU类型
 def getCpuType():
-    cpuinfo = open('/proc/cpuinfo', 'r').read()
-    rep = "model\s+name\s+:\s+(.+)"
-    tmp = re.search(rep,cpuinfo,re.I)
-    cpuType = ''
-    if tmp:
-        cpuType = tmp.groups()[0]
-    else:
-        cpuinfo = ExecShell('LANG="en_US.UTF-8" && lscpu')[0]
-        rep = "Model\s+name:\s+(.+)"
-        tmp = re.search(rep, cpuinfo, re.I)
-        if tmp: cpuType = tmp.groups()[0]
-    return cpuType
+    try:
+        with open('/proc/cpuinfo', 'r') as f:
+            cpuinfo = f.read()
+        rep = "model\s+name\s+:\s+(.+)"
+        tmp = re.search(rep,cpuinfo,re.I)
+        cpuType = ''
+        if tmp:
+            cpuType = tmp.groups()[0]
+        else:
+            cpuinfo = ExecShell('LANG="en_US.UTF-8" && lscpu')[0]
+            rep = "Model\s+name:\s+(.+)"
+            tmp = re.search(rep, cpuinfo, re.I)
+            if tmp: cpuType = tmp.groups()[0]
+        return cpuType
+    except:
+        return 'Unknown CPU'
 
 
 # 检查是否允许重启
