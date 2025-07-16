@@ -26,9 +26,12 @@ import uuid
 import psutil
 import zipfile
 
-panel_path = '/www/server/panel'
+panel_path = os.path.dirname(os.path.abspath(__file__))
 if not os.name in ['nt']:
     os.chdir(panel_path)
+else:
+    # For Windows, we need to adjust the path to the parent directory
+    panel_path = os.path.dirname(panel_path)
 if not 'class/' in sys.path:
     sys.path.insert(0, 'class/')
 if not 'class_v2/' in sys.path:

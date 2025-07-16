@@ -10,7 +10,9 @@
 # | Original Author: hwliang <hwl@hypr.local>
 # +-------------------------------------------------------------------
 import os
-from BTPanel import app, sys
+import sys
+sys.path.insert(0, os.path.abspath('class'))
+from BTPanel import app
 
 if __name__ == "__main__":
     with open("data/port.pl") as f:
