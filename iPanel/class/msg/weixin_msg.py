@@ -266,3 +266,5 @@ class weixin_msg:
             os.remove(self.conf_path)
 
 
+
+

@@ -557,3 +557,5 @@ class WeChatAccountMsg:
 #
 #         except:
 #             return public.returnMsg(False, '微信消息发送失败。 --> {}'.format(public.get_error_info()))
+
+

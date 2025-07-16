@@ -1191,3 +1191,5 @@ class data:
     def get_wp_classification(self, get=None):
         data = public.M("wp_site_types").select()
         return public.return_message(0, 0, data)
+
+

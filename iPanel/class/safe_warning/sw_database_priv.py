@@ -55,3 +55,5 @@ def check_run():
         if priv.lower() != "y":
             return False, "The root user has insufficient privileges to perform mysqldump backups."
     return True, 'Risk-free'
+
+

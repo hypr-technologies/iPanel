@@ -578,3 +578,5 @@ class SqlAlchemySessionInterface(SessionInterface):
         response.set_cookie(app.session_cookie_name, session_id,
                             expires=expires, httponly=httponly,
                             domain=domain, path=path, secure=secure)
+
+

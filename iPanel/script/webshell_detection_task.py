@@ -34,3 +34,4 @@ if __name__ == '__main__':
     msg = main_obj.run()
     if msg['msg_list']:
         system.push_by_task_keyword("safe_cloud_hinge", "safe_cloud_hinge", push_data=msg)
+

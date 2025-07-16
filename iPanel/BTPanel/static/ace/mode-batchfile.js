@@ -6,3 +6,4 @@ define("ace/mode/batchfile_highlight_rules",["require","exports","module","ace/l
                     });
                 })();
             
+

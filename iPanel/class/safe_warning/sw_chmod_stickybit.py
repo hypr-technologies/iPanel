@@ -34,3 +34,5 @@ def check_run():
         return False, 'The following directories do not have sticky bit permissions set：{}'.format(result)
     else:
         return True, 'Risk-free'
+
+

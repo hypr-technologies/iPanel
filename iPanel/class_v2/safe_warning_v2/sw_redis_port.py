@@ -83,3 +83,5 @@ def is_strong_password(password):
     if grade == 4 or (grade >= 2 and len(password) >= 9):
         return True
     return False
+
+

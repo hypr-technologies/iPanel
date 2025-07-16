@@ -79,3 +79,4 @@ def load_login_translations():
         return login_translations
     except:
         public.print_log(public.get_error_info())
+

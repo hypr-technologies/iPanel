@@ -15,3 +15,5 @@ from mod.base.web_conf import IpRestrict
 class main(IpRestrict):   # 继承并使用同ip黑白名单限制
     def __init__(self):
         super().__init__(config_prefix="")
+
+

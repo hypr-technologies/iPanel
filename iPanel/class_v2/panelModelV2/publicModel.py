@@ -353,3 +353,5 @@ class main(panelBase):
         from flask import current_app
         return current_app.config['CDN_PROXY']
 
+
+

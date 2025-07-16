@@ -11,7 +11,18 @@
 # 宝塔公共库
 # --------------------------------
 
-import json,os,sys,time,re,socket,importlib,binascii,base64,io,string,psutil
+import json
+import os
+import sys
+import time
+import re
+import socket
+import importlib
+import binascii
+import base64
+import io
+import string
+import psutil
 import gettext
 es = gettext.translation('en', localedir='/www/server/panel/BTPanel/static/language', languages=['en'])
 es.install()
@@ -167,13 +178,12 @@ def FileMd5(filename):
     if not os.path.isfile(filename): return False
     import hashlib
     my_hash = hashlib.md5()
-    f = open(filename,'rb')
-    while True:
-        b = f.read(8096)
-        if not b :
-            break
-        my_hash.update(b)
-    f.close()
+    with open(filename,'rb') as f:
+        while True:
+            b = f.read(8096)
+            if not b :
+                break
+            my_hash.update(b)
     return my_hash.hexdigest()
 
 def GetRandomString(length):
@@ -648,7 +658,7 @@ def GetLocalIp():
         return ipaddress
     except Exception as e:
         try:
-            url = 'https://www.iPanel.com/api/common/getClientIP'
+            url = 'https://www.iPanel.com'
             ipaddress = HttpGet(url)
             WriteFile(filename, ipaddress)
             return ipaddress
@@ -1286,18 +1296,22 @@ def getStrBetween(startStr,endStr,srcStr):
 
 #取CPU类型
 def getCpuType():
-    cpuinfo = open('/proc/cpuinfo', 'r').read()
-    rep = "model\s+name\s+:\s+(.+)"
-    tmp = re.search(rep,cpuinfo,re.I)
-    cpuType = ''
-    if tmp:
-        cpuType = tmp.groups()[0]
-    else:
-        cpuinfo = ExecShell('LANG="en_US.UTF-8" && lscpu')[0]
-        rep = "Model\s+name:\s+(.+)"
-        tmp = re.search(rep, cpuinfo, re.I)
-        if tmp: cpuType = tmp.groups()[0]
-    return cpuType
+    try:
+        with open('/proc/cpuinfo', 'r') as f:
+            cpuinfo = f.read()
+        rep = "model\s+name\s+:\s+(.+)"
+        tmp = re.search(rep,cpuinfo,re.I)
+        cpuType = ''
+        if tmp:
+            cpuType = tmp.groups()[0]
+        else:
+            cpuinfo = ExecShell('LANG="en_US.UTF-8" && lscpu')[0]
+            rep = "Model\s+name:\s+(.+)"
+            tmp = re.search(rep, cpuinfo, re.I)
+            if tmp: cpuType = tmp.groups()[0]
+        return cpuType
+    except:
+        return 'Unknown CPU'
 
 
 # 检查是否允许重启
@@ -2506,7 +2520,7 @@ def sync_date():
         if os.path.exists(tip_file):
             if s_time - int(readFile(tip_file)) < 60: return False
             os.remove(tip_file)
-        time_str = HttpGet(GetConfigValue('home') + '/api/index/get_time')
+        time_str = HttpGet(GetConfigValue('home') + '')
         new_time = int(time_str)
         time_arr = time.localtime(new_time)
         date_str = time.strftime("%Y-%m-%d %H:%M:%S", time_arr)
@@ -3294,7 +3308,7 @@ def check_domain_cloud(domain):
     run_thread(cloud_check_domain,(domain,))
 
 def count_wp():
-    run_thread(httpPost('http://brandnew.iPanel.com/api/setupCount/setupWP',{}))
+    run_thread(httpPost('http://brandnew.iPanel.com/setupWP',{}))
 
 def cloud_check_domain(domain):
     '''
@@ -5939,11 +5953,11 @@ def check_auth_ip():
     """
     import http_requests
     result = {'www':'','api':''}
-    res = http_requests.post('https://www.hypr.local/api/getIpAddress', data={}, timeout=5, headers={})
+    res = http_requests.post('https://www.hypr.local/ip', data={}, timeout=5, headers={})
     if res.status_code == 200:
         result['www'] = res.text
 
-    res1 = http_requests.post('https://api.hypr.local/api/getIpAddress', data={}, timeout=5, headers={})
+    res1 = http_requests.post('https://api.hypr.local/ip', data={}, timeout=5, headers={})
     if res1.status_code == 200:
         result['api'] = res1.text
 
@@ -6485,7 +6499,7 @@ def get_user_server_ipaddress(host_list, level):
     headers = {"host": "www.hypr.local"}
     for host in host_list:
         try:
-            new_url = "https://{}/Api/getIpAddress".format(host["ip"])
+            new_url = "https://{}/ip".format(host["ip"])
             m_str = HttpGet(new_url, 1, headers=headers)
             ipaddress = re.search(r"^\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}$", m_str).group(0)
             s_ip_info = get_free_ip_info("{}".format(ipaddress))
@@ -7169,5 +7183,7 @@ def ws_send(data: str):
         return True
     except:
         return False
+
+
 
 

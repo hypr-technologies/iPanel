@@ -12896,3 +12896,5 @@ $('#cutMode .tabs-item[data-type="' + (bt.get_cookie('site_model') || 'php') + '
 // 	}
 // 	return o;
 // };
+
+

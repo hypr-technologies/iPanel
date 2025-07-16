@@ -1,1 +1,3 @@
 import{k as e,c as r,a1 as o,X as t,s as a,W as l}from"./vue.js?v=1752142539265";import{ab as s}from"./page_layout.js?v=1752142539265";import{by as u}from"./naive.js?v=1752142539265";const i=e({__name:"index",props:{value:{default:0},type:{default:"line"},height:{default:5},borderRadius:{default:4},textColor:{},defaultColor:{default:""}},setup(e){const i=e,d=s(),n=r((()=>{const{value:e,defaultColor:r}=i;return e>90?d.value.errorColor:e>80?d.value.warningColor:r||d.value.primaryColor}));return(e,r)=>{const s=u;return t(),o(s,a({type:e.type,color:l(n),height:e.height,percentage:e.value,"indicator-text-color":e.textColor,"border-radius":e.borderRadius},e.$attrs),null,16,["type","color","height","percentage","indicator-text-color","border-radius"])}}});export{i as _};
+
+

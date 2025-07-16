@@ -1968,3 +1968,5 @@ class main(Base):
             public.M('firewall_ip').execute('ALTER TABLE "firewall_ip" ADD "domain" TEXT DEFAULT ""')
         if 'chain' not in create_table_str:
             public.M('firewall_ip').execute('ALTER TABLE "firewall_ip" ADD "chain" TEXT DEFAULT ""')
+
+

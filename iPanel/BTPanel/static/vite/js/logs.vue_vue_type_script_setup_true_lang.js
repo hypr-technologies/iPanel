@@ -1,1 +1,3 @@
 import{_ as a}from"./index101.js?v=1752142539265";import{O as s,d as t}from"./page_layout.js?v=1752142539265";import{c as o}from"./public.js?v=1752142539265";import{a as r}from"./site.js?v=1752142539265";import{k as e,r as p,a1 as l,X as n,a2 as i,Q as m,W as u}from"./vue.js?v=1752142539265";const c=e({__name:"logs",props:{data:{}},setup(e){const c=e,{type:g,path:d}=c.data,f=p(""),{loading:y,setLoading:_}=o();return(async()=>{try{_(!0);const{message:a}=await r({type:g,path:d});t(a)&&(f.value=a.result)}finally{_(!1)}})(),(t,o)=>{const r=a,e=s;return n(),l(e,{class:"w-650px h-550px bg-#282C34",show:u(y)},{default:i((()=>[m(r,{log:u(f)},null,8,["log"])])),_:1},8,["show"])}}});export{c as _};
+
+

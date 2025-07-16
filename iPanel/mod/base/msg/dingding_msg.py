@@ -154,3 +154,5 @@ class DingDingMsg:
         if res is None:
             return None
         return res
+
+

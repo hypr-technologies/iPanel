@@ -111,3 +111,5 @@ class Base(object):
             return result.stdout, result.stderr
         except subprocess.CalledProcessError as e:
             return e.stdout, e.stderr
+
+

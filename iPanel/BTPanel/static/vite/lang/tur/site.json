@@ -147,7 +147,7 @@
 			"index_6": "Hedef: Proxy yapmanız gereken siteyi doldurabilirsiniz, hedef URL adresini seçerseniz URL'ye normal bir erişim olmalıdır, Unix'i seçerseniz bir soket dosyası olmalıdır",
 			"index_7": "Alan Adı Gönder: Alan adını arka uç sunucusuna geçmek için istek başlığına ekleyin, varsayılan hedef URL etki alanı adıdır, düzgün ayarlanmazsa proxy'ye yol açabilir, örneğin: Örneğin:",
 			"index_8": "http://192.168.100.20:19888, sonra $ http_host tutarak alan adını gönderin",
-			"index_9": "http://www.bt.cn, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
+			"index_9": "https://github.com/hypr-technologies/iPanel, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
 			"index_10": "Yukarıdaki örnekler sadece yaygın durumlardır, lütfen gerçek duruma bakın",
 			"index_11": "URL adresi",
 			"index_12": "Unix adresi",
@@ -217,7 +217,7 @@
 			"index_76": "Hedef: Proxy yapmanız gereken siteyi doldurabilirsiniz, hedef URL adresini seçerseniz URL'ye normal bir erişim olmalıdır, Unix'i seçerseniz bir soket dosyası olmalıdır",
 			"index_77": "Alan Adı Gönder: Alan adını arka uç sunucusuna geçmek için istek başlığına ekleyin, varsayılan hedef URL etki alanı adıdır, düzgün ayarlanmazsa proxy'ye yol açabilir, örneğin: Örneğin:",
 			"index_78": "http://192.168.100.20:19888, sonra $ http_host tutarak alan adını gönderin",
-			"index_79": "http://www.bt.cn, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
+			"index_79": "https://github.com/hypr-technologies/iPanel, o zaman gönderme alan adı www.bt.cn olarak değiştirilmelidir.",
 			"index_80": "Yukarıdaki örnekler sadece yaygın durumlardır, lütfen gerçek duruma bakın",
 			"index_81": "İçerik Değiştirme Ekle",
 			"index_82": "Ters proxy projesi ekleyin"
@@ -669,10 +669,12 @@
 			"index_12": "Durum duyarsız",
 			"index_13": "Yalnızca birinciyi değiştirin",
 			"index_14": "Düzenli ifade",
-			"index_15": "Varsayılan efekt: 'http://www.aapanel.com' ile 'https://www.aapanel.com' ile değiştirin.",
+			"index_15": "Varsayılan efekt: 'https://github.com/hypr-technologies/iPanel' ile 'https://github.com/hypr-technologies/iPanel' ile değiştirin.",
 			"index_16": "Global WebSocket etkinleştirilir ve ayrı ayrı devre dışı bırakılmasına izin verilmez",
 			"index_17": "Ters proxy projesini sil",
 			"index_18": "Eşleşen tüm anahtar kelimeleri değiştirin"
 		}
 	}
 }
+
+

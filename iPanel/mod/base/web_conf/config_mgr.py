@@ -152,3 +152,4 @@ class ConfigMgr:
             rm_file = save_path + '/' + i
             if os.path.exists(rm_file):
                 os.remove(rm_file)
+

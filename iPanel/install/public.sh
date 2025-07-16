@@ -10,7 +10,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
 
 get_node_url(){
-	nodes=(https://node.aapanel.com https://dg2.bt.cn https://download.bt.cn https://hk1-node.bt.cn https://na1-node.bt.cn https://jp1-node.bt.cn);
+	nodes=(https://github.com/hypr-technologies/iPanel/releases/latest/download https://raw.githubusercontent.com/hypr-technologies/iPanel/main/assets https://cdn.jsdelivr.net/gh/hypr-technologies/iPanel@main/assets);
 
 	if [ "$1" ];then
 		nodes=($(echo ${nodes[*]}|sed "s#${1}##"))
@@ -52,7 +52,7 @@ get_node_url(){
 	if [ -z "$NODE_URL" ];then
 		NODE_URL=$(cat $tmp_file2|sort -g -t " " -k 1|head -n 1|awk '{print $2}')
 		if [ -z "$NODE_URL" ];then
-			NODE_URL='https://node.aapanel.com';
+		NODE_URL='https://github.com/hypr-technologies/iPanel/releases/latest/download';
 		fi
 	fi
 	rm -f $tmp_file1
@@ -108,7 +108,8 @@ send_check(){
 	chmod +x /etc/init.d/bt
 	p_path2=/www/server/panel/class/common.py
 	p_version=$(cat $p_path2|grep "version = "|awk '{print $3}'|tr -cd [0-9.])
-	curl -sS --connect-timeout 3 -m 60 http://www.bt.cn/api/panel/notpro?version=$p_version
+	# Log version check locally instead of external API
+	echo "$(date) - iPanel version check: $p_version" >> /www/server/panel/data/version_check.log
 	NODE_URL=""
 	exit 0;
 }
@@ -141,9 +142,9 @@ if [ -d "/www/server/phpmyadmin/pma" ];then
 	rm -rf /www/server/phpmyadmin/pma
 	EN_CHECK=$(cat /www/server/panel/config/config.json |grep English)
 	if [ "${EN_CHECK}" ];then
-		curl http://download.bt.cn/install/update_7.x_en.sh|bash
+		echo "Update script not available - please check GitHub releases for updates"
 	else
-		curl http://download.bt.cn/install/update6.sh|bash
+		echo "Update script not available - please check GitHub releases for updates"
 	fi
 	echo > /www/server/panel/data/restart.pl
 fi
@@ -158,4 +159,6 @@ if [ ! $NODE_URL ];then
 	get_node_url
 	bt_check
 fi
+
+
 

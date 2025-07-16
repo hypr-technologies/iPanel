@@ -147,7 +147,7 @@
 			"index_6": "Target: Anda dapat mengisi situs yang Anda butuhkan untuk proxy, target jika Anda memilih alamat URL harus menjadi akses normal ke URL, jika Anda memilih UNIX harus menjadi file soket",
 			"index_7": "Kirim Nama Domain: Tambahkan nama domain ke header permintaan untuk diteruskan ke server back-end, standarnya adalah nama domain URL target, jika tidak diatur dengan benar dapat menyebabkan proxy tidak dapat diakses dengan benar, misalnya:",
 			"index_8": "http://192.168.100.20:19888, lalu cukup kirimkan nama domain $ http_host",
-			"index_9": "http://www.bt.cn, maka domain pengirim harus diubah ke www.bt.cn",
+			"index_9": "https://github.com/hypr-technologies/iPanel, maka domain pengirim harus diubah ke www.bt.cn",
 			"index_10": "Contoh di atas hanyalah kasus umum, silakan merujuk ke situasi aktual",
 			"index_11": "Alamat URL",
 			"index_12": "Alamat unix",
@@ -217,7 +217,7 @@
 			"index_76": "Target: Anda dapat mengisi situs yang Anda butuhkan untuk proxy, target jika Anda memilih alamat URL harus menjadi akses normal ke URL, jika Anda memilih UNIX harus menjadi file soket",
 			"index_77": "Kirim Nama Domain: Tambahkan nama domain ke header permintaan untuk diteruskan ke server back-end, standarnya adalah nama domain URL target, jika tidak diatur dengan benar dapat menyebabkan proxy tidak dapat diakses dengan benar, misalnya:",
 			"index_78": "http://192.168.100.20:19888, lalu cukup kirimkan nama domain $ http_host",
-			"index_79": "http://www.bt.cn, maka domain pengirim harus diubah ke www.bt.cn",
+			"index_79": "https://github.com/hypr-technologies/iPanel, maka domain pengirim harus diubah ke www.bt.cn",
 			"index_80": "Contoh di atas hanyalah kasus umum, silakan merujuk ke situasi aktual",
 			"index_81": "Tambahkan Penggantian Konten",
 			"index_82": "Tambahkan proyek proxy terbalik"
@@ -669,10 +669,12 @@
 			"index_12": "Kasus tidak sensitif",
 			"index_13": "Hanya ganti yang pertama",
 			"index_14": "Ekspresi reguler",
-			"index_15": "Efek default: Ganti semua 'http://www.aapanel.com' dengan 'https://www.aapanel.com'.",
+			"index_15": "Efek default: Ganti semua 'https://github.com/hypr-technologies/iPanel' dengan 'https://github.com/hypr-technologies/iPanel'.",
 			"index_16": "Websocket global diaktifkan dan tidak diizinkan dinonaktifkan secara individual",
 			"index_17": "Hapus proyek proxy terbalik",
 			"index_18": "Ganti semua kata kunci yang cocok"
 		}
 	}
 }
+
+

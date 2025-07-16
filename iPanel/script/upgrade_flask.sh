@@ -13,3 +13,4 @@ fi
 
 rm -f /www/server/panel/script/upgrade_flask.sh
 bash /www/server/panel/init.sh reload
+

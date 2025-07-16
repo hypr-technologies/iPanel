@@ -58,3 +58,4 @@ class main:
         dp.sql('hosts').delete(id=args.id)
         dp.write_log("Delete host [{}] successful！".format(data['url']))
         return public.returnMsg(True, public.lang("Delete host successfully！"))
+

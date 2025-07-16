@@ -152,3 +152,5 @@ class RedisCache(BaseCache):
 
     def dec(self, key, delta=1):
         return self._client.decr(name=self.key_prefix + key, amount=delta)
+
+

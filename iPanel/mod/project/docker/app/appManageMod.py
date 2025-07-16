@@ -1474,3 +1474,5 @@ class AppManage(App):
         if not app_tags:
             return public.return_message(0, 0, [])
         return  public.return_message(0, 0,app_tags)
+
+

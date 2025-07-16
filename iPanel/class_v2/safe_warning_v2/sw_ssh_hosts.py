@@ -29,3 +29,5 @@ def check_run():
         return True, 'Risk-free'
     else:
         return False, 'ssh login whitelist is not set'
+
+

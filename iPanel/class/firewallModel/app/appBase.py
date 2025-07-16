@@ -76,3 +76,5 @@ class Base(object):
                     for l in range(ip_start[3], ip_end[3] + 1):
                         ip_list.append("{}.{}.{}.{}".format(i, j, k, l))
         return ip_list
+
+

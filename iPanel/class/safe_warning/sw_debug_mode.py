@@ -38,3 +38,5 @@ def check_run():
     if os.path.exists('/www/server/panel/data/debug.pl'):
         return False,'[Developer mode] has been opened, and risks such as data communication and information leakage exist'
     return True,'Risk-free'
+
+

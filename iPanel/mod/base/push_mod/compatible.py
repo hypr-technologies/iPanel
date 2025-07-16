@@ -25,3 +25,5 @@ if __name__ == "__main__":
         rsync_push().main()
 """)
         write_file(f, src_data)
+
+

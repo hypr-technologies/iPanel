@@ -213,3 +213,5 @@ class JMXConnection(object):
         :return:            A list of JMXQuerys found in the JVM with their current values
         """
         return self.__run_jar(queries, timeout)
+
+

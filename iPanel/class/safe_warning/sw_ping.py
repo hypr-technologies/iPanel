@@ -45,3 +45,5 @@ def check_run():
             return True,'Rick-free'
 
     return False,'If the [Block ICMP] function is not enabled, there is a risk that the server will be attacked or scanned by ICMP'
+
+

@@ -140,3 +140,4 @@ class userLang:
         return public.return_message(0, 0, public.lang('The setup was successful'))
 
     # 获取当前设置的语言
+

@@ -185,3 +185,5 @@ class userRegister:
         rsa_text = base64.b64encode(cipher.encrypt(bytes(data.encode("utf8"))))
         return str(rsa_text, encoding='utf-8')
 
+
+

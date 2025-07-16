@@ -213,3 +213,5 @@ class BaseTaskViewMsg:
 
     def get_msg(self, task: dict) -> Optional[str]:
         return ""
+
+

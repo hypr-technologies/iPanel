@@ -211,3 +211,4 @@ class main(JournalctlManage, SecureManage):
         task_id = task_obj.create_task('SSH blocking and IP bursting programme', 0, exec_shell)
         public.set_module_logs('SSH', 'run_ban_login_failed_ip', 1)
         return {'status': True, 'msg': 'Task created.', 'task_id': task_id}
+

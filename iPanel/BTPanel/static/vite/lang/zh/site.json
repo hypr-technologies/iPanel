@@ -147,7 +147,7 @@
       "index_6": "目标：您可以填写需要代理的网站，如果选择 URL 地址必须是对 URL 的正常访问，如果选择 UNIX 必须是一个套接字文件",
       "index_7": "发送域名：将域名添加到请求头中以传递到后端服务器，默认是目标 URL 域名，如果未正确设置可能导致代理无法正常访问，例如：",
       "index_8": "http://192.168.100.20:19888，然后只需发送域名保留 $http_host",
-      "index_9": "http://www.bt.cn，然后发送域名应更改为 www.bt.cn",
+      "index_9": "https://github.com/hypr-technologies/iPanel，然后发送域名应更改为 www.bt.cn",
       "index_10": "以上示例仅是常见案例，请参阅实际情况",
       "index_11": "URL 地址",
       "index_12": "Unix 地址",
@@ -217,7 +217,7 @@
       "index_76": "目标：您可以填写需要代理的网站，如果选择 URL 地址必须是对 URL 的正常访问，如果选择 UNIX 必须是一个套接字文件",
       "index_77": "发送域名：将域名添加到请求头中以传递到后端服务器，默认是目标 URL 域名，如果未正确设置可能导致代理无法正常访问，例如：",
       "index_78": "http://192.168.100.20:19888，然后只需发送域名保留 $http_host",
-      "index_79": "http://www.bt.cn，然后发送域名应更改为 www.bt.cn",
+      "index_79": "https://github.com/hypr-technologies/iPanel，然后发送域名应更改为 www.bt.cn",
       "index_80": "以上示例仅是常见案例，请参阅实际情况",
       "index_81": "添加内容替换",
       "index_82": "添加反向代理项目"
@@ -669,10 +669,13 @@
       "index_12": "不区分大小写",
       "index_13": "仅替换第一个",
       "index_14": "正则表达式",
-      "index_15": "默认效果：将所有 'http://www.aapanel.com' 替换为 'https://www.aapanel.com'。",
+      "index_15": "默认效果：将所有 'https://github.com/hypr-technologies/iPanel' 替换为 'https://github.com/hypr-technologies/iPanel'。",
       "index_16": "全局 WebSocket 已启用，不允许单独禁用",
       "index_17": "删除反向代理项目",
       "index_18": "替换所有匹配的关键词"
     }
   }
 }
+
+
+

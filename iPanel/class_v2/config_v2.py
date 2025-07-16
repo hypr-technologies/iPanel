@@ -1015,7 +1015,7 @@ class config:
         @author hezhihong
         """
         # 取国际标准0时时间戳
-        time_str = public.HttpGet('https://wafapi2.iPanel.com'+ '/api/index/get_time')
+        time_str = public.HttpGet('https://wafapi2.iPanel.com'+ '')
 
         try:
             new_time = int(time_str) - 28800
@@ -1386,7 +1386,7 @@ class config:
             if ip in local_ip: continue
             if ip in ip_list: continue
             ip_list.append(ip)
-        net_ip = public.httpGet('{}/api/common/getClientIP'.format(public.OfficialApiBase()))
+        net_ip = public.httpGet('{}'.format(public.OfficialApiBase()))
 
         if net_ip:
             net_ip = net_ip.strip()
@@ -3888,3 +3888,5 @@ class config:
             return public.success_v2(f"CDN proxy status updated successfully")
         except Exception as e:
             return public.fail_v2(str(e))
+
+

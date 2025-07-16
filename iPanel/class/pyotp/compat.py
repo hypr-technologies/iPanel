@@ -8,3 +8,5 @@ if USING_PYTHON2:
     str = unicode  # noqa
 else:
     str = str
+
+

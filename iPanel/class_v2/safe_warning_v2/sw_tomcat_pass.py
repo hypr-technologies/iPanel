@@ -59,3 +59,5 @@ def check_run():
 def get_pass_list():
     pass_info = public.ReadFile("/www/server/panel/config/weak_pass.txt")
     return pass_info.split('\n')
+
+

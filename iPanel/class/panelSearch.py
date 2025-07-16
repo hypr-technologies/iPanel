@@ -354,3 +354,4 @@ class panelSearch:
                 else:
                     i['is_path_status'] = False
         return public.returnMsg(True, data)
+

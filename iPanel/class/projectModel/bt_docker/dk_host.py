@@ -40,3 +40,4 @@ class main :#line:4
         dp .sql ('hosts').delete (id =O0O0O0O000000OOOO .id )#line:46
         dp .write_log ("Delete host [{}] succeeded!".format (OOO00OO0OO0OOO00O ['url']))#line:47
         return public .returnMsg (True ,"Delete host successfully!")
+

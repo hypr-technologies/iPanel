@@ -65,3 +65,5 @@ class downloadFile:
     #写输出日志
     def WriteLogs(self,logMsg):
         public.WriteFile(self.logPath,logMsg)
+
+

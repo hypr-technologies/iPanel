@@ -305,3 +305,4 @@ class main(dockerBase):
                 "CREATE TABLE `dk_sites` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `path` TEXT, `status` TEXT DEFAULT 1, `ps` TEXT, `addtime` TEXT, `type_id` integer DEFAULT 111, `edate` integer DEFAULT '0000-00-00', `project_type` STRING DEFAULT 'dk_proxy', `container_id` TEXT DEFAULT '', `container_name` TEXT DEFAULT '', `container_port` TEXT DEFAULT '')",
                 ()
             )
+

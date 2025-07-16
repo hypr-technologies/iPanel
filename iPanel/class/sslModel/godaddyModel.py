@@ -106,3 +106,5 @@ class main(sslBase):
                 return public.returnMsg(True, '删除失败，{}'.format(response.text))
         except Exception as e:
             return public.returnMsg(False, '删除失败，msg：{}'.format(e))
+
+

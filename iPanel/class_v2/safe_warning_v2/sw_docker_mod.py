@@ -37,3 +37,5 @@ def check_run():
         return False, 'The following critical file or directory permission error:{}'.format('、'.join(not_mode_list))
     else:
         return True, "Risk-free"
+
+

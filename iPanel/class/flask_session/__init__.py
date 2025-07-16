@@ -107,3 +107,5 @@ class Session(object):
             session_interface = NullSessionInterface()
 
         return session_interface
+
+

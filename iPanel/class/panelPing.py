@@ -85,3 +85,4 @@ def get_ping(timeout = 0.5):
 
 if __name__ == '__main__':
     print verbose_ping(sys.argv[1],2)
+

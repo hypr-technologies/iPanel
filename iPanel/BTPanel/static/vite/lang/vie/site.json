@@ -147,7 +147,7 @@
 			"index_6": "Mục tiêu: Bạn có thể điền vào trang web bạn cần ủy quyền, mục tiêu Nếu bạn chọn địa chỉ URL phải là quyền truy cập bình thường vào URL, nếu bạn chọn Unix phải là tệp ổ cắm",
 			"index_7": "Gửi tên miền: Thêm tên miền vào tiêu đề yêu cầu để chuyển đến máy chủ back-end, mặc định là tên miền URL đích, nếu không được đặt đúng có thể dẫn đến proxy không thể được truy cập đúng, ví dụ: ví dụ:",
 			"index_8": "http://192.168.100.20:19888, sau đó chỉ cần gửi tên miền giữ $ http_host",
-			"index_9": "http://www.bt.cn, sau đó tên miền gửi nên được thay đổi thành www.bt.cn",
+			"index_9": "https://github.com/hypr-technologies/iPanel, sau đó tên miền gửi nên được thay đổi thành www.bt.cn",
 			"index_10": "Các ví dụ trên chỉ là những trường hợp phổ biến, vui lòng tham khảo tình huống thực tế",
 			"index_11": "Địa chỉ URL",
 			"index_12": "Địa chỉ UNIX",
@@ -217,7 +217,7 @@
 			"index_76": "Mục tiêu: Bạn có thể điền vào trang web bạn cần ủy quyền, mục tiêu Nếu bạn chọn địa chỉ URL phải là quyền truy cập bình thường vào URL, nếu bạn chọn Unix phải là tệp ổ cắm",
 			"index_77": "Gửi tên miền: Thêm tên miền vào tiêu đề yêu cầu để chuyển đến máy chủ back-end, mặc định là tên miền URL đích, nếu không được đặt đúng có thể dẫn đến proxy không thể được truy cập đúng, ví dụ: ví dụ:",
 			"index_78": "http://192.168.100.20:19888, sau đó chỉ cần gửi tên miền giữ $ http_host",
-			"index_79": "http://www.bt.cn, sau đó tên miền gửi nên được thay đổi thành www.bt.cn",
+			"index_79": "https://github.com/hypr-technologies/iPanel, sau đó tên miền gửi nên được thay đổi thành www.bt.cn",
 			"index_80": "Các ví dụ trên chỉ là những trường hợp phổ biến, vui lòng tham khảo tình huống thực tế",
 			"index_81": "Thêm thay thế nội dung",
 			"index_82": "Thêm một dự án proxy ngược"
@@ -669,10 +669,12 @@
 			"index_12": "Trường hợp không nhạy cảm",
 			"index_13": "Chỉ thay thế cái đầu tiên",
 			"index_14": "Biểu thức chính quy",
-			"index_15": "Hiệu ứng mặc định: Thay thế tất cả 'http://www.aapanel.com' bằng 'https://www.aapanel.com'.",
+			"index_15": "Hiệu ứng mặc định: Thay thế tất cả 'https://github.com/hypr-technologies/iPanel' bằng 'https://github.com/hypr-technologies/iPanel'.",
 			"index_16": "WebSocket toàn cầu được bật và không được phép bị vô hiệu hóa riêng lẻ",
 			"index_17": "Xóa dự án proxy ngược",
 			"index_18": "Thay thế tất cả các từ khóa phù hợp"
 		}
 	}
 }
+
+

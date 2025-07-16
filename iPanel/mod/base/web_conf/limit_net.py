@@ -236,3 +236,5 @@ class LimitNet(object):
         public.serviceReload()
         public.WriteLog('TYPE_SITE', 'SITE_NETLIMIT_CLOSE_SUCCESS', (site_name,))
         return public.returnMsg(True, 'SITE_NETLIMIT_CLOSE_SUCCESS')
+
+

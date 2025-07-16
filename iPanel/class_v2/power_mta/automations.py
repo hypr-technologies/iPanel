@@ -1619,3 +1619,5 @@ create index if not exists `recipient_isSent` on `recipient_info` (`recipient`, 
 
 def schedule_automations_forever():
     Task().schedule_forever()
+
+

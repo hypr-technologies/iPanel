@@ -2294,3 +2294,5 @@ cd {}
         public.WriteLog(self._log_name, dene_msg)
         public.print_log(dene_msg,'INFO')
         return True
+
+

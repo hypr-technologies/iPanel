@@ -1005,3 +1005,5 @@ if __name__ == "__main__":#dns调用验证脚本
             public.ExecShell('/etc/init.d/nginx start');
     else:
         result = public.ExecShell('/etc/init.d/httpd reload')
+
+

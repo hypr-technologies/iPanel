@@ -166,3 +166,5 @@ def update_mod_push_msg():
 
     sc.save_config()
     write_file(PUSH_DATA_PATH + "/update_sender.pl", "")
+
+

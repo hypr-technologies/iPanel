@@ -138,3 +138,4 @@ class panelMysql:
     def __Close(self):
         self.__DB_CUR.close()
         self.__DB_CONN.close()
+

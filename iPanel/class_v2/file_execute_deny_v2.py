@@ -277,3 +277,5 @@ class FileExecuteDeny:
         if hasattr(args,'dir'):
             if not args.dir:
                 return public.return_message(-1, 0, public.lang("Directory cannot be empty"))
+
+

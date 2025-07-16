@@ -77,3 +77,5 @@ class HurricaneDns(common.BaseDns):
             self.clt.del_record(root, i["id"])
 
         self.logger.info("delete_dns_record end: %s", (domain_name, domain_dns_value))
+
+

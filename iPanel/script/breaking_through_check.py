@@ -37,3 +37,5 @@ plugin_object = getattr(plugin_class,class_string)()
 def_name='cron_method'
 getattr(plugin_object,def_name)()
 # public.print_log(result)
+
+

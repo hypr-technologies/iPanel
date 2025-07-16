@@ -681,7 +681,7 @@ class ajax:
             import json
             conf_status = public.M('config').where("id=?",('1',)).field('status').find()
             if int(session['config']['status']) == 0 and int(conf_status['status']) == 0:
-                public.arequests('get', '{}/api/setupCount/setupPanel?type=Linux'.format(self.__official_url))
+                public.arequests('get', '{}?type=Linux'.format(self.__official_url))
                 public.M('config').where("id=?",('1',)).setField('status',1)
             
             #取回远程版本信息
@@ -1725,3 +1725,4 @@ class ajax:
             pass
 
         return public.return_msg_gettext(True, public.lang("Ignore success, this version will no longer be reminded to update."))
+

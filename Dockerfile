@@ -1,13 +1,3 @@
-# Multi-stage build for production deployment
-FROM node:18-alpine AS frontend-build
-
-WORKDIR /app/frontend
-COPY iPanel/BTPanel/static/package*.json ./
-RUN npm ci --only=production
-
-COPY iPanel/BTPanel/static/ ./
-RUN npm run build
-
 FROM python:3.9-slim AS base
 
 # Install system dependencies
@@ -29,7 +19,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY iPanel/ ./iPanel/
-COPY --from=frontend-build /app/frontend/dist ./iPanel/BTPanel/static/dist/
 
 # Set ownership
 RUN chown -R ipanel:ipanel /app

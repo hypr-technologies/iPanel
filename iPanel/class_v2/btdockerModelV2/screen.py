@@ -82,3 +82,4 @@ class main:
             if num != 0:
                 info[c] = cpu_usage / num
         return info
+

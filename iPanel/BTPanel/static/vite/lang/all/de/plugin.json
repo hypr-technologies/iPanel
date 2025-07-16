@@ -81,3 +81,5 @@
 	"d9647fa654243adb05ea5d73a5fae511": "Gibt die maximale Anzahl der gleichzeitigen SSL-Verbindungen an, die der Server akzeptiert, da die gesamten gleichzeitigen SSL- und Nicht-SSL-Verbindungen die durch „maximale Verbindungen“ angegebene Grenze nicht überschreiten können. Die tatsächliche Anzahl der zulässigen gleichzeitigen SSL-Verbindungen muss niedriger sein",
 	"12e2afb8b1475bdd6d48db7548add761": "Wenn Sie die MySQL -Version ändern müssen, sichern Sie bitte Ihre Daten, deinstallieren Sie MySQL und installieren Sie sie neu."
 }
+
+

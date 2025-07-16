@@ -345,3 +345,5 @@ class SimpleCache(BaseCache):
         if not os.path.exists(self.__SHM_BASEDIR):
             os.makedirs(self.__SHM_BASEDIR, 384)
 
+
+

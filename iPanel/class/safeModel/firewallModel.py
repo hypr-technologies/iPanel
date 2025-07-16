@@ -3999,3 +3999,5 @@ sql = """
       """
 s = Sqlite()
 s.create_trigger(sql)
+
+

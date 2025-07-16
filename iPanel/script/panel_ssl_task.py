@@ -12,3 +12,4 @@ if lets_info:
         strTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(time.time())))
         public.writeFile("/tmp/panelSSL.pl","{} Panel certificate updated successfully\n".format(strTime),"a+")
         public.writeFile('/www/server/panel/data/reload.pl',"1")
+

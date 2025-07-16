@@ -36,3 +36,5 @@ def check_run():
         return False, 'The following files have sid privilege, chmod u-s or g-s remove sid bits: \"{}\"'.format(result)
     else:
         return True, 'Risk-free'
+
+

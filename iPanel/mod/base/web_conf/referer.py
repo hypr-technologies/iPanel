@@ -361,3 +361,5 @@ class Referer:
 
         flag, msg = self._r.set_referer_security(r)
         return json_response(status=flag, msg=msg)
+
+

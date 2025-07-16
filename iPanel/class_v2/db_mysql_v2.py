@@ -375,3 +375,5 @@ class panelMysql:
             self.__DB_CUR.close()
         except:
             pass
+
+

@@ -1325,3 +1325,5 @@ class MailTracker:
 
     def get_html(self) -> str:
         return self.__mail_html
+
+

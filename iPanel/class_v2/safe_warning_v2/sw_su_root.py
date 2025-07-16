@@ -37,3 +37,5 @@ def check_run():
         return True, 'Risk-free, But the whell group user can su is not configured'
     else:
         return True, 'Risk-free'
+
+

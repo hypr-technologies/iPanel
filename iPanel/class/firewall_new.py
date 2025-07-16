@@ -492,3 +492,5 @@ class firewalls:
         return public.return_msg_gettext(True, public.lang("Successfully deleted"))
 
 
+
+

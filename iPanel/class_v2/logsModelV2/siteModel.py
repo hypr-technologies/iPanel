@@ -110,3 +110,5 @@ class main(logsBase):
         # return data
 
         return public.return_message(-1, 0, 'log is empty')
+
+

@@ -26,7 +26,7 @@ GetSysInfo(){
 	echo -e ${SYS_VERSION}
 	echo -e Bit:${SYS_BIT} Mem:${MEM_TOTAL}M Core:${CPU_INFO}
 	echo -e ${SYS_INFO}
-	echo -e "Please screenshot the above error message and post to the forum forum.aapanel.com for help"
+	echo -e "Please screenshot the above error message and post to the GitHub issues at https://github.com/hypr-technologies/iPanel/issues for help"
 }
 Red_Error(){
 	echo '=================================================';
@@ -37,7 +37,7 @@ Red_Error(){
 
 is64bit=$(getconf LONG_BIT)
 if [ "${is64bit}" != '64' ];then
-	Red_Error "Sorry, aaPanel Does not support 32-bit systems, Use 64-bit system Please!";
+	Red_Error "Sorry, iPanel Does not support 32-bit systems, Use 64-bit system Please!";
 
 fi
 Lock_Clear(){
@@ -53,7 +53,7 @@ Install_Check(){
 	while [ "$yes" != 'yes' ] && [ "$yes" != 'n' ]
 	do
 		echo -e "----------------------------------------------------"
-		echo -e "Web service is alreday installed,installing aaPanel may affect existing sites."
+		echo -e "Web service is alreday installed,installing iPanel may affect existing sites."
 		echo -e "----------------------------------------------------"
 		read -p "Enter yes to force installation (yes/n): " yes;
 	done 
@@ -141,9 +141,9 @@ get_node_url(){
 		fi
 	fi
 	
- 	echo '---------------------------------------------';
+	echo '---------------------------------------------';
 	echo "Selected download node...";
-	nodes=(http://node.aapanel.com http://128.1.164.196 http://45.76.53.20 http://103.224.251.67 http://dg2.bt.cn http://dg1.bt.cn http://123.129.198.197 http://125.88.182.172:5880 http://119.188.210.21:5880 http://120.206.184.160 http://113.107.111.78);
+	nodes=(https://github.com/hypr-technologies/iPanel/releases/latest/download https://raw.githubusercontent.com/hypr-technologies/iPanel/main/assets https://cdn.jsdelivr.net/gh/hypr-technologies/iPanel@main/assets);
 	tmp_file1=/dev/shm/net_test1.pl
 	tmp_file2=/dev/shm/net_test2.pl
 						  
@@ -185,7 +185,7 @@ get_node_url(){
 	if [ -z "$NODE_URL" ];then
 		NODE_URL=$(cat $tmp_file2|sort -g -t " " -k 1|head -n 1|awk '{print $2}')
 		if [ -z "$NODE_URL" ];then
-			NODE_URL='http://download.bt.cn';
+			NODE_URL='https://github.com/hypr-technologies/iPanel/releases/latest/download';
 		fi
 	fi
 
@@ -219,15 +219,16 @@ Install_RPM_Pack(){
 
 	yumBaseUrl=$(cat /etc/yum.repos.d/CentOS-Base.repo|grep baseurl=http|cut -d '=' -f 2|cut -d '$' -f 1|head -n 1)
 	[ "${yumBaseUrl}" ] && checkYumRepo=$(curl --connect-timeout 5 --head -s -o /dev/null -w %{http_code} ${yumBaseUrl})	
-	if [ "${checkYumRepo}" != "200" ];then
-		curl -Ss --connect-timeout 3 -m 60 http://download.bt.cn/install/yumRepo_select.sh|bash
+		if [ "${checkYumRepo}" != "200" ];then
+		echo "Warning: YUM repository check failed. Please ensure your system has proper repository configuration."
 	fi
 	
-# 	尝试同步时间(从bt.cn)
+	# Synchronizing system time using standard NTP
 	echo 'Synchronizing system time...'
-	getBtTime=$(curl -sS --connect-timeout 3 -m 60 http://www.bt.cn/api/index/get_time)
-	if [ "${getBtTime}" ];then	
-		date -s "$(date -d @$getBtTime +"%Y-%m-%d %H:%M:%S")"
+	if command -v ntpdate >/dev/null 2>&1; then
+		ntpdate -s time.nist.gov || ntpdate -s pool.ntp.org || echo "Time sync failed, continuing..."
+	elif command -v timedatectl >/dev/null 2>&1; then
+		timedatectl set-ntp true || echo "Time sync failed, continuing..."
 	fi
 
 	#if [ -z "${Centos8Check}" ]; then
@@ -668,19 +669,17 @@ Set_Firewall(){
 }
 Get_Ip_Address(){
 	getIpAddress=""
-# 	getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://brandnew.aapanel.com/api/common/getClientIP)
-	getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://www.bt.cn/Api/getIpAddress)
-	if [ -z "${getIpAddress}" ] || [ "${getIpAddress}" = "0.0.0.0" ]; then
-		isHosts=$(cat /etc/hosts|grep 'www.bt.cn')
-		if [ -z "${isHosts}" ];then
-			echo "" >> /etc/hosts
-			echo "103.224.251.67 www.bt.cn" >> /etc/hosts
-			#getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://brandnew.aapanel.com/api/common/getClientIP)
-			getIpAddress=$(curl -sS --connect-timeout 10 -m 60 https://www.bt.cn/Api/getIpAddress)
-			if [ -z "${getIpAddress}" ];then
-				sed -i "/bt.cn/d" /etc/hosts
-			fi
+	# Try multiple IP detection services
+	for ip_service in "https://api.ipify.org" "https://ipinfo.io/ip" "https://icanhazip.com" "https://checkip.amazonaws.com"; do
+		getIpAddress=$(curl -sS --connect-timeout 10 -m 60 "$ip_service" 2>/dev/null | tr -d '\n\r')
+		if [ -n "${getIpAddress}" ] && [ "${getIpAddress}" != "0.0.0.0" ]; then
+			break
 		fi
+	done
+	
+	# Fallback to local IP detection if external services fail
+	if [ -z "${getIpAddress}" ] || [ "${getIpAddress}" = "0.0.0.0" ]; then
+		getIpAddress=$(hostname -I | awk '{print $1}' 2>/dev/null || echo "127.0.0.1")
 	fi
 
 	ipv4Check=$($python_bin -c "import re; print(re.match('^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$','${getIpAddress}'))")
@@ -701,14 +700,19 @@ Get_Ip_Address(){
 	fi
 }
 Setup_Count(){
-    curl -sS --connect-timeout 10 -m 60 https://brandnew.aapanel.com/api/setupCount/setupPanel?type=Linux > /dev/null 2>&1
-    #curl -sS --connect-timeout 10 -m 60 https://www.aapanel.com/Api/SetupCount?type=Linux > /dev/null 2>&1
-    curl -sS --connect-timeout 10 -m 60 https://console.aapanel.com/Api/SetupCount?type=Linux > /dev/null 2>&1
-	#if [ "$1" != "" ];then
-	echo "66959f96" > /www/server/panel/data/o.pl
+	# Log installation to local file for analytics
+	install_log="/www/server/panel/data/install.log"
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - iPanel installed on $(hostname) - IP: ${getIpAddress}" >> "$install_log"
+	
+	# Optional: Send anonymous installation stats to GitHub (if desired)
+	# curl -sS --connect-timeout 5 -m 30 "https://api.github.com/repos/hypr-technologies/iPanel/dispatches" \
+	#   -H "Authorization: token YOUR_TOKEN" \
+	#   -H "Accept: application/vnd.github.v3+json" \
+	#   -d '{"event_type": "installation", "client_payload": {"type": "Linux"}}' > /dev/null 2>&1
+	
+	echo "ipanel-install-$(date +%s)" > /www/server/panel/data/o.pl
 	cd /www/server/panel
 	$python_bin tools.py o
-	#fi
 	echo /www > /var/bt_setupPath.conf
 }
 
@@ -746,17 +750,17 @@ Install_Main(){
 
 echo "
 +----------------------------------------------------------------------
-| aaPanel 6.0 FOR CentOS/Ubuntu/Debian
+|| iPanel 8.0 FOR CentOS/Ubuntu/Debian
 +----------------------------------------------------------------------
-| Copyright © 2015-2099 BT-SOFT(http://www.aapanel.com) All rights reserved.
+|| Copyright © 2024 Hypr Technologies (https://github.com/hypr-technologies/iPanel) All rights reserved.
 +----------------------------------------------------------------------
-| The WebPanel URL will be http://SERVER_IP:8888 when installed.
+|| The WebPanel URL will be http://SERVER_IP:8888 when installed.
 +----------------------------------------------------------------------
 "
 
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 do
-	read -p "Do you want to install aaPanel to the $setup_path directory now?(y/n): " go;
+	read -p "Do you want to install iPanel to the $setup_path directory now?(y/n): " go;
 done
 
 if [ "$go" == 'n' ];then
@@ -769,11 +773,11 @@ echo -e "=================================================================="
 echo -e "\033[32mCongratulations! Installed successfully!\033[0m"
 echo -e "=================================================================="
 if [ "$SET_SSL" == true ];then
-        echo  "aaPanel Internet Address: https://${getIpAddress}:${panelPort}$auth_path"
-		echo  "aaPanel Internal Address: https://${intenal_ip}:${panelPort}$auth_path"
+        echo  "iPanel Internet Address: https://${getIpAddress}:${panelPort}$auth_path"
+		echo  "iPanel Internal Address: https://${intenal_ip}:${panelPort}$auth_path"
 else
-        echo "aaPanel Internet Address: http://${getIpAddress}:${panelPort}$auth_path"
-		echo "aaPanel Internal Address: http://${intenal_ip}:${panelPort}$auth_path"
+        echo "iPanel Internet Address: http://${getIpAddress}:${panelPort}$auth_path"
+		echo "iPanel Internal Address: http://${intenal_ip}:${panelPort}$auth_path"
 fi
 echo -e "username: $username"
 echo -e "password: $password"
@@ -786,5 +790,7 @@ endTime=`date +%s`
 ((outTime=($endTime-$startTime)/60))
 echo -e "Time consumed:\033[32m $outTime \033[0mMinute!"
 rm -f new_install_en.sh	
+
+
 
 

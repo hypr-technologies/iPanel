@@ -1,6 +1,6 @@
 {
 	"Public": {
-		"Name": "aaPanel",
+		"Name": "iPanel",
 		"Site": "Site",
 		"Help": "Help",
 		"Type": "Type",
@@ -215,3 +215,6 @@
 		}
 	}
 }
+
+
+

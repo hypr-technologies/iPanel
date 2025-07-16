@@ -57,3 +57,5 @@ if __name__ == '__main__':
     s = unittest.TestSuite()
     s.addTest(TestGitTool())
     unittest.TextTestRunner().run(s)
+
+

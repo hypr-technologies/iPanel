@@ -298,3 +298,5 @@ echo "[*] shut down"
         if get.type not in type_list: return public.return_message(-1, 0, public.lang("Type mismatch"))
         if not os.path.exists(speed + get.type + '.log'): return public.return_message(-1, 0, public.lang("Record does not exist"))
         return public.return_message(0,0,self.get_log_count(speed + get.type + '.log', is_body=True))
+
+

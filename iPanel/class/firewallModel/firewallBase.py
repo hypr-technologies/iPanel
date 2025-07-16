@@ -218,3 +218,5 @@ class Base(object):
         result = 0
         if temp['local']: result += 2
         return result
+
+

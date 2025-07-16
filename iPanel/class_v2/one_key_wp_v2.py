@@ -1991,3 +1991,4 @@ def checklist_fields() -> (bool, str):
         return True, "Table structure is valid and updated successfully!"
     except sqlite3.Error as e:
         return False, str(e)
+

@@ -38,3 +38,5 @@ def reform_list(check_list):
     """处理列表里的空字符串"""
     return [i for i in check_list if (i is not None) and (str(i).strip() != '')]
 
+
+

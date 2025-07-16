@@ -1090,3 +1090,5 @@ class system:
         public.ExecShell("wget --no-check-certificate -O update.sh " + public.get_url() + "/install/update_7.x_en.sh && bash update.sh")
         self.ReWeb(None)
         return True
+
+

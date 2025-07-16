@@ -1636,3 +1636,4 @@ function get_temp_login_view(){
 	});
 
 }
+

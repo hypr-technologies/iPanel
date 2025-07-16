@@ -115,3 +115,5 @@ class dockerBase(object):
             self._rCmd_log,
         ))
         return public.return_message(0, 0, public.lang("The command has been executed!"))
+
+
