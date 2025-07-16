@@ -1,0 +1,53 @@
+[bandit]
+exclude_dirs = [
+    "*/migrations/*",
+    "*/tests/*",
+    "*/venv/*",
+    "*/env/*",
+    "*/build/*",
+    "*/dist/*",
+    "*/node_modules/*",
+    "*/__pycache__/*",
+    ".git",
+    ".github",
+    "docs",
+    "docker",
+    "scripts",
+]
+
+skips = [
+    "B101",  # Test for use of assert
+    "B601",  # paramiko_calls
+    "B602",  # subprocess_popen_with_shell_equals_true
+    "B603",  # subprocess_without_shell_equals_true
+    "B604",  # any_other_function_with_shell_equals_true
+    "B605",  # start_process_with_a_shell
+    "B607",  # start_process_with_partial_path
+]
+
+[bandit.assert_used]
+skips = ["*/tests/*", "*/test_*"]
+
+[bandit.hardcoded_bind_all_interfaces]
+# Allow binding to all interfaces in development
+skips = ["*/runserver.py", "*/app.py"]
+
+[bandit.subprocess_popen_with_shell_equals_true]
+# Allow shell=True in specific files
+skips = ["*/script/*", "*/class/public.py", "*/class/system.py"]
+
+[bandit.subprocess_without_shell_equals_true]
+# Allow shell commands in specific files
+skips = ["*/script/*", "*/class/public.py", "*/class/system.py"]
+
+[bandit.any_other_function_with_shell_equals_true]
+# Allow shell commands in specific files
+skips = ["*/script/*", "*/class/public.py", "*/class/system.py"]
+
+[bandit.start_process_with_a_shell]
+# Allow shell commands in specific files
+skips = ["*/script/*", "*/class/public.py", "*/class/system.py"]
+
+[bandit.start_process_with_partial_path]
+# Allow partial paths in specific files
+skips = ["*/script/*", "*/class/public.py", "*/class/system.py"]

@@ -1,0 +1,147 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipanel"
+version = "1.0.0"
+description = "iPanel Control System"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.ruff]
+line-length = 127
+target-version = "py38"
+extend-exclude = [
+    "migrations",
+    "__pycache__",
+    ".venv",
+    ".git",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+    "S",  # bandit
+    "T20", # flake8-print
+    "SIM", # flake8-simplify
+    "RUF", # Ruff-specific rules
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "S101",  # Use of assert detected
+    "S602",  # subprocess call with shell=True
+    "S603",  # subprocess call without shell=True
+    "S604",  # Function call with shell=True
+    "S605",  # Starting a process with a shell
+    "S607",  # Starting a process with a partial executable path
+    "T201",  # print found
+    "UP006", # Use `list` instead of `List` for type annotations
+    "UP007", # Use `X | Y` for type annotations
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105", "S106", "S107", "S108"]
+"iPanel/script/*" = ["T201", "S602", "S603", "S604", "S605", "S607"]
+"iPanel/class/*" = ["E402", "F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["iPanel"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-string-normalization = false
+line-ending = "auto"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["iPanel"]
+omit = [
+    "*/migrations/*",
+    "*/tests/*",
+    "*/venv/*",
+    "*/env/*",
+    "*/build/*",
+    "*/dist/*",
+    "setup.py",
+    "*/script/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+skip_covered = false
+fail_under = 85
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "iPanel/mod/test"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings",
+    "--cov=iPanel",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=85",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
