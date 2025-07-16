@@ -55,6 +55,21 @@ Welcome to the iPanel documentation hub. This comprehensive guide will help you 
 
 ---
 
-**Documentation Version**: 8.0.0  
+## Release Information
+
+**Current Version**: 8.0.0  
+**Release Date**: December 19, 2024  
 **Last Updated**: January 2025  
 **Documentation URL**: [https://docs.noahdummett.com/ipanel](https://docs.noahdummett.com/ipanel)
+
+### What's New in v8.0.0
+
+- **Hypr Technologies Integration**: Complete rebranding and integration with Hypr Technologies infrastructure
+- **Cloud-Native Architecture**: Enhanced cloud deployment capabilities
+- **Multi-Cloud Support**: Unified management across AWS, GCP, Azure, and bare metal
+- **Advanced Security**: Enhanced security features and compliance tools
+- **Improved Performance**: Optimized for better performance and scalability
+
+### Migration from Previous Versions
+
+If you're upgrading from Infuze Panel or earlier versions, please see our [Migration Guide](migration.md) for step-by-step instructions.
